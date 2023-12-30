@@ -159,9 +159,10 @@ def main(args):
 def make_index_page(output_dir):
     sub_pages_list = []
     for html_file in glob(os.path.join(output_dir, '*.html')):
-        if os.path.basename(html_file) == 'index.html':
+        html_file = os.path.basename(html_file)
+        if html_file == 'index.html':
             continue
-        title = os.path.splitext(os.path.basename(html_file))[0].replace('-', ' ').title()
+        title = os.path.splitext(html_file)[0].replace('-', ' ').title()
         sub_pages_list.append((title, html_file))
 
     content = ''

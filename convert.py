@@ -2,6 +2,7 @@ import os
 import sys
 import re
 import argparse
+from glob import glob
 
 DEFAULT_OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'www')
 
@@ -122,6 +123,9 @@ def _parse_QA_file(filename):
 
 def construct_content(components):
     content = ''
+    content += '<thead>'
+    content += '<tr><th>English Phrase</th><th>Japanese Description</th></tr>'
+    content += '</thead>'
     content += '<tbody>'
     for component in components:
         if isinstance(component, QAComment):
@@ -134,19 +138,50 @@ def construct_content(components):
     return content
 
 def main(args):
+    stem_name = os.path.splitext(os.path.basename(args.input_file))[0]
     components = _parse_QA_file(args.input_file)
     page_content = construct_content(components)
     with open('template.html') as f:
         html = f.read()
 
+    html = html.replace('%TITLE%', stem_name.replace('-', ' ').title())
     html = html.replace('%CONTENT%', page_content)
 
-    output_filename = os.path.splitext(os.path.basename(args.input_file).lower())[0] + '.html'
+    output_filename = stem_name.lower() + '.html'
     output_filepath = os.path.join(args.output_dir, output_filename)
 
     with open(output_filepath, 'w') as f:
         f.write(html)
     print(f'Created {output_filepath}')
+
+    make_index_page(args.output_dir)
+
+def make_index_page(output_dir):
+    sub_pages_list = []
+    for html_file in glob(os.path.join(output_dir, '*.html')):
+        if os.path.basename(html_file) == 'index.html':
+            continue
+        title = os.path.splitext(os.path.basename(html_file))[0].replace('-', ' ').title()
+        sub_pages_list.append((title, html_file))
+
+    content = ''
+    content += '<thead>'
+    content += '<tr><th>Pages</th></tr>'
+    content += '</thead>'
+    content += '<tbody class="uk-table-striped">'
+    for title, html_file in sorted(sub_pages_list):
+        content += f'<tr><td><a href="{html_file}">{title}</a></td></tr>'
+    content += '</body>'
+    with open('template.html') as f:
+        html = f.read()
+    html = html.replace('%TITLE%', 'Vocablary overview')
+    html = html.replace('%CONTENT%', content)
+
+    index_filename = os.path.join(output_dir, 'index.html')
+    with open(index_filename, 'w') as f:
+        f.write(html)
+
+    print(f'Created {index_filename}')
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

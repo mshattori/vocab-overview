@@ -3,33 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Vocabulary List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/css/uikit.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/js/uikit-icons.min.js"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
         .comment {
             color: grey;
-            font-style: italic;
         }
         .synonym, .note {
             font-size: smaller;
             color: grey;
         }
+        .uk-table th, .uk-table td {
+            border-right: 1px solid #ddd;
+        }
+        .uk-table th:last-child, .uk-table td:last-child {
+            border-right: none;
+        }
     </style>
 </head>
 <body>
-    %CONTENT%
+    <table class="uk-table uk-table-divider uk-table-responsive">
+        <thead>
+            <tr>
+                <th>English Phrase</th>
+                <th>Japanese Description</th>
+            </tr>
+        </thead>
+        %CONTENT%
+    </table>
 </body>
 </html>

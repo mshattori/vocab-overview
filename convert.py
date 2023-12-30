@@ -7,12 +7,12 @@ DEFAULT_OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'w
 
 
 def split_by_parens(text):
-    split_text = re.split(r'(\([^()]+(?:\([^()]+\)[^()]*)*\))', text)
+    split_text = re.split(r'(\([^()]*(?:\([^()]+\)[^()]*)*\))', text)
     result = [s for s in split_text if s.strip()]
     return result
 
 def split_by_brackets(text):
-    split_text = re.split(r'(\[[^\[\]]+(?:\[[^\[\]]+\][^\[\]]*)*\])', text)
+    split_text = re.split(r'(\[[^\[\]]*(?:\[[^\[\]]+\][^\[\]]*)*\])', text)
     result = [s for s in split_text if s.strip()]
     return result
 
@@ -122,8 +122,7 @@ def _parse_QA_file(filename):
 
 def construct_content(components):
     content = ''
-    content += '<table>'
-    content += '<tr><th>English Phrase</th><th>Japanese Description</th></tr>'
+    content += '<tbody>'
     for component in components:
         if isinstance(component, QAComment):
             content += '<tr class="comment"><td colspan="2">' + str(component) + '</td></tr>'
@@ -131,7 +130,7 @@ def construct_content(components):
             content += '<tr><td>' + component.q_text + '</td><td>' + component.a_text + '</td></tr>'
         elif isinstance(component, QAAnnotation):
             content += '<tr class="note"><td colspan="2">' + str(component) + '</td></tr>'
-    content += '</table>'
+    content += '</body>'
     return content
 
 def main(args):

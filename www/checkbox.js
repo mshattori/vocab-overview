@@ -1,11 +1,17 @@
 // Use HTML filename without the extension as the DB name
 const dbName = document.location.pathname.split('/').pop().split('.')[0];
 const dbVersion = 1;
+let db;
 
-document.addEventListener('DOMContentLoaded', initCheckboxDatabase);
+document.addEventListener('DOMContentLoaded', function() {
+    initCheckboxDatabase();
+    // Add event listener to clear-checkboxes menu
+    document.getElementById('clear-checkboxes').addEventListener('click', function() {
+        clearCheckboxes(db);
+    });
+});
 
 function initCheckboxDatabase() {
-    let db;
     const request = indexedDB.open(dbName, dbVersion);
     request.onerror = function(event) {
         console.error('Database error:', event.target.error);
@@ -47,4 +53,13 @@ function saveCheckboxState(db, id, state) {
     const store = transaction.objectStore('checkboxes');
     const data = {id: id, state: state};
     store.put(data);
+}
+
+function clearCheckboxes(db) {
+    const transaction = db.transaction(['checkboxes'], 'readwrite');
+    const store = transaction.objectStore('checkboxes');
+    document.querySelectorAll('input[type="checkbox"]').forEach(function(checkbox) {
+        checkbox.checked = false;
+        store.put({ id: checkbox.id, state: false });
+    });
 }

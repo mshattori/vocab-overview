@@ -4,6 +4,8 @@ import re
 import argparse
 from glob import glob
 
+INDEX_TEMPLATE_FILEPATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'index_template.html')
+PAGE_TEMPLATE_FILEPATH  = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'page_template.html')
 DEFAULT_OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'www')
 
 
@@ -153,7 +155,7 @@ def main(args):
     stem_name = os.path.splitext(os.path.basename(args.input_file))[0]
     components = _parse_QA_file(args.input_file)
     page_content = construct_content(components)
-    with open('template.html') as f:
+    with open(PAGE_TEMPLATE_FILEPATH) as f:
         html = f.read()
 
     html = html.replace('%TITLE%', stem_name.replace('-', ' ').title())
@@ -185,7 +187,7 @@ def make_index_page(output_dir):
     for title, html_file in sorted(sub_pages_list):
         content += f'<tr><td><a href="{html_file}">{title}</a></td></tr>'
     content += '</body>'
-    with open('template.html') as f:
+    with open(INDEX_TEMPLATE_FILEPATH) as f:
         html = f.read()
     html = html.replace('%TITLE%', 'Vocablary overview')
     html = html.replace('%CONTENT%', content)

@@ -45,6 +45,15 @@ class QAItem:
     def __init__(self, q_text, a_text):
         self._q_text = q_text
         self._a_text = a_text
+        # Split q_text by space, slash and punctuation marks (period, comma, etc.)
+        id_components = re.split(r'[\s/.,;:!?]+', q_text)
+        # Remove characters that cannot be used for the id of HTML elements.
+        id_components = [re.sub(r'[^\w-]', '', c) for c in id_components]
+        self._item_id = '-'.join(id_components)
+
+    @property
+    def item_id(self):
+        return self._item_id
 
     @property
     def q_text(self):
@@ -123,18 +132,21 @@ def _parse_QA_file(filename):
 
 def construct_content(components):
     content = ''
-    content += '<thead>'
-    content += '<tr><th>English Phrase</th><th>Japanese Description</th></tr>'
-    content += '</thead>'
+    # content += '<thead>'
+    # content += '<tr><th>English Phrase</th><th>Japanese Description</th></tr>'
+    # content += '</thead>'
     content += '<tbody>'
     for component in components:
         if isinstance(component, QAComment):
-            content += '<tr class="comment"><td colspan="2">' + str(component) + '</td></tr>'
+            content += '<tr class="comment"><td colspan="3">' + str(component) + '</td></tr>\n'
         elif isinstance(component, QAItem):
-            content += '<tr><td>' + component.q_text + '</td><td>' + component.a_text + '</td></tr>'
+            content += '<tr>'
+            content += f'<td><input class="uk-checkbox" type="checkbox" id="{component.item_id}"/></td>'
+            content += f'<td>{component.q_text}</td>'
+            content += f'<td>{component.a_text}</td>'
+            content += '</tr>\n'
         elif isinstance(component, QAAnnotation):
-            content += '<tr class="note"><td colspan="2">' + str(component) + '</td></tr>'
-    content += '</body>'
+            content += '<tr class="note"><td colspan="3">' + str(component) + '</td></tr>\n'
     return content
 
 def main(args):

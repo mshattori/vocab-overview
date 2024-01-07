@@ -137,18 +137,19 @@ def construct_content(components):
     # content += '<thead>'
     # content += '<tr><th>English Phrase</th><th>Japanese Description</th></tr>'
     # content += '</thead>'
-    content += '<tbody>'
+    content += '<tbody>\n'
     for component in components:
         if isinstance(component, QAComment):
             content += '<tr class="comment"><td colspan="3">' + str(component) + '</td></tr>\n'
         elif isinstance(component, QAItem):
-            content += '<tr>'
-            content += f'<td><input class="uk-checkbox" type="checkbox" id="{component.item_id}"/></td>'
-            content += f'<td>{component.q_text}</td>'
-            content += f'<td class="answer-text">{component.a_text}</td>'
+            content += '<tr>\n'
+            content += f'<td><input class="uk-checkbox" type="checkbox" id="{component.item_id}"/></td>\n'
+            content += f'<td>{component.q_text}</td>\n'
+            content += f'<td class="answer-text">{component.a_text}</td>\n'
             content += '</tr>\n'
         elif isinstance(component, QAAnnotation):
             content += '<tr class="note"><td colspan="3">' + str(component) + '</td></tr>\n'
+    content += '</tbody>'
     return content
 
 def main(args):

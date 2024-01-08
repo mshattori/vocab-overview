@@ -12,17 +12,19 @@
     <link rel="stylesheet" href="table.css" />
 </head>
 <body>
-    <nav class="uk-navbar-container" uk-navbar>
-        <div class="uk-navbar-right">
-            <a class="uk-navbar-toggle uk-navbar-toggle-animate" uk-navbar-toggle-icon href="#"></a>
-            <div class="uk-navbar-dropdown">
-                <ul class="uk-nav uk-navbar-dropdown-nav">
-                    <li><a href="#" id="clear-checkboxes">Clear Checkboxes</a></li>
-                    <li><a href="#" id="toggle-answers">Hide/Show Answers</a></li>
-                </ul>
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+        <nav class="uk-navbar-container" uk-navbar>
+            <div class="uk-navbar-right">
+                <a class="uk-navbar-toggle uk-navbar-toggle-animate" uk-navbar-toggle-icon href="#"></a>
+                <div class="uk-navbar-dropdown">
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li><a href="#" id="clear-checkboxes">Clear Checkboxes</a></li>
+                        <li><a href="#" id="toggle-answers">Hide/Show Answers</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
     <table class="uk-table uk-table-divider">
         <tbody>
 <tr>

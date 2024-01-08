@@ -78,10 +78,10 @@ class QAItem:
         equals = q_equals + a_equals
         annotations = q_annotations + a_annotations
 
-        q_text = ', '.join(q_texts)
-        a_text = ', '.join(a_texts)
-        equals = ', '.join(equals)
-        annotations = '; '.join(annotations)
+        q_text = ', '.join(q_texts).strip()
+        a_text = ', '.join(a_texts).strip()
+        equals = ', '.join(equals).strip()
+        annotations = '; '.join(annotations).strip()
 
         components = []
         components.append(QAItem(q_text, a_text))

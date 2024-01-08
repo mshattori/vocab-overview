@@ -148,7 +148,7 @@ def construct_content(components):
             content += f'<td class="answer-text">{component.a_text}</td>\n'
             content += '</tr>\n'
         elif isinstance(component, QAAnnotation):
-            content += '<tr class="note"><td colspan="3">' + str(component) + '</td></tr>\n'
+            content += '<tr class="note"><td colspan="3" class="answer-text">' + str(component) + '</td></tr>\n'
     content += '</tbody>'
     return content
 

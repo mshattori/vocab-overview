@@ -16,5 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.answer-text').forEach(function(element) {
             element.style.opacity = globalVisibility;
         });
+        UIkit.dropdown('.uk-navbar-dropdown').hide();
     });
 });

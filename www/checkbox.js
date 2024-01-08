@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add event listener to clear-checkboxes menu
     document.getElementById('clear-checkboxes').addEventListener('click', function() {
         clearCheckboxes(db);
+        UIkit.dropdown('.uk-navbar-dropdown').hide();
     });
 });
 

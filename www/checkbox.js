@@ -30,10 +30,13 @@ function initCheckboxDatabase() {
 
 function initCheckboxStates(db) {
     console.log('Initializing checkbox states...');
-    const transaction = db.transaction(['checkboxes'], 'readonly');
+    const transaction = db.transaction(['checkboxes'], 'readwrite');
     const store = transaction.objectStore('checkboxes');
 
+    let latestCheckboxIds = [];
+
     document.querySelectorAll('input[type="checkbox"]').forEach(function(checkbox) {
+        latestCheckboxIds.push(checkbox.id); // Record the latest checkboxes
         let request = store.get(checkbox.id);
         // Apply checked state and add event listener to checkboxes
         request.onsuccess = function(event) {
@@ -47,6 +50,21 @@ function initCheckboxStates(db) {
             saveCheckboxState(db, checkbox.id, checkbox.checked);
         });
     });
+    cleanupDatabase(store, latestCheckboxIds);
+}
+
+function cleanupDatabase(store, checkboxIds) {
+    // Delete all unused records
+    const request = store.getAll();
+    request.onsuccess = function() {
+        const allRecords = request.result;
+        allRecords.forEach(function(record) {
+            if (!checkboxIds.includes(record.id)) {
+                store.delete(record.id);
+                console.log('Deleted unused record:', record.id);
+            }
+        });
+    };
 }
 
 function saveCheckboxState(db, id, state) {

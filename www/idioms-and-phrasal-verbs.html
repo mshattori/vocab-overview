@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Idioms And Phrasal Verbs</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/css/uikit.min.css" />
+    <style>
+        .transparent-navbar {
+            background: rgba(255, 255, 255, 0.8) !important;
+            box-shadow: none !important;
+        }
+    </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/js/uikit-icons.min.js"></script>
     <script src="checkbox.js"></script>
@@ -13,7 +19,7 @@
 </head>
 <body>
     <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; show-on-up: true">
-        <nav class="uk-navbar-container" uk-navbar>
+        <nav class="uk-navbar-container transparent-navbar" uk-navbar>
             <div class="uk-navbar-right">
                 <a class="uk-navbar-toggle uk-navbar-toggle-animate" uk-navbar-toggle-icon href="#"></a>
                 <div class="uk-navbar-dropdown">

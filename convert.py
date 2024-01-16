@@ -59,6 +59,9 @@ class QAItem:
         # Remove characters that cannot be used for the id of HTML elements.
         id_components = [re.sub(r'[^\w-]', '', c) for c in id_components]
         id_components = [c for c in id_components if len(c)]
+        # Insert 'id' to make sure the id starts with a word (not a decimal character)
+        if id_components[0].isdigit():
+            id_components.insert(0, 'id')
         self._item_id = '-'.join(id_components)
 
     @property
@@ -153,17 +156,19 @@ def construct_content(components):
     # content += '<tr><th>English Phrase</th><th>Japanese Description</th></tr>'
     # content += '</thead>'
     content += '<tbody>\n'
+    item_id = ''
     for component in components:
         if isinstance(component, QAComment):
             content += '<tr class="comment"><td colspan="3">' + str(component) + '</td></tr>\n'
         elif isinstance(component, QAItem):
-            content += '<tr>\n'
-            content += f'<td><input class="uk-checkbox" type="checkbox" id="{component.item_id}"/></td>\n'
+            item_id = component.item_id
+            content += f'<tr class="{item_id}">\n'
+            content += f'<td><input class="uk-checkbox" type="checkbox" id="{item_id}"/></td>\n'
             content += f'<td>{component.q_text}</td>\n'
             content += f'<td class="answer-text">{component.a_text}</td>\n'
             content += '</tr>\n'
         elif isinstance(component, QAAnnotation):
-            content += '<tr class="note"><td colspan="3" class="answer-text">' + str(component) + '</td></tr>\n'
+            content += f'<tr class="note {item_id}"><td colspan="3" class="answer-text">{str(component)}</td></tr>\n'
     content += '</tbody>'
     return content
 

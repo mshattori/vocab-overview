@@ -2,12 +2,17 @@
 const dbName = document.location.pathname.split('/').pop().split('.')[0];
 const dbVersion = 1;
 let db;
+let showUnchecked = true
 
 document.addEventListener('DOMContentLoaded', function() {
     initCheckboxDatabase();
     // Add event listener to clear-checkboxes menu
     document.getElementById('clear-checkboxes').addEventListener('click', function() {
         clearCheckboxes(db);
+        UIkit.dropdown('.uk-navbar-dropdown').hide();
+    });
+    document.getElementById('toggle-unchecked').addEventListener('click', function() {
+        toggleUnchecked();
         UIkit.dropdown('.uk-navbar-dropdown').hide();
     });
 });
@@ -36,6 +41,7 @@ function initCheckboxStates(db) {
     let latestCheckboxIds = [];
 
     document.querySelectorAll('input[type="checkbox"]').forEach(function(checkbox) {
+        checkbox.checked = false; // Set default checked state to false
         latestCheckboxIds.push(checkbox.id); // Record the latest checkboxes
         let request = store.get(checkbox.id);
         // Apply checked state and add event listener to checkboxes
@@ -80,5 +86,19 @@ function clearCheckboxes(db) {
     document.querySelectorAll('input[type="checkbox"]').forEach(function(checkbox) {
         checkbox.checked = false;
         store.put({ id: checkbox.id, state: false });
+    });
+}
+
+function toggleUnchecked() {
+    showUnchecked = !showUnchecked;
+    document.querySelectorAll('input[type="checkbox"]').forEach(function(checkbox) {
+        display = showUnchecked || checkbox.checked ? 'block' : 'none';
+        document.querySelectorAll('.' + checkbox.id).forEach(function(element) {
+            element.style.display = display;
+        });
+    });
+    // Hide comments when hiding unchecked
+    document.querySelectorAll('.comment').forEach(function(comment) {
+        comment.style.display = showUnchecked ? 'block' : 'none';
     });
 }

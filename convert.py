@@ -195,11 +195,11 @@ def make_index_page(output_dir):
     content = ''
     content += '<thead>'
     content += '<tr><th>Pages</th></tr>'
-    content += '</thead>'
-    content += '<tbody class="uk-table-striped">'
+    content += '</thead>\n'
+    content += '<tbody class="uk-table-striped">\n'
     for title, html_file in sorted(sub_pages_list):
-        content += f'<tr><td><a href="{html_file}">{title}</a></td></tr>'
-    content += '</body>'
+        content += f'<tr><td><a href="{html_file}">{title}</a></td></tr>\n'
+    content += '</tbody>\n'
     with open(INDEX_TEMPLATE_FILEPATH) as f:
         html = f.read()
     html = html.replace('%TITLE%', 'Vocablary overview')

@@ -11,29 +11,33 @@ DEFAULT_OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'w
 
 def split_by_parens(text):
     split_text = re.split(r'(\([^()]*(?:\([^()]+\)[^()]*)*\))', text)
-    result = [s for s in split_text if s.strip()]
+    result = [s.strip() for s in split_text if s.strip()]
     return result
 
 def split_by_brackets(text):
     split_text = re.split(r'(\[[^\[\]]*(?:\[[^\[\]]+\][^\[\]]*)*\])', text)
-    result = [s for s in split_text if s.strip()]
+    result = [s.strip() for s in split_text if s.strip()]
     return result
 
 def split_by_brackets_and_parens(text):
     result = []
     split_text = split_by_brackets(text)
     for s in split_text:
-        if s.strip():
-            result.extend(split_by_parens(s))
+        result.extend(split_by_parens(s))
     return result
+
+WORD_CLASS_PATTERN = r'\((vi|vt|adj|adv|n)\.?\)'
 
 def split_text_equals_annotations(text):
     texts = []
     equals = []
     annotations = []
+
     split_text = split_by_brackets_and_parens(text)
     for s in split_text:
-        if re.fullmatch('\[.*\]|\(.*\)', s):
+        if re.fullmatch(WORD_CLASS_PATTERN, s):
+            texts.append(s)
+        elif re.fullmatch('\[.*\]|\(.*\)', s):
             s = s[1:-1]
             if s.startswith('='):
                 equals.append(s[1:])
@@ -41,6 +45,7 @@ def split_text_equals_annotations(text):
                 annotations.append(s)
         else:
             texts.append(s)
+
     return texts, equals, annotations
 
 class QAItem:
@@ -78,10 +83,17 @@ class QAItem:
         equals = q_equals + a_equals
         annotations = q_annotations + a_annotations
 
-        q_text = ', '.join(q_texts).strip()
-        a_text = ', '.join(a_texts).strip()
-        equals = ', '.join(equals).strip()
-        annotations = '; '.join(annotations).strip()
+        def remove_commas_around_word_class(text):
+            # Remove commas before/after word class signes.
+            pattern = f'(, )?{WORD_CLASS_PATTERN}(, )?'
+            # Preserve the space at left, but remove the right one
+            replace = lambda m: m.group().lstrip(',').rstrip(' ,')
+            return re.sub(pattern, replace, text)
+
+        q_text = remove_commas_around_word_class(', '.join(q_texts))
+        a_text = remove_commas_around_word_class(', '.join(a_texts))
+        equals = ', '.join(equals)
+        annotations = '; '.join(annotations)
 
         components = []
         components.append(QAItem(q_text, a_text))

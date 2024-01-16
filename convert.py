@@ -52,10 +52,13 @@ class QAItem:
     def __init__(self, q_text, a_text):
         self._q_text = q_text
         self._a_text = a_text
+        # Remove word class signes
+        q_text = re.sub(WORD_CLASS_PATTERN, '', q_text)
         # Split q_text by space, slash and punctuation marks (period, comma, etc.)
         id_components = re.split(r'[\s/.,;:!?]+', q_text)
         # Remove characters that cannot be used for the id of HTML elements.
         id_components = [re.sub(r'[^\w-]', '', c) for c in id_components]
+        id_components = [c for c in id_components if len(c)]
         self._item_id = '-'.join(id_components)
 
     @property

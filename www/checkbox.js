@@ -3,6 +3,7 @@ const dbName = document.location.pathname.split('/').pop().split('.')[0];
 const dbVersion = 1;
 let db;
 let showUnchecked = true
+let questionWidth = 0
 
 document.addEventListener('DOMContentLoaded', function() {
     initCheckboxDatabase();
@@ -15,6 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleUnchecked();
         UIkit.dropdown('.uk-navbar-dropdown').hide();
     });
+});
+
+window.addEventListener('load', function() {
+    // Preserve the width
+    questionWidth = document.querySelector('td.question-text').offsetWidth;
 });
 
 function initCheckboxDatabase() {
@@ -90,6 +96,7 @@ function clearCheckboxes(db) {
 }
 
 function toggleUnchecked() {
+    console.log(questionWidth)
     showUnchecked = !showUnchecked;
     document.querySelectorAll('input[type="checkbox"]').forEach(function(checkbox) {
         display = showUnchecked || checkbox.checked ? 'block' : 'none';
@@ -100,5 +107,9 @@ function toggleUnchecked() {
     // Hide comments when hiding unchecked
     document.querySelectorAll('.comment').forEach(function(comment) {
         comment.style.display = showUnchecked ? 'block' : 'none';
+    });
+    // Reset the width
+    document.querySelectorAll('td.question-text').forEach(function(elem) {
+        elem.style.width = questionWidth + 'px'
     });
 }

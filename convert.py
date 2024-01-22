@@ -164,7 +164,7 @@ def construct_content(components):
             item_id = component.item_id
             content += f'<tr class="{item_id}">\n'
             content += f'<td><input class="uk-checkbox" type="checkbox" id="{item_id}"/></td>\n'
-            content += f'<td>{component.q_text}</td>\n'
+            content += f'<td class="question-text">{component.q_text}</td>\n'
             content += f'<td class="answer-text">{component.a_text}</td>\n'
             content += '</tr>\n'
         elif isinstance(component, QAAnnotation):

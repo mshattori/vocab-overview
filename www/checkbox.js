@@ -100,7 +100,9 @@ function toggleUnchecked() {
     showUnchecked = !showUnchecked;
     document.querySelectorAll('input[type="checkbox"]').forEach(function(checkbox) {
         display = showUnchecked || checkbox.checked ? 'block' : 'none';
-        document.querySelectorAll('.' + checkbox.id).forEach(function(element) {
+        // NOTE: querySelectorAll() causes an error when checkbox.id contains non-ASCII.
+        elements = document.getElementsByClassName(checkbox.id);
+        Array.from(elements).forEach(function(element) {
             element.style.display = display;
         });
     });

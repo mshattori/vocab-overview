@@ -14,6 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/js/uikit-icons.min.js"></script>
     <script src="checkbox.js"></script>
+    <script src="set-position.js"></script>
     <script src="toggle-answers.js"></script>
     <link rel="stylesheet" href="table.css" />
 </head>
@@ -34,152 +35,158 @@
     </div>
     <table class="uk-table uk-table-divider">
         <tbody>
-<tr class="the-respiratory-organs">
+<tr class="item the-respiratory-organs">
 <td><input class="uk-checkbox" type="checkbox" id="the-respiratory-organs"/></td>
 <td class="question-text">the respiratory organs</td>
 <td class="answer-text">呼吸器</td>
 </tr>
 <tr class="note the-respiratory-organs"><td colspan="3" class="answer-text">respiratory /résp(ə)rət`ɔːri/ﾚｽﾊﾟﾗﾄﾘ/: 呼吸(作用)の; re(繰り返し)+spir(息をする)</td></tr>
-<tr class="a-lenient-treatment">
+<tr class="item a-lenient-treatment">
 <td><input class="uk-checkbox" type="checkbox" id="a-lenient-treatment"/></td>
 <td class="question-text">a lenient treatment</td>
 <td class="answer-text">寛大な処置</td>
 </tr>
 <tr class="note a-lenient-treatment"><td colspan="3" class="answer-text">lenient /líːniənt/ﾘｰﾆｴﾝﾄ/: 寛大な,慈悲深い,甘い</td></tr>
-<tr class="an-abridged-edition">
+<tr class="item an-abridged-edition">
 <td><input class="uk-checkbox" type="checkbox" id="an-abridged-edition"/></td>
 <td class="question-text">an abridged edition</td>
 <td class="answer-text">要約版</td>
 </tr>
 <tr class="note an-abridged-edition"><td colspan="3" class="answer-text">abridged /əbrídʒ/: 要約する,短縮する</td></tr>
-<tr class="look-dejected">
+<tr class="item look-dejected">
 <td><input class="uk-checkbox" type="checkbox" id="look-dejected"/></td>
 <td class="question-text">look dejected</td>
 <td class="answer-text">しょんぼりして見える</td>
 </tr>
-<tr class="perform-an-autopsy">
+<tr class="item perform-an-autopsy">
 <td><input class="uk-checkbox" type="checkbox" id="perform-an-autopsy"/></td>
 <td class="question-text">perform an autopsy</td>
 <td class="answer-text">検死を行なう</td>
 </tr>
 <tr class="note perform-an-autopsy"><td colspan="3" class="answer-text">autopsy /ˈɔːtɑpsi/ｵｰﾀﾌﾟｼ/: 検死解剖</td></tr>
-<tr class="strangle-the-economy">
+<tr class="item strangle-the-economy">
 <td><input class="uk-checkbox" type="checkbox" id="strangle-the-economy"/></td>
 <td class="question-text">strangle the economy</td>
 <td class="answer-text">経済を抑圧する</td>
 </tr>
 <tr class="note strangle-the-economy"><td colspan="3" class="answer-text">strangle: 抑圧する(=supress, restrain, hamper): 締め殺す(=stifle, choke)</td></tr>
-<tr class="a-sturdy-soldier">
+<tr class="item a-sturdy-soldier">
 <td><input class="uk-checkbox" type="checkbox" id="a-sturdy-soldier"/></td>
 <td class="question-text">a sturdy soldier</td>
 <td class="answer-text">頑健な兵士</td>
 </tr>
 <tr class="note a-sturdy-soldier"><td colspan="3" class="answer-text">=robust; ref.stout: thick and strong; stoky: short and solid</td></tr>
-<tr class="a-janitors-room">
+<tr class="item a-janitors-room">
 <td><input class="uk-checkbox" type="checkbox" id="a-janitors-room"/></td>
 <td class="question-text">a janitor's room</td>
 <td class="answer-text">守衛室</td>
 </tr>
 <tr class="note a-janitors-room"><td colspan="3" class="answer-text">janitor: ビルの管理人,門番,学校の用務員</td></tr>
-<tr class="a-proponent-of-clean-energy">
+<tr class="item a-proponent-of-clean-energy">
 <td><input class="uk-checkbox" type="checkbox" id="a-proponent-of-clean-energy"/></td>
 <td class="question-text">a proponent of clean energy</td>
 <td class="answer-text">クリーンエネルギーの支持者</td>
 </tr>
 <tr class="note a-proponent-of-clean-energy"><td colspan="3" class="answer-text">proponent: 支持者,擁護者(=supporter); 提唱者(=advocate); ↔︎ opponent</td></tr>
-<tr class="termite-extermination">
+<tr class="item termite-extermination">
 <td><input class="uk-checkbox" type="checkbox" id="termite-extermination"/></td>
 <td class="question-text">termite extermination</td>
 <td class="answer-text">シロアリ駆除</td>
 </tr>
 <tr class="note termite-extermination"><td colspan="3" class="answer-text">termite/ﾀｰﾏｲﾄ/</td></tr>
-<tr class="a-house-of-detention">
+<tr class="item a-house-of-detention">
 <td><input class="uk-checkbox" type="checkbox" id="a-house-of-detention"/></td>
 <td class="question-text">a house of detention</td>
 <td class="answer-text">留置場</td>
 </tr>
 <tr class="note a-house-of-detention"><td colspan="3" class="answer-text">detention: 拘留,拘禁; 引き止め; ref. detain: 拘留する</td></tr>
-<tr class="a-model-inmate">
+<tr class="item a-model-inmate">
 <td><input class="uk-checkbox" type="checkbox" id="a-model-inmate"/></td>
 <td class="question-text">a model inmate</td>
 <td class="answer-text">模範囚</td>
 </tr>
 <tr class="note a-model-inmate"><td colspan="3" class="answer-text">inmate: (病院・刑務所などの収容者,同居人)</td></tr>
-<tr class="got-blisters-on-my-hand">
+<tr class="item got-blisters-on-my-hand">
 <td><input class="uk-checkbox" type="checkbox" id="got-blisters-on-my-hand"/></td>
 <td class="question-text">got blisters on my hand</td>
 <td class="answer-text">手に水ぶくれができた</td>
 </tr>
-<tr class="a-compound-fracture">
+<tr class="item a-compound-fracture">
 <td><input class="uk-checkbox" type="checkbox" id="a-compound-fracture"/></td>
 <td class="question-text">a compound fracture</td>
 <td class="answer-text">複雑骨折</td>
 </tr>
-<tr class="microbes-and-viruses">
+<tr class="item microbes-and-viruses">
 <td><input class="uk-checkbox" type="checkbox" id="microbes-and-viruses"/></td>
 <td class="question-text">microbes and viruses</td>
 <td class="answer-text">微生物とウイルス</td>
 </tr>
 <tr class="note microbes-and-viruses"><td colspan="3" class="answer-text">microbes: 微生物(=microorganism); 病原菌; ref. germ: (日常用語で)細菌・病原菌</td></tr>
-<tr class="an-apprentice-carpenter">
+<tr class="item an-apprentice-carpenter">
 <td><input class="uk-checkbox" type="checkbox" id="an-apprentice-carpenter"/></td>
 <td class="question-text">an apprentice carpenter</td>
 <td class="answer-text">見習い大工</td>
 </tr>
 <tr class="note an-apprentice-carpenter"><td colspan="3" class="answer-text">apprentice: 徒弟,見習い,実習生</td></tr>
-<tr class="deflect-criticism">
+<tr class="item deflect-criticism">
 <td><input class="uk-checkbox" type="checkbox" id="deflect-criticism"/></td>
 <td class="question-text">deflect criticism</td>
 <td class="answer-text">批判をそらす</td>
 </tr>
 <tr class="note deflect-criticism"><td colspan="3" class="answer-text">deflect/ﾃﾞｨﾌﾚｸﾄ/: そらせる; 偏向させる,ゆがめる=divert, distract</td></tr>
-<tr class="converge-on-a-point">
+<tr class="item converge-on-a-point">
 <td><input class="uk-checkbox" type="checkbox" id="converge-on-a-point"/></td>
 <td class="question-text">converge on a point</td>
 <td class="answer-text">一点に収束する</td>
 </tr>
 <tr class="note converge-on-a-point"><td colspan="3" class="answer-text">converge: 一ヶ所に集中する,収束,収斂する</td></tr>
-<tr class="a-perilous-voyage">
+<tr class="item a-perilous-voyage">
 <td><input class="uk-checkbox" type="checkbox" id="a-perilous-voyage"/></td>
 <td class="question-text">a perilous voyage</td>
 <td class="answer-text">危険な船旅</td>
 </tr>
 <tr class="note a-perilous-voyage"><td colspan="3" class="answer-text">→ peril</td></tr>
-<tr class="become-nervous-and-perspire">
+<tr class="item become-nervous-and-perspire">
 <td><input class="uk-checkbox" type="checkbox" id="become-nervous-and-perspire"/></td>
 <td class="question-text">become nervous and perspire</td>
 <td class="answer-text">緊張して汗をかく</td>
 </tr>
 <tr class="note become-nervous-and-perspire"><td colspan="3" class="answer-text">ref. perspiration: 発汗</td></tr>
-<tr class="demote-the-employee">
+<tr class="item demote-the-employee">
 <td><input class="uk-checkbox" type="checkbox" id="demote-the-employee"/></td>
 <td class="question-text">demote the employee</td>
 <td class="answer-text">社員を降格させる</td>
 </tr>
 <tr class="note demote-the-employee"><td colspan="3" class="answer-text">cf.promote</td></tr>
-<tr class="influx-of-jellyfish">
+<tr class="item influx-of-jellyfish">
 <td><input class="uk-checkbox" type="checkbox" id="influx-of-jellyfish"/></td>
 <td class="question-text">influx of jellyfish</td>
 <td class="answer-text">クラゲの大量流入</td>
 </tr>
 <tr class="note influx-of-jellyfish"><td colspan="3" class="answer-text">influx: 流入,殺到</td></tr>
-<tr class="a-counterfeit-diamond">
+<tr class="item a-counterfeit-diamond">
 <td><input class="uk-checkbox" type="checkbox" id="a-counterfeit-diamond"/></td>
 <td class="question-text">a counterfeit diamond</td>
 <td class="answer-text">模造ダイヤ</td>
 </tr>
 <tr class="note a-counterfeit-diamond"><td colspan="3" class="answer-text">=bogus, fake; ref. (n.)forgery, (vt.)forge, falsify</td></tr>
-<tr class="falsify-the-data">
+<tr class="item falsify-the-data">
 <td><input class="uk-checkbox" type="checkbox" id="falsify-the-data"/></td>
 <td class="question-text">falsify the data</td>
 <td class="answer-text">データを偽造する</td>
 </tr>
-<tr class="a-gracious-mistress">
+<tr class="item a-gracious-mistress">
 <td><input class="uk-checkbox" type="checkbox" id="a-gracious-mistress"/></td>
 <td class="question-text">a gracious mistress</td>
 <td class="answer-text">お優しい奥様</td>
 </tr>
 <tr class="note a-gracious-mistress"><td colspan="3" class="answer-text">gracious; (下の者に対して)親切な,丁重な; 優雅な; ref.grace: 優雅さ,品格,寛大さ; mistress: (↔︎ master)(使用人の)女主人,ペットの飼い主,女流名人,情婦</td></tr>
+<tr class="item agonize-over-what-to-do">
+<td><input class="uk-checkbox" type="checkbox" id="agonize-over-what-to-do"/></td>
+<td class="question-text">agonize over what to do</td>
+<td class="answer-text">どうしようか頭を悩ませる</td>
+</tr>
+<tr class="note agonize-over-what-to-do"><td colspan="3" class="answer-text">agonize over: ～について頭を抱えて悩む,くよくよする; agonize: 難しい判断に苦悩,苦悶する</td></tr>
 </tbody>
     </table>
 </body>

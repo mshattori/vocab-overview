@@ -162,7 +162,7 @@ def construct_content(components):
             content += '<tr class="comment"><td colspan="3">' + str(component) + '</td></tr>\n'
         elif isinstance(component, QAItem):
             item_id = component.item_id
-            content += f'<tr class="{item_id}">\n'
+            content += f'<tr class="item {item_id}">\n'
             content += f'<td><input class="uk-checkbox" type="checkbox" id="{item_id}"/></td>\n'
             content += f'<td class="question-text">{component.q_text}</td>\n'
             content += f'<td class="answer-text">{component.a_text}</td>\n'

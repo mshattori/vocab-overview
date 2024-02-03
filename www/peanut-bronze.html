@@ -13,6 +13,7 @@
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/js/uikit-icons.min.js"></script>
+    <script src="local-context.js"></script>
     <script src="checkbox.js"></script>
     <script src="set-position.js"></script>
     <script src="toggle-answers.js"></script>
@@ -1595,12 +1596,11 @@
 <td class="question-text">ちょっと間を置く</td>
 <td class="answer-text">pause for a moment</td>
 </tr>
-<tr class="item 一定の-の感覚で">
-<td><input class="uk-checkbox" type="checkbox" id="一定の-の感覚で"/></td>
-<td class="question-text">一定の, の感覚で</td>
+<tr class="item 一定の時間間隔で">
+<td><input class="uk-checkbox" type="checkbox" id="一定の時間間隔で"/></td>
+<td class="question-text">一定の時間間隔で</td>
 <td class="answer-text">at regular intervals</td>
 </tr>
-<tr class="note 一定の-の感覚で"><td colspan="3" class="answer-text">時間</td></tr>
 <tr class="item 不規則な生活をする">
 <td><input class="uk-checkbox" type="checkbox" id="不規則な生活をする"/></td>
 <td class="question-text">不規則な生活をする</td>
@@ -1661,11 +1661,12 @@
 <td class="question-text">財産を相続する</td>
 <td class="answer-text">inherit property</td>
 </tr>
-<tr class="item あちこちで借金を作る">
-<td><input class="uk-checkbox" type="checkbox" id="あちこちで借金を作る"/></td>
-<td class="question-text">あちこちで借金を作る</td>
+<tr class="item 借金を重ねる">
+<td><input class="uk-checkbox" type="checkbox" id="借金を重ねる"/></td>
+<td class="question-text">借金を重ねる</td>
 <td class="answer-text">accumulate debts</td>
 </tr>
+<tr class="note 借金を重ねる"><td colspan="3" class="answer-text">cf.credit: 貸方,貸勘定</td></tr>
 <tr class="item 貧困から抜け出る">
 <td><input class="uk-checkbox" type="checkbox" id="貧困から抜け出る"/></td>
 <td class="question-text">貧困から抜け出る</td>
@@ -1686,9 +1687,9 @@
 <td class="question-text">値段を比べる</td>
 <td class="answer-text">compare prices</td>
 </tr>
-<tr class="item 物価高に不平を言う">
-<td><input class="uk-checkbox" type="checkbox" id="物価高に不平を言う"/></td>
-<td class="question-text">物価高に不平を言う</td>
+<tr class="item 高い物価に不平を言う">
+<td><input class="uk-checkbox" type="checkbox" id="高い物価に不平を言う"/></td>
+<td class="question-text">高い物価に不平を言う</td>
 <td class="answer-text">complain about high prices</td>
 </tr>
 <tr class="item おつりを計算する">
@@ -2251,15 +2252,14 @@
 <td class="question-text">脳細胞</td>
 <td class="answer-text">brain cells</td>
 </tr>
-<tr class="item 防衛機能">
-<td><input class="uk-checkbox" type="checkbox" id="防衛機能"/></td>
-<td class="question-text">防衛機能</td>
+<tr class="item 防衛機構">
+<td><input class="uk-checkbox" type="checkbox" id="防衛機構"/></td>
+<td class="question-text">防衛機構</td>
 <td class="answer-text">a defense mechanism</td>
 </tr>
-<tr class="note 防衛機能"><td colspan="3" class="answer-text">体の</td></tr>
-<tr class="item 体の発達">
-<td><input class="uk-checkbox" type="checkbox" id="体の発達"/></td>
-<td class="question-text">体の発達</td>
+<tr class="item 身体的発達">
+<td><input class="uk-checkbox" type="checkbox" id="身体的発達"/></td>
+<td class="question-text">身体的発達</td>
 <td class="answer-text">physical development</td>
 </tr>
 <tr class="item 平均身長">
@@ -2267,9 +2267,9 @@
 <td class="question-text">平均身長</td>
 <td class="answer-text">average height</td>
 </tr>
-<tr class="item 体の特徴">
-<td><input class="uk-checkbox" type="checkbox" id="体の特徴"/></td>
-<td class="question-text">体の特徴</td>
+<tr class="item 身体的特徴">
+<td><input class="uk-checkbox" type="checkbox" id="身体的特徴"/></td>
+<td class="question-text">身体的特徴</td>
 <td class="answer-text">physical features</td>
 </tr>
 <tr class="item ほっそりした体つき">
@@ -2312,9 +2312,9 @@
 <td class="question-text">深く呼吸する</td>
 <td class="answer-text">breathe deeply</td>
 </tr>
-<tr class="item 息をこらえる">
-<td><input class="uk-checkbox" type="checkbox" id="息をこらえる"/></td>
-<td class="question-text">息をこらえる</td>
+<tr class="item 息を止める">
+<td><input class="uk-checkbox" type="checkbox" id="息を止める"/></td>
+<td class="question-text">息を止める</td>
 <td class="answer-text">hold your breath</td>
 </tr>
 <tr class="item すきっ腹で">

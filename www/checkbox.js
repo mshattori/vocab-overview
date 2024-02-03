@@ -96,7 +96,6 @@ function clearCheckboxes(db) {
 }
 
 function toggleUnchecked() {
-    console.log(questionWidth)
     showUnchecked = !showUnchecked;
     document.querySelectorAll('input[type="checkbox"]').forEach(function(checkbox) {
         display = showUnchecked || checkbox.checked ? 'block' : 'none';

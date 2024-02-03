@@ -1,6 +1,6 @@
-let globalVisibility = 1
-
 document.addEventListener('DOMContentLoaded', function() {
+    let globalVisibility = 1
+
     // Set click event listener to toggle visibility
     document.querySelectorAll('.answer-text').forEach(function(element) {
         // NOTE: Using 'element.style.visibility' isn't avairable because hidden elements
@@ -11,11 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     document.getElementById('toggle-answers').addEventListener('click', function() {
+        saveVisibleRowId();
         // Toggle visibility of all target element
         globalVisibility = globalVisibility == 1 ? 0 : 1;
         document.querySelectorAll('.answer-text').forEach(function(element) {
             element.style.opacity = globalVisibility;
         });
         UIkit.dropdown('.uk-navbar-dropdown').hide();
+        scrollToSavedRow();
     });
 });

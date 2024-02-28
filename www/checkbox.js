@@ -2,7 +2,7 @@
 const dbName = document.location.pathname.split('/').pop().split('.')[0];
 const dbVersion = 1;
 let db;
-let showUnchecked = true
+let hideUnchecked = false
 let questionWidth = 0
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -63,6 +63,12 @@ function initCheckboxStates(db) {
         });
     });
     cleanupDatabase(store, latestCheckboxIds);
+
+    let hideUncheckedSaved = localContext.getItem('hide-unchecked');
+    console.log('hide-unchecked: ' + hideUncheckedSaved);
+    if (hideUncheckedSaved == 'true') {
+        toggleUnchecked();
+    }
 }
 
 function cleanupDatabase(store, checkboxIds) {
@@ -96,9 +102,19 @@ function clearCheckboxes(db) {
 }
 
 function toggleUnchecked() {
-    showUnchecked = !showUnchecked;
+    hideUnchecked = !hideUnchecked;
+    localContext.setItem('hide-unchecked', hideUnchecked);
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            doToggleUnchecked();
+        });
+    });
+}
+
+function doToggleUnchecked() {
+    console.log("doToggleUnchecked: hideUnchecked=" + hideUnchecked);
     document.querySelectorAll('input[type="checkbox"]').forEach(function(checkbox) {
-        display = showUnchecked || checkbox.checked ? 'block' : 'none';
+        display = (hideUnchecked && !checkbox.checked) ? 'none' : 'block';
         // NOTE: querySelectorAll() causes an error when checkbox.id contains non-ASCII.
         elements = document.getElementsByClassName(checkbox.id);
         Array.from(elements).forEach(function(element) {
@@ -107,7 +123,7 @@ function toggleUnchecked() {
     });
     // Hide comments when hiding unchecked
     document.querySelectorAll('.comment').forEach(function(comment) {
-        comment.style.display = showUnchecked ? 'block' : 'none';
+        comment.style.display = hideUnchecked ? 'none' : 'block';
     });
     // Reset the width
     document.querySelectorAll('td.question-text').forEach(function(elem) {

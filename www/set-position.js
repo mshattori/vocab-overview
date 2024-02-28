@@ -13,9 +13,10 @@ function saveVisibleRowId() {
     const viewportHeight = window.innerHeight;
     for (let row of rows) {
         const rect = row.getBoundingClientRect();
-        if (rect.top >= 0 && rect.bottom <= viewportHeight) {
+        if (rect.top >= 0 && rect.bottom <= viewportHeight && row.style.display != 'none') {
             checkbox = row.querySelector('input.uk-checkbox')
             localContext.setItem('visible-position', checkbox.id);
+            console.log("Save position: " + checkbox.id)
             break;
         }
     }

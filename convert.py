@@ -146,6 +146,8 @@ def _parse_QA_file(filename):
     with open(filename) as f:
         for line in f.readlines():
             line = line.rstrip('\n')
+            if line.strip() == '':
+                continue
             parsed_components = _parse_QA_line(line)
             components.extend(parsed_components)
     return components

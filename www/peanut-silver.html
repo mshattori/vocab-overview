@@ -1,0 +1,3928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Peanut Silver</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/css/uikit.min.css" />
+    <style>
+        .transparent-navbar {
+            background: rgba(255, 255, 255, 0.8) !important;
+            box-shadow: none !important;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/js/uikit-icons.min.js"></script>
+    <script src="local-context.js"></script>
+    <script src="checkbox.js"></script>
+    <script src="set-position.js"></script>
+    <script src="toggle-answers.js"></script>
+    <link rel="stylesheet" href="table.css" />
+</head>
+<body>
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; show-on-up: true">
+        <nav class="uk-navbar-container transparent-navbar" uk-navbar>
+            <div class="uk-navbar-right">
+                <a class="uk-navbar-toggle uk-navbar-toggle-animate" uk-navbar-toggle-icon href="#"></a>
+                <div class="uk-navbar-dropdown">
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li><a href="#" id="clear-checkboxes">Clear Checkboxes</a></li>
+                        <li><a href="#" id="toggle-unchecked">Hide/Show Unchecked</a></li>
+                        <li><a href="#" id="toggle-answers">Hide/Show Answers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <table class="uk-table uk-table-divider">
+        <tbody>
+<tr class="item 理論を修正する">
+<td><input class="uk-checkbox" type="checkbox" id="理論を修正する"/></td>
+<td class="question-text">理論を修正する</td>
+<td class="answer-text">modify the theory</td>
+</tr>
+<tr class="item 語学の才能">
+<td><input class="uk-checkbox" type="checkbox" id="語学の才能"/></td>
+<td class="question-text">語学の才能</td>
+<td class="answer-text">linguistic talent</td>
+</tr>
+<tr class="item 聴きとり能力">
+<td><input class="uk-checkbox" type="checkbox" id="聴きとり能力"/></td>
+<td class="question-text">聴きとり能力</td>
+<td class="answer-text">listening comprehension</td>
+</tr>
+<tr class="item 英語で会話する">
+<td><input class="uk-checkbox" type="checkbox" id="英語で会話する"/></td>
+<td class="question-text">英語で会話する</td>
+<td class="answer-text">converse in English</td>
+</tr>
+<tr class="item 口語表現">
+<td><input class="uk-checkbox" type="checkbox" id="口語表現"/></td>
+<td class="question-text">口語表現</td>
+<td class="answer-text">a colloquial expression</td>
+</tr>
+<tr class="item 田舎の方言">
+<td><input class="uk-checkbox" type="checkbox" id="田舎の方言"/></td>
+<td class="question-text">田舎の方言</td>
+<td class="answer-text">a rural dialect</td>
+</tr>
+<tr class="item 独特のなまり">
+<td><input class="uk-checkbox" type="checkbox" id="独特のなまり"/></td>
+<td class="question-text">独特のなまり</td>
+<td class="answer-text">a peculiar accent</td>
+</tr>
+<tr class="item 意味のはっきりしない一節">
+<td><input class="uk-checkbox" type="checkbox" id="意味のはっきりしない一節"/></td>
+<td class="question-text">意味のはっきりしない一節</td>
+<td class="answer-text">an obscure passage</td>
+</tr>
+<tr class="item 専門用語">
+<td><input class="uk-checkbox" type="checkbox" id="専門用語"/></td>
+<td class="question-text">専門用語</td>
+<td class="answer-text">technical terms</td>
+</tr>
+<tr class="item 複雑な文">
+<td><input class="uk-checkbox" type="checkbox" id="複雑な文"/></td>
+<td class="question-text">複雑な文</td>
+<td class="answer-text">a complicated sentence</td>
+</tr>
+<tr class="item 文法や語法">
+<td><input class="uk-checkbox" type="checkbox" id="文法や語法"/></td>
+<td class="question-text">文法や語法</td>
+<td class="answer-text">grammar and usage</td>
+</tr>
+<tr class="item 文法の細部">
+<td><input class="uk-checkbox" type="checkbox" id="文法の細部"/></td>
+<td class="question-text">文法の細部</td>
+<td class="answer-text">grammatical details</td>
+</tr>
+<tr class="item 唯一の例外">
+<td><input class="uk-checkbox" type="checkbox" id="唯一の例外"/></td>
+<td class="question-text">唯一の例外</td>
+<td class="answer-text">a single exception</td>
+</tr>
+<tr class="item 正確な情報">
+<td><input class="uk-checkbox" type="checkbox" id="正確な情報"/></td>
+<td class="question-text">正確な情報</td>
+<td class="answer-text">accurate information</td>
+</tr>
+<tr class="item 情報を得る">
+<td><input class="uk-checkbox" type="checkbox" id="情報を得る"/></td>
+<td class="question-text">情報を得る</td>
+<td class="answer-text">access information</td>
+</tr>
+<tr class="item 情報を伝える">
+<td><input class="uk-checkbox" type="checkbox" id="情報を伝える"/></td>
+<td class="question-text">情報を伝える</td>
+<td class="answer-text">transmit information</td>
+</tr>
+<tr class="item 情報を蓄える">
+<td><input class="uk-checkbox" type="checkbox" id="情報を蓄える"/></td>
+<td class="question-text">情報を蓄える</td>
+<td class="answer-text">store information</td>
+</tr>
+<tr class="item 情報を消化する">
+<td><input class="uk-checkbox" type="checkbox" id="情報を消化する"/></td>
+<td class="question-text">情報を消化する</td>
+<td class="answer-text">digest the information</td>
+</tr>
+<tr class="item 情報伝達の方式">
+<td><input class="uk-checkbox" type="checkbox" id="情報伝達の方式"/></td>
+<td class="question-text">情報伝達の方式</td>
+<td class="answer-text">a mode of communication</td>
+</tr>
+<tr class="note 情報伝達の方式"><td colspan="3" class="answer-text">mode: (表現などの)方法,様式; (機械などの)状態,モード; (動作や行為の)やり方,流儀; (動詞の)法</td></tr>
+<tr class="item 情報伝達の媒体">
+<td><input class="uk-checkbox" type="checkbox" id="情報伝達の媒体"/></td>
+<td class="question-text">情報伝達の媒体</td>
+<td class="answer-text">a medium for communication</td>
+</tr>
+<tr class="item 情報伝達を妨げる">
+<td><input class="uk-checkbox" type="checkbox" id="情報伝達を妨げる"/></td>
+<td class="question-text">情報伝達を妨げる</td>
+<td class="answer-text">hinder communication</td>
+</tr>
+<tr class="item 状況を説明する">
+<td><input class="uk-checkbox" type="checkbox" id="状況を説明する"/></td>
+<td class="question-text">状況を説明する</td>
+<td class="answer-text">illustrate the situation</td>
+</tr>
+<tr class="item 適切な説明">
+<td><input class="uk-checkbox" type="checkbox" id="適切な説明"/></td>
+<td class="question-text">適切な説明</td>
+<td class="answer-text">an adequate description</td>
+</tr>
+<tr class="item 手短な説明">
+<td><input class="uk-checkbox" type="checkbox" id="手短な説明"/></td>
+<td class="question-text">手短な説明</td>
+<td class="answer-text">a brief description</td>
+</tr>
+<tr class="item 事実を大げさに言う">
+<td><input class="uk-checkbox" type="checkbox" id="事実を大げさに言う"/></td>
+<td class="question-text">事実を大げさに言う</td>
+<td class="answer-text">exaggerate the facts</td>
+</tr>
+<tr class="item プライバシーを侵害する">
+<td><input class="uk-checkbox" type="checkbox" id="プライバシーを侵害する"/></td>
+<td class="question-text">プライバシーを侵害する</td>
+<td class="answer-text">intrude on her privacy</td>
+</tr>
+<tr class="item 手紙の内容">
+<td><input class="uk-checkbox" type="checkbox" id="手紙の内容"/></td>
+<td class="question-text">手紙の内容</td>
+<td class="answer-text">the contents of letter</td>
+</tr>
+<tr class="item 秘密を公開する">
+<td><input class="uk-checkbox" type="checkbox" id="秘密を公開する"/></td>
+<td class="question-text">秘密を公開する</td>
+<td class="answer-text">disclose the secret</td>
+</tr>
+<tr class="item 真相を暴露する">
+<td><input class="uk-checkbox" type="checkbox" id="真相を暴露する"/></td>
+<td class="question-text">真相を暴露する</td>
+<td class="answer-text">expose the truth</td>
+</tr>
+<tr class="item 電話でおしゃべりする">
+<td><input class="uk-checkbox" type="checkbox" id="電話でおしゃべりする"/></td>
+<td class="question-text">電話でおしゃべりする</td>
+<td class="answer-text">chat on the phone</td>
+</tr>
+<tr class="item 恥ずかしい話題">
+<td><input class="uk-checkbox" type="checkbox" id="恥ずかしい話題"/></td>
+<td class="question-text">恥ずかしい話題</td>
+<td class="answer-text">an embarrassing subject</td>
+</tr>
+<tr class="item 気づまりな沈黙">
+<td><input class="uk-checkbox" type="checkbox" id="気づまりな沈黙"/></td>
+<td class="question-text">気づまりな沈黙</td>
+<td class="answer-text">an awkward silence</td>
+</tr>
+<tr class="item 思い切って意見を述べる">
+<td><input class="uk-checkbox" type="checkbox" id="思い切って意見を述べる"/></td>
+<td class="question-text">思い切って意見を述べる</td>
+<td class="answer-text">venture an opinion</td>
+</tr>
+<tr class="item 悪気のない質問">
+<td><input class="uk-checkbox" type="checkbox" id="悪気のない質問"/></td>
+<td class="question-text">悪気のない質問</td>
+<td class="answer-text">an innocent question</td>
+</tr>
+<tr class="item まともな質問">
+<td><input class="uk-checkbox" type="checkbox" id="まともな質問"/></td>
+<td class="question-text">まともな質問</td>
+<td class="answer-text">a sensible question</td>
+</tr>
+<tr class="item 無礼な発言">
+<td><input class="uk-checkbox" type="checkbox" id="無礼な発言"/></td>
+<td class="question-text">無礼な発言</td>
+<td class="answer-text">a rude remark</td>
+</tr>
+<tr class="item 丁寧な返事">
+<td><input class="uk-checkbox" type="checkbox" id="丁寧な返事"/></td>
+<td class="question-text">丁寧な返事</td>
+<td class="answer-text">a courteous reply</td>
+</tr>
+<tr class="item 満足できる答">
+<td><input class="uk-checkbox" type="checkbox" id="満足できる答"/></td>
+<td class="question-text">満足できる答</td>
+<td class="answer-text">a satisfactory answer</td>
+</tr>
+<tr class="item 聞こえるささやき声">
+<td><input class="uk-checkbox" type="checkbox" id="聞こえるささやき声"/></td>
+<td class="question-text">聞こえるささやき声</td>
+<td class="answer-text">an audible whisper</td>
+</tr>
+<tr class="item なかなか消えない噂">
+<td><input class="uk-checkbox" type="checkbox" id="なかなか消えない噂"/></td>
+<td class="question-text">なかなか消えない噂</td>
+<td class="answer-text">a persistent rumor</td>
+</tr>
+<tr class="item 編集長">
+<td><input class="uk-checkbox" type="checkbox" id="編集長"/></td>
+<td class="question-text">編集長</td>
+<td class="answer-text">the chief editor</td>
+</tr>
+<tr class="item 信頼できる記事">
+<td><input class="uk-checkbox" type="checkbox" id="信頼できる記事"/></td>
+<td class="question-text">信頼できる記事</td>
+<td class="answer-text">a reliable report</td>
+</tr>
+<tr class="item 誤解を招く記事">
+<td><input class="uk-checkbox" type="checkbox" id="誤解を招く記事"/></td>
+<td class="question-text">誤解を招く記事</td>
+<td class="answer-text">a misleading report</td>
+</tr>
+<tr class="item 発行部数の多い新聞">
+<td><input class="uk-checkbox" type="checkbox" id="発行部数の多い新聞"/></td>
+<td class="question-text">発行部数の多い新聞</td>
+<td class="answer-text">a mass-circulation newspaper</td>
+</tr>
+<tr class="item 大衆を啓蒙する">
+<td><input class="uk-checkbox" type="checkbox" id="大衆を啓蒙する"/></td>
+<td class="question-text">大衆を啓蒙する</td>
+<td class="answer-text">enlighten the public</td>
+</tr>
+<tr class="item 大衆をびっくりさせる">
+<td><input class="uk-checkbox" type="checkbox" id="大衆をびっくりさせる"/></td>
+<td class="question-text">大衆をびっくりさせる</td>
+<td class="answer-text">alarm the public</td>
+</tr>
+<tr class="item 騒ぎを引き起こす">
+<td><input class="uk-checkbox" type="checkbox" id="騒ぎを引き起こす"/></td>
+<td class="question-text">騒ぎを引き起こす</td>
+<td class="answer-text">create a sensation</td>
+</tr>
+<tr class="item 報道陣を締め出す">
+<td><input class="uk-checkbox" type="checkbox" id="報道陣を締め出す"/></td>
+<td class="question-text">報道陣を締め出す</td>
+<td class="answer-text">exclude the press</td>
+</tr>
+<tr class="item 論説コラム">
+<td><input class="uk-checkbox" type="checkbox" id="論説コラム"/></td>
+<td class="question-text">論説コラム</td>
+<td class="answer-text">an op-ed column</td>
+</tr>
+<tr class="item 新聞をたたむ">
+<td><input class="uk-checkbox" type="checkbox" id="新聞をたたむ"/></td>
+<td class="question-text">新聞をたたむ</td>
+<td class="answer-text">fold the newspaper</td>
+</tr>
+<tr class="item ２４巻の百科事典">
+<td><input class="uk-checkbox" type="checkbox" id="２４巻の百科事典"/></td>
+<td class="question-text">２４巻の百科事典</td>
+<td class="answer-text">a 24-volume encyclopedia</td>
+</tr>
+<tr class="item 教育改革">
+<td><input class="uk-checkbox" type="checkbox" id="教育改革"/></td>
+<td class="question-text">教育改革</td>
+<td class="answer-text">educational reform</td>
+</tr>
+<tr class="item 義務教育">
+<td><input class="uk-checkbox" type="checkbox" id="義務教育"/></td>
+<td class="question-text">義務教育</td>
+<td class="answer-text">compulsory education</td>
+</tr>
+<tr class="item 適切な行動">
+<td><input class="uk-checkbox" type="checkbox" id="適切な行動"/></td>
+<td class="question-text">適切な行動</td>
+<td class="answer-text">appropriate behavior</td>
+</tr>
+<tr class="item 厳しいしつけ">
+<td><input class="uk-checkbox" type="checkbox" id="厳しいしつけ"/></td>
+<td class="question-text">厳しいしつけ</td>
+<td class="answer-text">harsh discipline</td>
+</tr>
+<tr class="item 粘り強い学生">
+<td><input class="uk-checkbox" type="checkbox" id="粘り強い学生"/></td>
+<td class="question-text">粘り強い学生</td>
+<td class="answer-text">a student with perseverance</td>
+</tr>
+<tr class="item 集中講座">
+<td><input class="uk-checkbox" type="checkbox" id="集中講座"/></td>
+<td class="question-text">集中講座</td>
+<td class="answer-text">an intensive course</td>
+</tr>
+<tr class="item 目ざましい努力をする">
+<td><input class="uk-checkbox" type="checkbox" id="目ざましい努力をする"/></td>
+<td class="question-text">目ざましい努力をする</td>
+<td class="answer-text">make a splendid effort</td>
+</tr>
+<tr class="item 努力をに限定する">
+<td><input class="uk-checkbox" type="checkbox" id="努力をに限定する"/></td>
+<td class="question-text">努力を〜に限定する</td>
+<td class="answer-text">confine your efforts to 〜</td>
+</tr>
+<tr class="item 最重要ポイント">
+<td><input class="uk-checkbox" type="checkbox" id="最重要ポイント"/></td>
+<td class="question-text">最重要ポイント</td>
+<td class="answer-text">a vital point</td>
+</tr>
+<tr class="item 絶えざる繰り返し">
+<td><input class="uk-checkbox" type="checkbox" id="絶えざる繰り返し"/></td>
+<td class="question-text">絶えざる繰り返し</td>
+<td class="answer-text">endless repetition</td>
+</tr>
+<tr class="item うんざりするほどの宿題">
+<td><input class="uk-checkbox" type="checkbox" id="うんざりするほどの宿題"/></td>
+<td class="question-text">うんざりするほどの宿題</td>
+<td class="answer-text">excessive homework</td>
+</tr>
+<tr class="item 宿題として出された課題">
+<td><input class="uk-checkbox" type="checkbox" id="宿題として出された課題"/></td>
+<td class="question-text">宿題として出された課題</td>
+<td class="answer-text">homework assignments</td>
+</tr>
+<tr class="item 必読書">
+<td><input class="uk-checkbox" type="checkbox" id="必読書"/></td>
+<td class="question-text">必読書</td>
+<td class="answer-text">essential reading</td>
+</tr>
+<tr class="item レポートを提出する">
+<td><input class="uk-checkbox" type="checkbox" id="レポートを提出する"/></td>
+<td class="question-text">レポートを提出する</td>
+<td class="answer-text">submit a report</td>
+</tr>
+<tr class="item 家庭教師を雇う">
+<td><input class="uk-checkbox" type="checkbox" id="家庭教師を雇う"/></td>
+<td class="question-text">家庭教師を雇う</td>
+<td class="answer-text">employ a tutor</td>
+</tr>
+<tr class="item 先生をからかう">
+<td><input class="uk-checkbox" type="checkbox" id="先生をからかう"/></td>
+<td class="question-text">先生をからかう</td>
+<td class="answer-text">mock your teacher</td>
+</tr>
+<tr class="item 優秀な成績をとる">
+<td><input class="uk-checkbox" type="checkbox" id="優秀な成績をとる"/></td>
+<td class="question-text">優秀な成績をとる</td>
+<td class="answer-text">get excellent grades</td>
+</tr>
+<tr class="item わが校の誇り">
+<td><input class="uk-checkbox" type="checkbox" id="わが校の誇り"/></td>
+<td class="question-text">わが校の誇り</td>
+<td class="answer-text">a credit to our school</td>
+</tr>
+<tr class="item 卒業証書を授与する">
+<td><input class="uk-checkbox" type="checkbox" id="卒業証書を授与する"/></td>
+<td class="question-text">卒業証書を授与する</td>
+<td class="answer-text">confer a diploma</td>
+</tr>
+<tr class="item 博士号を授与する">
+<td><input class="uk-checkbox" type="checkbox" id="博士号を授与する"/></td>
+<td class="question-text">博士号を授与する</td>
+<td class="answer-text">grant a doctorate</td>
+</tr>
+<tr class="item 従順な息子">
+<td><input class="uk-checkbox" type="checkbox" id="従順な息子"/></td>
+<td class="question-text">従順な息子</td>
+<td class="answer-text">an obedient son</td>
+</tr>
+<tr class="item 強情な娘">
+<td><input class="uk-checkbox" type="checkbox" id="強情な娘"/></td>
+<td class="question-text">強情な娘</td>
+<td class="answer-text">an obstinate daughter</td>
+</tr>
+<tr class="item 親に反抗する">
+<td><input class="uk-checkbox" type="checkbox" id="親に反抗する"/></td>
+<td class="question-text">親に反抗する</td>
+<td class="answer-text">rebel against your parents</td>
+</tr>
+<tr class="item 家庭内の暴君亭主関白">
+<td><input class="uk-checkbox" type="checkbox" id="家庭内の暴君亭主関白"/></td>
+<td class="question-text">家庭内の暴君（亭主関白）</td>
+<td class="answer-text">a domestic tyrant</td>
+</tr>
+<tr class="item 手綱を締める">
+<td><input class="uk-checkbox" type="checkbox" id="手綱を締める"/></td>
+<td class="question-text">手綱を締める</td>
+<td class="answer-text">tighten the reins</td>
+</tr>
+<tr class="item 親に悩みを打ち明ける">
+<td><input class="uk-checkbox" type="checkbox" id="親に悩みを打ち明ける"/></td>
+<td class="question-text">親に悩みを打ち明ける</td>
+<td class="answer-text">confide in your parents</td>
+</tr>
+<tr class="item 親の同意">
+<td><input class="uk-checkbox" type="checkbox" id="親の同意"/></td>
+<td class="question-text">親の同意</td>
+<td class="answer-text">parental consent</td>
+</tr>
+<tr class="item 世帯を維持する">
+<td><input class="uk-checkbox" type="checkbox" id="世帯を維持する"/></td>
+<td class="question-text">世帯を維持する</td>
+<td class="answer-text">maintain the family unit</td>
+</tr>
+<tr class="item 親密な家族の結び付き">
+<td><input class="uk-checkbox" type="checkbox" id="親密な家族の結び付き"/></td>
+<td class="question-text">親密な家族の結び付き</td>
+<td class="answer-text">close family bonds</td>
+</tr>
+<tr class="item 子供達の幸福">
+<td><input class="uk-checkbox" type="checkbox" id="子供達の幸福"/></td>
+<td class="question-text">子供達の幸福</td>
+<td class="answer-text">the children's well-being</td>
+</tr>
+<tr class="item 貧しい生まれ">
+<td><input class="uk-checkbox" type="checkbox" id="貧しい生まれ"/></td>
+<td class="question-text">貧しい生まれ</td>
+<td class="answer-text">humble birth</td>
+</tr>
+<tr class="item 人生の盛り">
+<td><input class="uk-checkbox" type="checkbox" id="人生の盛り"/></td>
+<td class="question-text">人生の盛り</td>
+<td class="answer-text">the prime of life</td>
+</tr>
+<tr class="item たまたま知っている人">
+<td><input class="uk-checkbox" type="checkbox" id="たまたま知っている人"/></td>
+<td class="question-text">たまたま知っている人</td>
+<td class="answer-text">a casual acquaintance</td>
+</tr>
+<tr class="item 親密な会話">
+<td><input class="uk-checkbox" type="checkbox" id="親密な会話"/></td>
+<td class="question-text">親密な会話</td>
+<td class="answer-text">intimate conversation</td>
+</tr>
+<tr class="item 堅苦しいことを抜きにする">
+<td><input class="uk-checkbox" type="checkbox" id="堅苦しいことを抜きにする"/></td>
+<td class="question-text">堅苦しいことを抜きにする</td>
+<td class="answer-text">dispense with formalities</td>
+</tr>
+<tr class="item 心からのもてなし">
+<td><input class="uk-checkbox" type="checkbox" id="心からのもてなし"/></td>
+<td class="question-text">心からのもてなし</td>
+<td class="answer-text">genuine hospitality</td>
+</tr>
+<tr class="item 海外の友人と文通する">
+<td><input class="uk-checkbox" type="checkbox" id="海外の友人と文通する"/></td>
+<td class="question-text">海外の友人と文通する</td>
+<td class="answer-text">correspond with friends overseas</td>
+</tr>
+<tr class="item 新しい切手を発行する">
+<td><input class="uk-checkbox" type="checkbox" id="新しい切手を発行する"/></td>
+<td class="question-text">新しい切手を発行する</td>
+<td class="answer-text">issue a new stamp</td>
+</tr>
+<tr class="item 変わらぬ友情を誓う">
+<td><input class="uk-checkbox" type="checkbox" id="変わらぬ友情を誓う"/></td>
+<td class="question-text">変わらぬ友情を誓う</td>
+<td class="answer-text">swear eternal friendship</td>
+</tr>
+<tr class="item 信頼できる友">
+<td><input class="uk-checkbox" type="checkbox" id="信頼できる友"/></td>
+<td class="question-text">信頼できる友</td>
+<td class="answer-text">a trustworthy friend</td>
+</tr>
+<tr class="item 信頼を裏切る">
+<td><input class="uk-checkbox" type="checkbox" id="信頼を裏切る"/></td>
+<td class="question-text">信頼を裏切る</td>
+<td class="answer-text">betray his trust</td>
+</tr>
+<tr class="item 自発的な参加">
+<td><input class="uk-checkbox" type="checkbox" id="自発的な参加"/></td>
+<td class="question-text">自発的な参加</td>
+<td class="answer-text">voluntary participation</td>
+</tr>
+<tr class="item 協力を誓う">
+<td><input class="uk-checkbox" type="checkbox" id="協力を誓う"/></td>
+<td class="question-text">協力を誓う</td>
+<td class="answer-text">pledge your cooperation</td>
+</tr>
+<tr class="item 助言を尊重する">
+<td><input class="uk-checkbox" type="checkbox" id="助言を尊重する"/></td>
+<td class="question-text">助言を尊重する</td>
+<td class="answer-text">esteem her counsel</td>
+</tr>
+<tr class="item 敵対関係">
+<td><input class="uk-checkbox" type="checkbox" id="敵対関係"/></td>
+<td class="question-text">敵対関係</td>
+<td class="answer-text">a hostile relationship</td>
+</tr>
+<tr class="item 対立する２人を和解させる">
+<td><input class="uk-checkbox" type="checkbox" id="対立する２人を和解させる"/></td>
+<td class="question-text">対立する２人を和解させる</td>
+<td class="answer-text">reconcile two opponents</td>
+</tr>
+<tr class="item 交渉を開始する">
+<td><input class="uk-checkbox" type="checkbox" id="交渉を開始する"/></td>
+<td class="question-text">交渉を開始する</td>
+<td class="answer-text">commence negotiations</td>
+</tr>
+<tr class="item しぶしぶの同意">
+<td><input class="uk-checkbox" type="checkbox" id="しぶしぶの同意"/></td>
+<td class="question-text">しぶしぶの同意</td>
+<td class="answer-text">reluctant agreement</td>
+</tr>
+<tr class="item うなずけば同意とみなす">
+<td><input class="uk-checkbox" type="checkbox" id="うなずけば同意とみなす"/></td>
+<td class="question-text">うなずけば同意とみなす</td>
+<td class="answer-text">Nodding implies consent.</td>
+</tr>
+<tr class="item 賛成を強いる">
+<td><input class="uk-checkbox" type="checkbox" id="賛成を強いる"/></td>
+<td class="question-text">賛成を強いる</td>
+<td class="answer-text">compel assent</td>
+</tr>
+<tr class="item 恋の炎">
+<td><input class="uk-checkbox" type="checkbox" id="恋の炎"/></td>
+<td class="question-text">恋の炎</td>
+<td class="answer-text">the flames of love</td>
+</tr>
+<tr class="item 彼女の愛を競う">
+<td><input class="uk-checkbox" type="checkbox" id="彼女の愛を競う"/></td>
+<td class="question-text">彼女の愛を競う</td>
+<td class="answer-text">compete for her favor</td>
+</tr>
+<tr class="item かたい抱擁">
+<td><input class="uk-checkbox" type="checkbox" id="かたい抱擁"/></td>
+<td class="question-text">かたい抱擁</td>
+<td class="answer-text">a tight embrace</td>
+</tr>
+<tr class="item けっして君を捨てたりしない">
+<td><input class="uk-checkbox" type="checkbox" id="けっして君を捨てたりしない"/></td>
+<td class="question-text">けっして君を捨てたりしない</td>
+<td class="answer-text">I'll never forsake you.</td>
+</tr>
+<tr class="item 結婚の誓約を交わす">
+<td><input class="uk-checkbox" type="checkbox" id="結婚の誓約を交わす"/></td>
+<td class="question-text">結婚の誓約を交わす</td>
+<td class="answer-text">exchange marriage vows</td>
+</tr>
+<tr class="item 豪華な結婚披露宴">
+<td><input class="uk-checkbox" type="checkbox" id="豪華な結婚披露宴"/></td>
+<td class="question-text">（豪華な）結婚披露宴</td>
+<td class="answer-text">a wedding feast</td>
+</tr>
+<tr class="item 仕事を進める">
+<td><input class="uk-checkbox" type="checkbox" id="仕事を進める"/></td>
+<td class="question-text">仕事を進める</td>
+<td class="answer-text">proceed with the work</td>
+</tr>
+<tr class="item 退屈で不愉快な仕事">
+<td><input class="uk-checkbox" type="checkbox" id="退屈で不愉快な仕事"/></td>
+<td class="question-text">退屈で不愉快な仕事</td>
+<td class="answer-text">dull and disagreeable work</td>
+</tr>
+<tr class="item 型通りで単調な仕事">
+<td><input class="uk-checkbox" type="checkbox" id="型通りで単調な仕事"/></td>
+<td class="question-text">型通りで単調な仕事</td>
+<td class="answer-text">a routine and monotonous job</td>
+</tr>
+<tr class="item 追加の仕事">
+<td><input class="uk-checkbox" type="checkbox" id="追加の仕事"/></td>
+<td class="question-text">追加の仕事</td>
+<td class="answer-text">extra work</td>
+</tr>
+<tr class="item あきあきする仕事">
+<td><input class="uk-checkbox" type="checkbox" id="あきあきする仕事"/></td>
+<td class="question-text">あきあきする仕事</td>
+<td class="answer-text">a tedious task</td>
+</tr>
+<tr class="item 仕事をなしとげる">
+<td><input class="uk-checkbox" type="checkbox" id="仕事をなしとげる"/></td>
+<td class="question-text">仕事をなしとげる</td>
+<td class="answer-text">execute the task</td>
+</tr>
+<tr class="item 骨のおれる仕事">
+<td><input class="uk-checkbox" type="checkbox" id="骨のおれる仕事"/></td>
+<td class="question-text">骨のおれる仕事</td>
+<td class="answer-text">a laborious business</td>
+</tr>
+<tr class="item 父親の仕事を継ぐ">
+<td><input class="uk-checkbox" type="checkbox" id="父親の仕事を継ぐ"/></td>
+<td class="question-text">父親の仕事を継ぐ</td>
+<td class="answer-text">inherit your father's business</td>
+</tr>
+<tr class="item 役割を課す">
+<td><input class="uk-checkbox" type="checkbox" id="役割を課す"/></td>
+<td class="question-text">役割を課す</td>
+<td class="answer-text">assign a role</td>
+</tr>
+<tr class="item 任務を引き受ける">
+<td><input class="uk-checkbox" type="checkbox" id="任務を引き受ける"/></td>
+<td class="question-text">任務を引き受ける</td>
+<td class="answer-text">undertake a mission</td>
+</tr>
+<tr class="item 立派な職業">
+<td><input class="uk-checkbox" type="checkbox" id="立派な職業"/></td>
+<td class="question-text">立派な職業</td>
+<td class="answer-text">a respectable profession</td>
+</tr>
+<tr class="item 不安な応募者">
+<td><input class="uk-checkbox" type="checkbox" id="不安な応募者"/></td>
+<td class="question-text">不安な応募者</td>
+<td class="answer-text">an uneasy applicant</td>
+</tr>
+<tr class="item 社員を転勤させる">
+<td><input class="uk-checkbox" type="checkbox" id="社員を転勤させる"/></td>
+<td class="question-text">社員を転勤させる</td>
+<td class="answer-text">transfer employees</td>
+</tr>
+<tr class="item 職場の同僚">
+<td><input class="uk-checkbox" type="checkbox" id="職場の同僚"/></td>
+<td class="question-text">職場の同僚</td>
+<td class="answer-text">colleagues at works</td>
+</tr>
+<tr class="item 有能な秘書">
+<td><input class="uk-checkbox" type="checkbox" id="有能な秘書"/></td>
+<td class="question-text">有能な秘書</td>
+<td class="answer-text">an efficient secretary</td>
+</tr>
+<tr class="item 上役にゴマをする">
+<td><input class="uk-checkbox" type="checkbox" id="上役にゴマをする"/></td>
+<td class="question-text">上役にゴマをする</td>
+<td class="answer-text">flatter your boss</td>
+</tr>
+<tr class="item 肉体労働">
+<td><input class="uk-checkbox" type="checkbox" id="肉体労働"/></td>
+<td class="question-text">肉体労働</td>
+<td class="answer-text">manual labor</td>
+</tr>
+<tr class="item 分業">
+<td><input class="uk-checkbox" type="checkbox" id="分業"/></td>
+<td class="question-text">分業</td>
+<td class="answer-text">division of labor</td>
+</tr>
+<tr class="item 道具を考案する">
+<td><input class="uk-checkbox" type="checkbox" id="道具を考案する"/></td>
+<td class="question-text">道具を考案する</td>
+<td class="answer-text">devise tools</td>
+</tr>
+<tr class="item 自動車を製造する">
+<td><input class="uk-checkbox" type="checkbox" id="自動車を製造する"/></td>
+<td class="question-text">自動車を製造する</td>
+<td class="answer-text">manufacture automobiles</td>
+</tr>
+<tr class="item スポーツカーを展示する">
+<td><input class="uk-checkbox" type="checkbox" id="スポーツカーを展示する"/></td>
+<td class="question-text">スポーツカーを展示する</td>
+<td class="answer-text">exhibit sports cars</td>
+</tr>
+<tr class="item ソーラーカー">
+<td><input class="uk-checkbox" type="checkbox" id="ソーラーカー"/></td>
+<td class="question-text">ソーラーカー</td>
+<td class="answer-text">a solar-powered vehicle</td>
+</tr>
+<tr class="item 不法駐車をする">
+<td><input class="uk-checkbox" type="checkbox" id="不法駐車をする"/></td>
+<td class="question-text">不法駐車をする</td>
+<td class="answer-text">park illegally</td>
+</tr>
+<tr class="item 罰金を払う">
+<td><input class="uk-checkbox" type="checkbox" id="罰金を払う"/></td>
+<td class="question-text">罰金を払う</td>
+<td class="answer-text">pay a fine</td>
+</tr>
+<tr class="item とぎれのない車の列">
+<td><input class="uk-checkbox" type="checkbox" id="とぎれのない車の列"/></td>
+<td class="question-text">とぎれのない車の列</td>
+<td class="answer-text">a continuous line of cars</td>
+</tr>
+<tr class="item 交通渋滞">
+<td><input class="uk-checkbox" type="checkbox" id="交通渋滞"/></td>
+<td class="question-text">交通渋滞</td>
+<td class="answer-text">a traffic jam</td>
+</tr>
+<tr class="item 逆方向">
+<td><input class="uk-checkbox" type="checkbox" id="逆方向"/></td>
+<td class="question-text">逆方向</td>
+<td class="answer-text">reverse direction</td>
+</tr>
+<tr class="item 制限速度を超える">
+<td><input class="uk-checkbox" type="checkbox" id="制限速度を超える"/></td>
+<td class="question-text">制限速度を超える</td>
+<td class="answer-text">exceed the speed limit</td>
+</tr>
+<tr class="item 弾丸列車新幹線">
+<td><input class="uk-checkbox" type="checkbox" id="弾丸列車新幹線"/></td>
+<td class="question-text">弾丸列車（新幹線）</td>
+<td class="answer-text">a bullet train</td>
+</tr>
+<tr class="item 通勤時間">
+<td><input class="uk-checkbox" type="checkbox" id="通勤時間"/></td>
+<td class="question-text">通勤時間</td>
+<td class="answer-text">commuting time</td>
+</tr>
+<tr class="item 貨物列車">
+<td><input class="uk-checkbox" type="checkbox" id="貨物列車"/></td>
+<td class="question-text">貨物列車</td>
+<td class="answer-text">a freight train</td>
+</tr>
+<tr class="item 貨物船">
+<td><input class="uk-checkbox" type="checkbox" id="貨物船"/></td>
+<td class="question-text">貨物船</td>
+<td class="answer-text">a cargo vessel</td>
+</tr>
+<tr class="item 観光旅行">
+<td><input class="uk-checkbox" type="checkbox" id="観光旅行"/></td>
+<td class="question-text">観光旅行</td>
+<td class="answer-text">a sightseeing trip</td>
+</tr>
+<tr class="item 素晴らしい眺め">
+<td><input class="uk-checkbox" type="checkbox" id="素晴らしい眺め"/></td>
+<td class="question-text">素晴らしい眺め</td>
+<td class="answer-text">a magnificent view</td>
+</tr>
+<tr class="item 一人旅">
+<td><input class="uk-checkbox" type="checkbox" id="一人旅"/></td>
+<td class="question-text">一人旅</td>
+<td class="answer-text">a solitary journey</td>
+</tr>
+<tr class="item 夜明けに出発する">
+<td><input class="uk-checkbox" type="checkbox" id="夜明けに出発する"/></td>
+<td class="question-text">夜明けに出発する</td>
+<td class="answer-text">start at daybreak</td>
+</tr>
+<tr class="item 目的地に着く">
+<td><input class="uk-checkbox" type="checkbox" id="目的地に着く"/></td>
+<td class="question-text">目的地に着く</td>
+<td class="answer-text">reach your destination</td>
+</tr>
+<tr class="item 人気のある娯楽">
+<td><input class="uk-checkbox" type="checkbox" id="人気のある娯楽"/></td>
+<td class="question-text">人気のある娯楽</td>
+<td class="answer-text">a popular pastime</td>
+</tr>
+<tr class="item 低俗な娯楽">
+<td><input class="uk-checkbox" type="checkbox" id="低俗な娯楽"/></td>
+<td class="question-text">低俗な娯楽</td>
+<td class="answer-text">mindless entertainment</td>
+</tr>
+<tr class="item 公園を散策する">
+<td><input class="uk-checkbox" type="checkbox" id="公園を散策する"/></td>
+<td class="question-text">公園を散策する</td>
+<td class="answer-text">stroll in the park</td>
+</tr>
+<tr class="item 釣り竿">
+<td><input class="uk-checkbox" type="checkbox" id="釣り竿"/></td>
+<td class="question-text">釣り竿</td>
+<td class="answer-text">a fishing rod</td>
+</tr>
+<tr class="item さけやますを釣る">
+<td><input class="uk-checkbox" type="checkbox" id="さけやますを釣る"/></td>
+<td class="question-text">さけやますを釣る</td>
+<td class="answer-text">fish for salmon and trout</td>
+</tr>
+<tr class="item 蝶の採集をする">
+<td><input class="uk-checkbox" type="checkbox" id="蝶の採集をする"/></td>
+<td class="question-text">蝶の採集をする</td>
+<td class="answer-text">assemble a butterfly collection</td>
+</tr>
+<tr class="item 馬に賭ける">
+<td><input class="uk-checkbox" type="checkbox" id="馬に賭ける"/></td>
+<td class="question-text">馬に賭ける</td>
+<td class="answer-text">bet on a horse</td>
+</tr>
+<tr class="item ギャンブルに眉をひそめる">
+<td><input class="uk-checkbox" type="checkbox" id="ギャンブルに眉をひそめる"/></td>
+<td class="question-text">ギャンブルに眉をひそめる</td>
+<td class="answer-text">frown upon gambling</td>
+</tr>
+<tr class="item 芸術や工芸">
+<td><input class="uk-checkbox" type="checkbox" id="芸術や工芸"/></td>
+<td class="question-text">芸術や工芸</td>
+<td class="answer-text">arts and crafts</td>
+</tr>
+<tr class="item 歌手になりたいと憧れる">
+<td><input class="uk-checkbox" type="checkbox" id="歌手になりたいと憧れる"/></td>
+<td class="question-text">歌手になりたいと憧れる</td>
+<td class="answer-text">aspire to become a singer</td>
+</tr>
+<tr class="item 名ピアニスト">
+<td><input class="uk-checkbox" type="checkbox" id="名ピアニスト"/></td>
+<td class="question-text">名ピアニスト</td>
+<td class="answer-text">a virtuoso pianist</td>
+</tr>
+<tr class="item 見事な演奏">
+<td><input class="uk-checkbox" type="checkbox" id="見事な演奏"/></td>
+<td class="question-text">見事な演奏</td>
+<td class="answer-text">an outstanding performance</td>
+</tr>
+<tr class="item 拍手喝采する">
+<td><input class="uk-checkbox" type="checkbox" id="拍手喝采する"/></td>
+<td class="question-text">拍手喝采する</td>
+<td class="answer-text">clap and cheer</td>
+</tr>
+<tr class="item 運動場や体育館">
+<td><input class="uk-checkbox" type="checkbox" id="運動場や体育館"/></td>
+<td class="question-text">運動場や体育館</td>
+<td class="answer-text">playgrounds and gymnasiums</td>
+</tr>
+<tr class="item 座席収容人数">
+<td><input class="uk-checkbox" type="checkbox" id="座席収容人数"/></td>
+<td class="question-text">座席収容人数</td>
+<td class="answer-text">seating capacity</td>
+</tr>
+<tr class="item ５００人を収容する">
+<td><input class="uk-checkbox" type="checkbox" id="５００人を収容する"/></td>
+<td class="question-text">５００人を収容する</td>
+<td class="answer-text">accommodate 500 people</td>
+</tr>
+<tr class="item スポーツ用具">
+<td><input class="uk-checkbox" type="checkbox" id="スポーツ用具"/></td>
+<td class="question-text">スポーツ用具</td>
+<td class="answer-text">sports equipment</td>
+</tr>
+<tr class="item 見るスポーツ">
+<td><input class="uk-checkbox" type="checkbox" id="見るスポーツ"/></td>
+<td class="question-text">見るスポーツ</td>
+<td class="answer-text">a spectator sport</td>
+</tr>
+<tr class="item 入場料">
+<td><input class="uk-checkbox" type="checkbox" id="入場料"/></td>
+<td class="question-text">入場料</td>
+<td class="answer-text">an admission fee</td>
+</tr>
+<tr class="item 群衆に混じる">
+<td><input class="uk-checkbox" type="checkbox" id="群衆に混じる"/></td>
+<td class="question-text">群衆に混じる</td>
+<td class="answer-text">mingle with the crowd</td>
+</tr>
+<tr class="item 室内競争">
+<td><input class="uk-checkbox" type="checkbox" id="室内競争"/></td>
+<td class="question-text">室内競争</td>
+<td class="answer-text">an indoor race</td>
+</tr>
+<tr class="item スポーツに優れる">
+<td><input class="uk-checkbox" type="checkbox" id="スポーツに優れる"/></td>
+<td class="question-text">スポーツに優れる</td>
+<td class="answer-text">excel in sports</td>
+</tr>
+<tr class="item 優勝を争う">
+<td><input class="uk-checkbox" type="checkbox" id="優勝を争う"/></td>
+<td class="question-text">優勝を争う</td>
+<td class="answer-text">vie for the championship</td>
+</tr>
+<tr class="item 対戦相手をやっつける">
+<td><input class="uk-checkbox" type="checkbox" id="対戦相手をやっつける"/></td>
+<td class="question-text">対戦相手をやっつける</td>
+<td class="answer-text">beat your opponent</td>
+</tr>
+<tr class="item 勝利に貢献する">
+<td><input class="uk-checkbox" type="checkbox" id="勝利に貢献する"/></td>
+<td class="question-text">勝利に貢献する</td>
+<td class="answer-text">contribute to the victory</td>
+</tr>
+<tr class="item 文化的な一貫性">
+<td><input class="uk-checkbox" type="checkbox" id="文化的な一貫性"/></td>
+<td class="question-text">文化的な一貫性</td>
+<td class="answer-text">cultural integrity</td>
+</tr>
+<tr class="item 昔からのことわざ">
+<td><input class="uk-checkbox" type="checkbox" id="昔からのことわざ"/></td>
+<td class="question-text">昔からのことわざ</td>
+<td class="answer-text">an ancient proverb</td>
+</tr>
+<tr class="item 昔からの迷信">
+<td><input class="uk-checkbox" type="checkbox" id="昔からの迷信"/></td>
+<td class="question-text">昔からの迷信</td>
+<td class="answer-text">an ancient superstition</td>
+</tr>
+<tr class="item 異国の文化">
+<td><input class="uk-checkbox" type="checkbox" id="異国の文化"/></td>
+<td class="question-text">異国の文化</td>
+<td class="answer-text">an alien culture</td>
+</tr>
+<tr class="item 海外生活に適応する">
+<td><input class="uk-checkbox" type="checkbox" id="海外生活に適応する"/></td>
+<td class="question-text">海外生活に適応する</td>
+<td class="answer-text">adjust to life overseas</td>
+</tr>
+<tr class="item 社会的な慣習">
+<td><input class="uk-checkbox" type="checkbox" id="社会的な慣習"/></td>
+<td class="question-text">社会的な慣習</td>
+<td class="answer-text">social conventions</td>
+</tr>
+<tr class="item 国民の特徴">
+<td><input class="uk-checkbox" type="checkbox" id="国民の特徴"/></td>
+<td class="question-text">国民の特徴</td>
+<td class="answer-text">national characteristics</td>
+</tr>
+<tr class="item 神話や伝説">
+<td><input class="uk-checkbox" type="checkbox" id="神話や伝説"/></td>
+<td class="question-text">神話や伝説</td>
+<td class="answer-text">myths and legends</td>
+</tr>
+<tr class="item 共有財産">
+<td><input class="uk-checkbox" type="checkbox" id="共有財産"/></td>
+<td class="question-text">共有財産</td>
+<td class="answer-text">shared possessions</td>
+</tr>
+<tr class="item 散文と韻文">
+<td><input class="uk-checkbox" type="checkbox" id="散文と韻文"/></td>
+<td class="question-text">散文と韻文</td>
+<td class="answer-text">prose and poetry</td>
+</tr>
+<tr class="item 詩を朗読する">
+<td><input class="uk-checkbox" type="checkbox" id="詩を朗読する"/></td>
+<td class="question-text">詩を朗読する</td>
+<td class="answer-text">recite verse</td>
+</tr>
+<tr class="item 寓話の本">
+<td><input class="uk-checkbox" type="checkbox" id="寓話の本"/></td>
+<td class="question-text">寓話の本</td>
+<td class="answer-text">a book of fables</td>
+</tr>
+<tr class="item 文学への愛着">
+<td><input class="uk-checkbox" type="checkbox" id="文学への愛着"/></td>
+<td class="question-text">文学への愛着</td>
+<td class="answer-text">a love of literature</td>
+</tr>
+<tr class="item 幅広い読書">
+<td><input class="uk-checkbox" type="checkbox" id="幅広い読書"/></td>
+<td class="question-text">幅広い読書</td>
+<td class="answer-text">extensive reading</td>
+</tr>
+<tr class="item 心を豊かにする">
+<td><input class="uk-checkbox" type="checkbox" id="心を豊かにする"/></td>
+<td class="question-text">心を豊かにする</td>
+<td class="answer-text">enrich your mind</td>
+</tr>
+<tr class="item 心の糧">
+<td><input class="uk-checkbox" type="checkbox" id="心の糧"/></td>
+<td class="question-text">心の糧</td>
+<td class="answer-text">nourishment for the soul</td>
+</tr>
+<tr class="item 精神的な充足">
+<td><input class="uk-checkbox" type="checkbox" id="精神的な充足"/></td>
+<td class="question-text">精神的な充足</td>
+<td class="answer-text">spiritual fulfillment</td>
+</tr>
+<tr class="item 活字離れの傾向">
+<td><input class="uk-checkbox" type="checkbox" id="活字離れの傾向"/></td>
+<td class="question-text">活字離れの傾向</td>
+<td class="answer-text">a tendency not to read</td>
+</tr>
+<tr class="item 原稿を書き取らせる">
+<td><input class="uk-checkbox" type="checkbox" id="原稿を書き取らせる"/></td>
+<td class="question-text">原稿を書き取らせる</td>
+<td class="answer-text">dictate the manuscript</td>
+</tr>
+<tr class="item 想像力の領域">
+<td><input class="uk-checkbox" type="checkbox" id="想像力の領域"/></td>
+<td class="question-text">想像力の領域</td>
+<td class="answer-text">the realm of the imagination</td>
+</tr>
+<tr class="item 架空の町">
+<td><input class="uk-checkbox" type="checkbox" id="架空の町"/></td>
+<td class="question-text">架空の町</td>
+<td class="answer-text">an imaginary town</td>
+</tr>
+<tr class="item 薄気味悪い話">
+<td><input class="uk-checkbox" type="checkbox" id="薄気味悪い話"/></td>
+<td class="question-text">薄気味悪い話</td>
+<td class="answer-text">an eerie story</td>
+</tr>
+<tr class="item 読者の関心をつかむ">
+<td><input class="uk-checkbox" type="checkbox" id="読者の関心をつかむ"/></td>
+<td class="question-text">読者の関心をつかむ</td>
+<td class="answer-text">grab the readers' interest</td>
+</tr>
+<tr class="item あらすじと登場人物">
+<td><input class="uk-checkbox" type="checkbox" id="あらすじと登場人物"/></td>
+<td class="question-text">あらすじと登場人物</td>
+<td class="answer-text">plot and characters</td>
+</tr>
+<tr class="item あらすじの要約">
+<td><input class="uk-checkbox" type="checkbox" id="あらすじの要約"/></td>
+<td class="question-text">あらすじの要約</td>
+<td class="answer-text">the plot summary</td>
+</tr>
+<tr class="item 伝記や自伝">
+<td><input class="uk-checkbox" type="checkbox" id="伝記や自伝"/></td>
+<td class="question-text">伝記や自伝</td>
+<td class="answer-text">biographies and autobiographies</td>
+</tr>
+<tr class="item 実際に起こった話をする">
+<td><input class="uk-checkbox" type="checkbox" id="実際に起こった話をする"/></td>
+<td class="question-text">実際に起こった話をする</td>
+<td class="answer-text">relate a true-life story</td>
+</tr>
+<tr class="item ささいな出来事">
+<td><input class="uk-checkbox" type="checkbox" id="ささいな出来事"/></td>
+<td class="question-text">ささいな出来事</td>
+<td class="answer-text">a trivial event</td>
+</tr>
+<tr class="item 現代の作家たち">
+<td><input class="uk-checkbox" type="checkbox" id="現代の作家たち"/></td>
+<td class="question-text">現代の作家たち</td>
+<td class="answer-text">contemporary authors</td>
+</tr>
+<tr class="item 文芸評論家">
+<td><input class="uk-checkbox" type="checkbox" id="文芸評論家"/></td>
+<td class="question-text">文芸評論家</td>
+<td class="answer-text">a literary critic</td>
+</tr>
+<tr class="item エマーソンの言葉を引用する">
+<td><input class="uk-checkbox" type="checkbox" id="エマーソンの言葉を引用する"/></td>
+<td class="question-text">エマーソンの言葉を引用する</td>
+<td class="answer-text">quote Emerson's words</td>
+</tr>
+<tr class="item 豊富な引用">
+<td><input class="uk-checkbox" type="checkbox" id="豊富な引用"/></td>
+<td class="question-text">豊富な引用</td>
+<td class="answer-text">ample quotations</td>
+</tr>
+<tr class="item 倫理や道徳">
+<td><input class="uk-checkbox" type="checkbox" id="倫理や道徳"/></td>
+<td class="question-text">倫理や道徳</td>
+<td class="answer-text">ethics and morals</td>
+</tr>
+<tr class="item 信仰と信条">
+<td><input class="uk-checkbox" type="checkbox" id="信仰と信条"/></td>
+<td class="question-text">信仰と信条</td>
+<td class="answer-text">beliefs and creeds</td>
+</tr>
+<tr class="item 主観的な考え">
+<td><input class="uk-checkbox" type="checkbox" id="主観的な考え"/></td>
+<td class="question-text">主観的な考え</td>
+<td class="answer-text">a subjective belief</td>
+</tr>
+<tr class="item 個人的な好み">
+<td><input class="uk-checkbox" type="checkbox" id="個人的な好み"/></td>
+<td class="question-text">個人的な好み</td>
+<td class="answer-text">personal preference</td>
+</tr>
+<tr class="item 従来の道徳を棄てる">
+<td><input class="uk-checkbox" type="checkbox" id="従来の道徳を棄てる"/></td>
+<td class="question-text">従来の道徳を棄てる</td>
+<td class="answer-text">abandon conventional morality</td>
+</tr>
+<tr class="item モラルの崩壊">
+<td><input class="uk-checkbox" type="checkbox" id="モラルの崩壊"/></td>
+<td class="question-text">モラルの崩壊</td>
+<td class="answer-text">moral decay</td>
+</tr>
+<tr class="item 国の不名誉">
+<td><input class="uk-checkbox" type="checkbox" id="国の不名誉"/></td>
+<td class="question-text">国の不名誉</td>
+<td class="answer-text">a national disgrace</td>
+</tr>
+<tr class="item 最も素晴らしい美点">
+<td><input class="uk-checkbox" type="checkbox" id="最も素晴らしい美点"/></td>
+<td class="question-text">最も素晴らしい美点</td>
+<td class="answer-text">supreme virtues</td>
+</tr>
+<tr class="item 謙譲の美徳">
+<td><input class="uk-checkbox" type="checkbox" id="謙譲の美徳"/></td>
+<td class="question-text">謙譲の美徳</td>
+<td class="answer-text">the virtue of humility</td>
+</tr>
+<tr class="item 彼の唯一の弱点">
+<td><input class="uk-checkbox" type="checkbox" id="彼の唯一の弱点"/></td>
+<td class="question-text">彼の唯一の弱点</td>
+<td class="answer-text">his only vice</td>
+</tr>
+<tr class="item 人道的な立場">
+<td><input class="uk-checkbox" type="checkbox" id="人道的な立場"/></td>
+<td class="question-text">人道的な立場</td>
+<td class="answer-text">a humanitarian standpoint</td>
+</tr>
+<tr class="item 人間の人間に対する非人間性">
+<td><input class="uk-checkbox" type="checkbox" id="人間の人間に対する非人間性"/></td>
+<td class="question-text">人間の人間に対する非人間性</td>
+<td class="answer-text">man's inhumanity to man</td>
+</tr>
+<tr class="item 罪の意識">
+<td><input class="uk-checkbox" type="checkbox" id="罪の意識"/></td>
+<td class="question-text">罪の意識</td>
+<td class="answer-text">a sense of guilt</td>
+</tr>
+<tr class="item 心の中の葛藤">
+<td><input class="uk-checkbox" type="checkbox" id="心の中の葛藤"/></td>
+<td class="question-text">心の中の葛藤</td>
+<td class="answer-text">inner conflicts</td>
+</tr>
+<tr class="item 精神科医に打ち明ける">
+<td><input class="uk-checkbox" type="checkbox" id="精神科医に打ち明ける"/></td>
+<td class="question-text">精神科医に打ち明ける</td>
+<td class="answer-text">confess to a psychiatrist</td>
+</tr>
+<tr class="item 政治的偽善">
+<td><input class="uk-checkbox" type="checkbox" id="政治的偽善"/></td>
+<td class="question-text">政治的偽善</td>
+<td class="answer-text">political hypocrisy</td>
+</tr>
+<tr class="item 最後に勝つは正義なり">
+<td><input class="uk-checkbox" type="checkbox" id="最後に勝つは正義なり"/></td>
+<td class="question-text">最後に勝つは正義なり</td>
+<td class="answer-text">Justice triumphs in the end.</td>
+</tr>
+<tr class="item 神の慈悲">
+<td><input class="uk-checkbox" type="checkbox" id="神の慈悲"/></td>
+<td class="question-text">神の慈悲</td>
+<td class="answer-text">God's mercy</td>
+</tr>
+<tr class="item 罪を許す">
+<td><input class="uk-checkbox" type="checkbox" id="罪を許す"/></td>
+<td class="question-text">罪を許す</td>
+<td class="answer-text">forgive a sin</td>
+</tr>
+<tr class="item 恵まれている点を数える">
+<td><input class="uk-checkbox" type="checkbox" id="恵まれている点を数える"/></td>
+<td class="question-text">恵まれている点を数える</td>
+<td class="answer-text">count your blessings</td>
+</tr>
+<tr class="item 神の導き">
+<td><input class="uk-checkbox" type="checkbox" id="神の導き"/></td>
+<td class="question-text">神の導き</td>
+<td class="answer-text">divine guidance</td>
+</tr>
+<tr class="item 宗教の教義">
+<td><input class="uk-checkbox" type="checkbox" id="宗教の教義"/></td>
+<td class="question-text">宗教の教義</td>
+<td class="answer-text">a religious doctrine</td>
+</tr>
+<tr class="item 教会に逆らう">
+<td><input class="uk-checkbox" type="checkbox" id="教会に逆らう"/></td>
+<td class="question-text">教会に逆らう</td>
+<td class="answer-text">contradict the church</td>
+</tr>
+<tr class="item 熱心な門弟">
+<td><input class="uk-checkbox" type="checkbox" id="熱心な門弟"/></td>
+<td class="question-text">熱心な門弟</td>
+<td class="answer-text">an enthusiastic disciple</td>
+</tr>
+<tr class="item お祈りをつぶやく">
+<td><input class="uk-checkbox" type="checkbox" id="お祈りをつぶやく"/></td>
+<td class="question-text">お祈りをつぶやく</td>
+<td class="answer-text">murmur a prayer</td>
+</tr>
+<tr class="item 不滅の霊魂">
+<td><input class="uk-checkbox" type="checkbox" id="不滅の霊魂"/></td>
+<td class="question-text">不滅の霊魂</td>
+<td class="answer-text">your immortal soul</td>
+</tr>
+<tr class="item 人は必ず死ぬ">
+<td><input class="uk-checkbox" type="checkbox" id="人は必ず死ぬ"/></td>
+<td class="question-text">人は必ず死ぬ</td>
+<td class="answer-text">Man is mortal.</td>
+</tr>
+<tr class="item 天国に昇る">
+<td><input class="uk-checkbox" type="checkbox" id="天国に昇る"/></td>
+<td class="question-text">天国に昇る</td>
+<td class="answer-text">ascend to heaven</td>
+</tr>
+<tr class="item 神聖な神社">
+<td><input class="uk-checkbox" type="checkbox" id="神聖な神社"/></td>
+<td class="question-text">神聖な神社</td>
+<td class="answer-text">a sacred shrine</td>
+</tr>
+<tr class="item 厳かな儀式">
+<td><input class="uk-checkbox" type="checkbox" id="厳かな儀式"/></td>
+<td class="question-text">厳かな儀式</td>
+<td class="answer-text">a solemn ritual</td>
+</tr>
+<tr class="item 坐って瞑想する">
+<td><input class="uk-checkbox" type="checkbox" id="坐って瞑想する"/></td>
+<td class="question-text">坐って瞑想する</td>
+<td class="answer-text">sit in meditation</td>
+</tr>
+<tr class="item 祖先と子孫">
+<td><input class="uk-checkbox" type="checkbox" id="祖先と子孫"/></td>
+<td class="question-text">祖先と子孫</td>
+<td class="answer-text">ancestors and descendants</td>
+</tr>
+<tr class="item 野蛮人と文明人">
+<td><input class="uk-checkbox" type="checkbox" id="野蛮人と文明人"/></td>
+<td class="question-text">野蛮人と文明人</td>
+<td class="answer-text">barbarians and civilized men</td>
+</tr>
+<tr class="item 未開な部族">
+<td><input class="uk-checkbox" type="checkbox" id="未開な部族"/></td>
+<td class="question-text">未開な部族</td>
+<td class="answer-text">savage tribes</td>
+</tr>
+<tr class="item 洞窟に住む人々">
+<td><input class="uk-checkbox" type="checkbox" id="洞窟に住む人々"/></td>
+<td class="question-text">洞窟に住む人々</td>
+<td class="answer-text">cave dwellers</td>
+</tr>
+<tr class="item 粗末な石器">
+<td><input class="uk-checkbox" type="checkbox" id="粗末な石器"/></td>
+<td class="question-text">粗末な石器</td>
+<td class="answer-text">crude stone tools</td>
+</tr>
+<tr class="item 農業の起り">
+<td><input class="uk-checkbox" type="checkbox" id="農業の起り"/></td>
+<td class="question-text">農業の起り</td>
+<td class="answer-text">the rise of agriculture</td>
+</tr>
+<tr class="item 忠誠の農夫">
+<td><input class="uk-checkbox" type="checkbox" id="忠誠の農夫"/></td>
+<td class="question-text">忠誠の農夫</td>
+<td class="answer-text">medieval peasants</td>
+</tr>
+<tr class="item 鎧を着た騎士">
+<td><input class="uk-checkbox" type="checkbox" id="鎧を着た騎士"/></td>
+<td class="question-text">鎧を着た騎士</td>
+<td class="answer-text">a knight in armor</td>
+</tr>
+<tr class="item 槍と楯">
+<td><input class="uk-checkbox" type="checkbox" id="槍と楯"/></td>
+<td class="question-text">槍と楯</td>
+<td class="answer-text">spears and shields</td>
+</tr>
+<tr class="item 封建領主">
+<td><input class="uk-checkbox" type="checkbox" id="封建領主"/></td>
+<td class="question-text">封建領主</td>
+<td class="answer-text">a feudal lord</td>
+</tr>
+<tr class="item 絶対君主">
+<td><input class="uk-checkbox" type="checkbox" id="絶対君主"/></td>
+<td class="question-text">絶対君主</td>
+<td class="answer-text">an absolute monarch</td>
+</tr>
+<tr class="item 王位継承者">
+<td><input class="uk-checkbox" type="checkbox" id="王位継承者"/></td>
+<td class="question-text">王位継承者</td>
+<td class="answer-text">the heir to the throne</td>
+</tr>
+<tr class="item 貴族社会を組織する">
+<td><input class="uk-checkbox" type="checkbox" id="貴族社会を組織する"/></td>
+<td class="question-text">貴族社会を組織する</td>
+<td class="answer-text">set up an aristocracy</td>
+</tr>
+<tr class="item 貴族の特権">
+<td><input class="uk-checkbox" type="checkbox" id="貴族の特権"/></td>
+<td class="question-text">貴族の特権</td>
+<td class="answer-text">aristocratic privileges</td>
+</tr>
+<tr class="item 植民地を築く">
+<td><input class="uk-checkbox" type="checkbox" id="植民地を築く"/></td>
+<td class="question-text">植民地を築く</td>
+<td class="answer-text">establish a colony</td>
+</tr>
+<tr class="item 苛酷な植民地支配">
+<td><input class="uk-checkbox" type="checkbox" id="苛酷な植民地支配"/></td>
+<td class="question-text">苛酷な植民地支配</td>
+<td class="answer-text">oppressive colonial rule</td>
+</tr>
+<tr class="item アメリカに移住する">
+<td><input class="uk-checkbox" type="checkbox" id="アメリカに移住する"/></td>
+<td class="question-text">アメリカに移住する</td>
+<td class="answer-text">migrate to America</td>
+</tr>
+<tr class="item ブラジルへ移民する">
+<td><input class="uk-checkbox" type="checkbox" id="ブラジルへ移民する"/></td>
+<td class="question-text">ブラジルへ移民する</td>
+<td class="answer-text">emigrate to Brazil</td>
+</tr>
+<tr class="item 移住してきた労働者">
+<td><input class="uk-checkbox" type="checkbox" id="移住してきた労働者"/></td>
+<td class="question-text">移住してきた労働者</td>
+<td class="answer-text">immigrant laborers</td>
+</tr>
+<tr class="item 奴隷制を廃止する">
+<td><input class="uk-checkbox" type="checkbox" id="奴隷制を廃止する"/></td>
+<td class="question-text">奴隷制を廃止する</td>
+<td class="answer-text">abolish slavery</td>
+</tr>
+<tr class="item 記念碑を建てる">
+<td><input class="uk-checkbox" type="checkbox" id="記念碑を建てる"/></td>
+<td class="question-text">記念碑を建てる</td>
+<td class="answer-text">erect a monument</td>
+</tr>
+<tr class="item 戦後の日本">
+<td><input class="uk-checkbox" type="checkbox" id="戦後の日本"/></td>
+<td class="question-text">戦後の日本</td>
+<td class="answer-text">postwar Japan</td>
+</tr>
+<tr class="item それ以前の時代">
+<td><input class="uk-checkbox" type="checkbox" id="それ以前の時代"/></td>
+<td class="question-text">それ以前の時代</td>
+<td class="answer-text">preceding eras</td>
+</tr>
+<tr class="item 現在の天皇">
+<td><input class="uk-checkbox" type="checkbox" id="現在の天皇"/></td>
+<td class="question-text">現在の天皇</td>
+<td class="answer-text">the present emperor</td>
+</tr>
+<tr class="item 資本主義思想">
+<td><input class="uk-checkbox" type="checkbox" id="資本主義思想"/></td>
+<td class="question-text">資本主義思想</td>
+<td class="answer-text">capitalist ideology</td>
+</tr>
+<tr class="item 資本主義の一側面">
+<td><input class="uk-checkbox" type="checkbox" id="資本主義の一側面"/></td>
+<td class="question-text">資本主義の一側面</td>
+<td class="answer-text">one aspect of capitalism</td>
+</tr>
+<tr class="item 共産主義の崩壊">
+<td><input class="uk-checkbox" type="checkbox" id="共産主義の崩壊"/></td>
+<td class="question-text">共産主義の崩壊</td>
+<td class="answer-text">the collapse of communism</td>
+</tr>
+<tr class="item 科学的探究">
+<td><input class="uk-checkbox" type="checkbox" id="科学的探究"/></td>
+<td class="question-text">科学的探究</td>
+<td class="answer-text">scientific inquiry</td>
+</tr>
+<tr class="item 真理の追求">
+<td><input class="uk-checkbox" type="checkbox" id="真理の追求"/></td>
+<td class="question-text">真理の追求</td>
+<td class="answer-text">the quest for truth</td>
+</tr>
+<tr class="item 客観的な真理">
+<td><input class="uk-checkbox" type="checkbox" id="客観的な真理"/></td>
+<td class="question-text">客観的な真理</td>
+<td class="answer-text">objective truth</td>
+</tr>
+<tr class="item 自明の真理">
+<td><input class="uk-checkbox" type="checkbox" id="自明の真理"/></td>
+<td class="question-text">自明の真理</td>
+<td class="answer-text">a self-evident truth</td>
+</tr>
+<tr class="item まだ解けない謎">
+<td><input class="uk-checkbox" type="checkbox" id="まだ解けない謎"/></td>
+<td class="question-text">まだ解けない謎</td>
+<td class="answer-text">an unsolved riddle</td>
+</tr>
+<tr class="item 著名な科学者">
+<td><input class="uk-checkbox" type="checkbox" id="著名な科学者"/></td>
+<td class="question-text">著名な科学者</td>
+<td class="answer-text">an eminent scientist</td>
+</tr>
+<tr class="item 重要な貢献">
+<td><input class="uk-checkbox" type="checkbox" id="重要な貢献"/></td>
+<td class="question-text">重要な貢献</td>
+<td class="answer-text">significant contributions</td>
+</tr>
+<tr class="item 多くの実験を行う">
+<td><input class="uk-checkbox" type="checkbox" id="多くの実験を行う"/></td>
+<td class="question-text">多くの実験を行う</td>
+<td class="answer-text">conduct numerous experiments</td>
+</tr>
+<tr class="item 詳細な分析">
+<td><input class="uk-checkbox" type="checkbox" id="詳細な分析"/></td>
+<td class="question-text">詳細な分析</td>
+<td class="answer-text">minute analysis</td>
+</tr>
+<tr class="item 幅広い応用">
+<td><input class="uk-checkbox" type="checkbox" id="幅広い応用"/></td>
+<td class="question-text">幅広い応用</td>
+<td class="answer-text">widespread application</td>
+</tr>
+<tr class="item 科学研究所">
+<td><input class="uk-checkbox" type="checkbox" id="科学研究所"/></td>
+<td class="question-text">科学研究所</td>
+<td class="answer-text">a chemistry laboratory</td>
+</tr>
+<tr class="item 水素と酸素">
+<td><input class="uk-checkbox" type="checkbox" id="水素と酸素"/></td>
+<td class="question-text">水素と酸素</td>
+<td class="answer-text">hydrogen and oxygen</td>
+</tr>
+<tr class="item 電気の性質">
+<td><input class="uk-checkbox" type="checkbox" id="電気の性質"/></td>
+<td class="question-text">電気の性質</td>
+<td class="answer-text">the properties of electricity</td>
+</tr>
+<tr class="item 著しい進歩">
+<td><input class="uk-checkbox" type="checkbox" id="著しい進歩"/></td>
+<td class="question-text">著しい進歩</td>
+<td class="answer-text">substantial progress</td>
+</tr>
+<tr class="item かなりの程度まで">
+<td><input class="uk-checkbox" type="checkbox" id="かなりの程度まで"/></td>
+<td class="question-text">かなりの程度まで</td>
+<td class="answer-text">to a great extent</td>
+</tr>
+<tr class="item つけ加えて">
+<td><input class="uk-checkbox" type="checkbox" id="つけ加えて"/></td>
+<td class="question-text">つけ加えて</td>
+<td class="answer-text">in addition</td>
+</tr>
+<tr class="item 時と共に減少する">
+<td><input class="uk-checkbox" type="checkbox" id="時と共に減少する"/></td>
+<td class="question-text">時と共に減少する</td>
+<td class="answer-text">diminish over time</td>
+</tr>
+<tr class="item 正当な理由">
+<td><input class="uk-checkbox" type="checkbox" id="正当な理由"/></td>
+<td class="question-text">正当な理由</td>
+<td class="answer-text">a valid reason</td>
+</tr>
+<tr class="item 根底にある前提">
+<td><input class="uk-checkbox" type="checkbox" id="根底にある前提"/></td>
+<td class="question-text">根底にある前提</td>
+<td class="answer-text">an underlying assumption</td>
+</tr>
+<tr class="item 無知に起因する">
+<td><input class="uk-checkbox" type="checkbox" id="無知に起因する"/></td>
+<td class="question-text">無知に起因する</td>
+<td class="answer-text">stem from ignorance</td>
+</tr>
+<tr class="item 避けられない結果">
+<td><input class="uk-checkbox" type="checkbox" id="避けられない結果"/></td>
+<td class="question-text">避けられない結果</td>
+<td class="answer-text">an inevitable consequense</td>
+</tr>
+<tr class="item 無数の可能性">
+<td><input class="uk-checkbox" type="checkbox" id="無数の可能性"/></td>
+<td class="question-text">無数の可能性</td>
+<td class="answer-text">innumerable possibilities</td>
+</tr>
+<tr class="item 矛盾する命題">
+<td><input class="uk-checkbox" type="checkbox" id="矛盾する命題"/></td>
+<td class="question-text">矛盾する命題</td>
+<td class="answer-text">contradictory propositions</td>
+</tr>
+<tr class="item ややこしい問題">
+<td><input class="uk-checkbox" type="checkbox" id="ややこしい問題"/></td>
+<td class="question-text">ややこしい問題</td>
+<td class="answer-text">a perplexing problem</td>
+</tr>
+<tr class="item 平行線">
+<td><input class="uk-checkbox" type="checkbox" id="平行線"/></td>
+<td class="question-text">平行線</td>
+<td class="answer-text">parallel lines</td>
+</tr>
+<tr class="item 点線を引く">
+<td><input class="uk-checkbox" type="checkbox" id="点線を引く"/></td>
+<td class="question-text">点線を引く</td>
+<td class="answer-text">draw dotted line</td>
+</tr>
+<tr class="item 算数の計算をする">
+<td><input class="uk-checkbox" type="checkbox" id="算数の計算をする"/></td>
+<td class="question-text">算数の計算をする</td>
+<td class="answer-text">do the arithmetic</td>
+</tr>
+<tr class="item ５に６をかける">
+<td><input class="uk-checkbox" type="checkbox" id="５に６をかける"/></td>
+<td class="question-text">５に６をかける</td>
+<td class="answer-text">multiply 5 by 6</td>
+</tr>
+<tr class="item 代数に幾何">
+<td><input class="uk-checkbox" type="checkbox" id="代数に幾何"/></td>
+<td class="question-text">代数に幾何</td>
+<td class="answer-text">algebra and geometry</td>
+</tr>
+<tr class="item 正確な計測">
+<td><input class="uk-checkbox" type="checkbox" id="正確な計測"/></td>
+<td class="question-text">正確な計測</td>
+<td class="answer-text">precise measurement</td>
+</tr>
+<tr class="item 直径２フィート">
+<td><input class="uk-checkbox" type="checkbox" id="直径２フィート"/></td>
+<td class="question-text">直径２フィート</td>
+<td class="answer-text">two feet in diameter</td>
+</tr>
+<tr class="item 範囲を示す">
+<td><input class="uk-checkbox" type="checkbox" id="範囲を示す"/></td>
+<td class="question-text">範囲を示す</td>
+<td class="answer-text">indicate the scope</td>
+</tr>
+<tr class="item 間の距離を縮める">
+<td><input class="uk-checkbox" type="checkbox" id="間の距離を縮める"/></td>
+<td class="question-text">〜間の距離を縮める</td>
+<td class="answer-text">shrink the distance between 〜</td>
+</tr>
+<tr class="item 写真を引きのばす">
+<td><input class="uk-checkbox" type="checkbox" id="写真を引きのばす"/></td>
+<td class="question-text">写真を引きのばす</td>
+<td class="answer-text">enlarge the picture</td>
+</tr>
+<tr class="item 対象を１０倍に拡大する">
+<td><input class="uk-checkbox" type="checkbox" id="対象を１０倍に拡大する"/></td>
+<td class="question-text">対象を１０倍に拡大する</td>
+<td class="answer-text">magnify the object 10 times</td>
+</tr>
+<tr class="item 時間を測る">
+<td><input class="uk-checkbox" type="checkbox" id="時間を測る"/></td>
+<td class="question-text">時間を測る</td>
+<td class="answer-text">reckon the amount of time</td>
+</tr>
+<tr class="item 断片的な時間">
+<td><input class="uk-checkbox" type="checkbox" id="断片的な時間"/></td>
+<td class="question-text">断片的な時間</td>
+<td class="answer-text">a fragment of time</td>
+</tr>
+<tr class="item 時間を守れ">
+<td><input class="uk-checkbox" type="checkbox" id="時間を守れ"/></td>
+<td class="question-text">時間を守れ</td>
+<td class="answer-text">Be punctual.</td>
+</tr>
+<tr class="item 昼休み">
+<td><input class="uk-checkbox" type="checkbox" id="昼休み"/></td>
+<td class="question-text">昼休み</td>
+<td class="answer-text">the noon recess</td>
+</tr>
+<tr class="item 不特定な期間">
+<td><input class="uk-checkbox" type="checkbox" id="不特定な期間"/></td>
+<td class="question-text">不特定な期間</td>
+<td class="answer-text">an indefinite time frame</td>
+</tr>
+<tr class="item 永久運動">
+<td><input class="uk-checkbox" type="checkbox" id="永久運動"/></td>
+<td class="question-text">永久運動</td>
+<td class="answer-text">perpetual motion</td>
+</tr>
+<tr class="item まともな暮らし">
+<td><input class="uk-checkbox" type="checkbox" id="まともな暮らし"/></td>
+<td class="question-text">まともな暮らし</td>
+<td class="answer-text">a decent living</td>
+</tr>
+<tr class="item 一ヵ月の予算">
+<td><input class="uk-checkbox" type="checkbox" id="一ヵ月の予算"/></td>
+<td class="question-text">一ヵ月の予算</td>
+<td class="answer-text">a monthly budget</td>
+</tr>
+<tr class="item 種々雑多な費用">
+<td><input class="uk-checkbox" type="checkbox" id="種々雑多な費用"/></td>
+<td class="question-text">種々雑多な費用</td>
+<td class="answer-text">miscellaneous expenses</td>
+</tr>
+<tr class="item 年金で暮らす">
+<td><input class="uk-checkbox" type="checkbox" id="年金で暮らす"/></td>
+<td class="question-text">年金で暮らす</td>
+<td class="answer-text">live on a pension</td>
+</tr>
+<tr class="item 株や債券">
+<td><input class="uk-checkbox" type="checkbox" id="株や債券"/></td>
+<td class="question-text">株や債券</td>
+<td class="answer-text">stocks and bonds</td>
+</tr>
+<tr class="item そんな余裕はありません">
+<td><input class="uk-checkbox" type="checkbox" id="そんな余裕はありません"/></td>
+<td class="question-text">そんな余裕はありません</td>
+<td class="answer-text">I can't afford it.</td>
+</tr>
+<tr class="item 数十億ドル">
+<td><input class="uk-checkbox" type="checkbox" id="数十億ドル"/></td>
+<td class="question-text">数十億ドル</td>
+<td class="answer-text">billions of dollars</td>
+</tr>
+<tr class="item きまった小遣い">
+<td><input class="uk-checkbox" type="checkbox" id="きまった小遣い"/></td>
+<td class="question-text">きまった小遣い</td>
+<td class="answer-text">a regular allowance</td>
+</tr>
+<tr class="item 宝石店">
+<td><input class="uk-checkbox" type="checkbox" id="宝石店"/></td>
+<td class="question-text">宝石店</td>
+<td class="answer-text">a jewelry shop</td>
+</tr>
+<tr class="item 値のはる商品">
+<td><input class="uk-checkbox" type="checkbox" id="値のはる商品"/></td>
+<td class="question-text">値のはる商品</td>
+<td class="answer-text">a costly commodity</td>
+</tr>
+<tr class="item 虚栄心を満足させる">
+<td><input class="uk-checkbox" type="checkbox" id="虚栄心を満足させる"/></td>
+<td class="question-text">虚栄心を満足させる</td>
+<td class="answer-text">gratify one's vanity</td>
+</tr>
+<tr class="item 市場を支配する">
+<td><input class="uk-checkbox" type="checkbox" id="市場を支配する"/></td>
+<td class="question-text">市場を支配する</td>
+<td class="answer-text">dominate the market</td>
+</tr>
+<tr class="item 事実上の独占">
+<td><input class="uk-checkbox" type="checkbox" id="事実上の独占"/></td>
+<td class="question-text">事実上の独占</td>
+<td class="answer-text">virtual monopoly</td>
+</tr>
+<tr class="item 海外市場に食い込む">
+<td><input class="uk-checkbox" type="checkbox" id="海外市場に食い込む"/></td>
+<td class="question-text">海外市場に食い込む</td>
+<td class="answer-text">penetrate foreign markets</td>
+</tr>
+<tr class="item 不動産業者">
+<td><input class="uk-checkbox" type="checkbox" id="不動産業者"/></td>
+<td class="question-text">不動産業者</td>
+<td class="answer-text">a real-estate agent</td>
+</tr>
+<tr class="item 値上がり続きの不動産">
+<td><input class="uk-checkbox" type="checkbox" id="値上がり続きの不動産"/></td>
+<td class="question-text">値上がり続きの不動産</td>
+<td class="answer-text">soaring property values</td>
+</tr>
+<tr class="item 予想を超える">
+<td><input class="uk-checkbox" type="checkbox" id="予想を超える"/></td>
+<td class="question-text">予想を超える</td>
+<td class="answer-text">surpass expectations</td>
+</tr>
+<tr class="item 保険をかける">
+<td><input class="uk-checkbox" type="checkbox" id="保険をかける"/></td>
+<td class="question-text">保険をかける</td>
+<td class="answer-text">take out insurance</td>
+</tr>
+<tr class="item 契約を更新する">
+<td><input class="uk-checkbox" type="checkbox" id="契約を更新する"/></td>
+<td class="question-text">契約を更新する</td>
+<td class="answer-text">renew the contract</td>
+</tr>
+<tr class="item 経済の舵取りをする">
+<td><input class="uk-checkbox" type="checkbox" id="経済の舵取りをする"/></td>
+<td class="question-text">経済の舵取りをする</td>
+<td class="answer-text">steer the economy</td>
+</tr>
+<tr class="item 貧富の大きな隔たり">
+<td><input class="uk-checkbox" type="checkbox" id="貧富の大きな隔たり"/></td>
+<td class="question-text">貧富の大きな隔たり</td>
+<td class="answer-text">the gulf between rich and poor</td>
+</tr>
+<tr class="item 富の公平な配分">
+<td><input class="uk-checkbox" type="checkbox" id="富の公平な配分"/></td>
+<td class="question-text">富の公平な配分</td>
+<td class="answer-text">fair distribution of wealth</td>
+</tr>
+<tr class="item 財政難">
+<td><input class="uk-checkbox" type="checkbox" id="財政難"/></td>
+<td class="question-text">財政難</td>
+<td class="answer-text">financial distress</td>
+</tr>
+<tr class="item 消費税">
+<td><input class="uk-checkbox" type="checkbox" id="消費税"/></td>
+<td class="question-text">消費税</td>
+<td class="answer-text">consumption tax</td>
+</tr>
+<tr class="item 間接課税">
+<td><input class="uk-checkbox" type="checkbox" id="間接課税"/></td>
+<td class="question-text">間接課税</td>
+<td class="answer-text">indirect taxation</td>
+</tr>
+<tr class="item 繁栄している国">
+<td><input class="uk-checkbox" type="checkbox" id="繁栄している国"/></td>
+<td class="question-text">繁栄している国</td>
+<td class="answer-text">a prosperous nation</td>
+</tr>
+<tr class="item 経済的な保証">
+<td><input class="uk-checkbox" type="checkbox" id="経済的な保証"/></td>
+<td class="question-text">経済的な保証</td>
+<td class="answer-text">financial guarantees</td>
+</tr>
+<tr class="item 新産業を育てる">
+<td><input class="uk-checkbox" type="checkbox" id="新産業を育てる"/></td>
+<td class="question-text">新産業を育てる</td>
+<td class="answer-text">foster new industry</td>
+</tr>
+<tr class="item 生産設備">
+<td><input class="uk-checkbox" type="checkbox" id="生産設備"/></td>
+<td class="question-text">生産設備</td>
+<td class="answer-text">production facilities</td>
+</tr>
+<tr class="item 生産を一時中止する">
+<td><input class="uk-checkbox" type="checkbox" id="生産を一時中止する"/></td>
+<td class="question-text">生産を（一時）中止する</td>
+<td class="answer-text">suspend production</td>
+</tr>
+<tr class="item 操業を停止する">
+<td><input class="uk-checkbox" type="checkbox" id="操業を停止する"/></td>
+<td class="question-text">操業を停止する</td>
+<td class="answer-text">cease operation</td>
+</tr>
+<tr class="item 地域住民">
+<td><input class="uk-checkbox" type="checkbox" id="地域住民"/></td>
+<td class="question-text">地域住民</td>
+<td class="answer-text">local residents</td>
+</tr>
+<tr class="item 社会構造">
+<td><input class="uk-checkbox" type="checkbox" id="社会構造"/></td>
+<td class="question-text">社会構造</td>
+<td class="answer-text">the social structure</td>
+</tr>
+<tr class="item 社会制度">
+<td><input class="uk-checkbox" type="checkbox" id="社会制度"/></td>
+<td class="question-text">社会制度</td>
+<td class="answer-text">a social institution</td>
+</tr>
+<tr class="item 複雑な社会組織">
+<td><input class="uk-checkbox" type="checkbox" id="複雑な社会組織"/></td>
+<td class="question-text">複雑な社会組織</td>
+<td class="answer-text">complex social organizations</td>
+</tr>
+<tr class="item 社会的制約">
+<td><input class="uk-checkbox" type="checkbox" id="社会的制約"/></td>
+<td class="question-text">社会的制約</td>
+<td class="answer-text">social restraints</td>
+</tr>
+<tr class="item 社会的流動性">
+<td><input class="uk-checkbox" type="checkbox" id="社会的流動性"/></td>
+<td class="question-text">社会的流動性</td>
+<td class="answer-text">social mobility</td>
+</tr>
+<tr class="item 過渡的な段階">
+<td><input class="uk-checkbox" type="checkbox" id="過渡的な段階"/></td>
+<td class="question-text">過渡的な段階</td>
+<td class="answer-text">a transitional phase</td>
+</tr>
+<tr class="item 都市開発計画">
+<td><input class="uk-checkbox" type="checkbox" id="都市開発計画"/></td>
+<td class="question-text">都市開発計画</td>
+<td class="answer-text">urban-development schemes</td>
+</tr>
+<tr class="item 弁護士の資格を得る">
+<td><input class="uk-checkbox" type="checkbox" id="弁護士の資格を得る"/></td>
+<td class="question-text">弁護士の資格を得る</td>
+<td class="answer-text">qualify as a lawyer</td>
+</tr>
+<tr class="item 権利と義務">
+<td><input class="uk-checkbox" type="checkbox" id="権利と義務"/></td>
+<td class="question-text">権利と義務</td>
+<td class="answer-text">rights and obligations</td>
+</tr>
+<tr class="item 法の枠組み">
+<td><input class="uk-checkbox" type="checkbox" id="法の枠組み"/></td>
+<td class="question-text">法の枠組み</td>
+<td class="answer-text">a legal framework</td>
+</tr>
+<tr class="item 規則に従う">
+<td><input class="uk-checkbox" type="checkbox" id="規則に従う"/></td>
+<td class="question-text">規則に従う</td>
+<td class="answer-text">conform to the rules</td>
+</tr>
+<tr class="item 欠かせぬ手続き">
+<td><input class="uk-checkbox" type="checkbox" id="欠かせぬ手続き"/></td>
+<td class="question-text">欠かせぬ手続き</td>
+<td class="answer-text">an indispensable procedure</td>
+</tr>
+<tr class="item 厳密な定義">
+<td><input class="uk-checkbox" type="checkbox" id="厳密な定義"/></td>
+<td class="question-text">厳密な定義</td>
+<td class="answer-text">rigid definition</td>
+</tr>
+<tr class="item 正統的な解釈">
+<td><input class="uk-checkbox" type="checkbox" id="正統的な解釈"/></td>
+<td class="question-text">正統的な解釈</td>
+<td class="answer-text">orthodox interpretation</td>
+</tr>
+<tr class="item 自由な解釈">
+<td><input class="uk-checkbox" type="checkbox" id="自由な解釈"/></td>
+<td class="question-text">自由な解釈</td>
+<td class="answer-text">a liberal interpretation</td>
+</tr>
+<tr class="item 証人を呼び出す">
+<td><input class="uk-checkbox" type="checkbox" id="証人を呼び出す"/></td>
+<td class="question-text">証人を呼び出す</td>
+<td class="answer-text">summon a witness</td>
+</tr>
+<tr class="item 宣誓を行う">
+<td><input class="uk-checkbox" type="checkbox" id="宣誓を行う"/></td>
+<td class="question-text">宣誓を行う</td>
+<td class="answer-text">take an oath</td>
+</tr>
+<tr class="item 事実を述べる">
+<td><input class="uk-checkbox" type="checkbox" id="事実を述べる"/></td>
+<td class="question-text">事実を述べる</td>
+<td class="answer-text">state the facts</td>
+</tr>
+<tr class="item 彼の無罪を断言する">
+<td><input class="uk-checkbox" type="checkbox" id="彼の無罪を断言する"/></td>
+<td class="question-text">彼の無罪を断言する</td>
+<td class="answer-text">affirm his innocence</td>
+</tr>
+<tr class="item 罪状を認める">
+<td><input class="uk-checkbox" type="checkbox" id="罪状を認める"/></td>
+<td class="question-text">罪状を認める</td>
+<td class="answer-text">plead guilty</td>
+</tr>
+<tr class="item 評決を下す">
+<td><input class="uk-checkbox" type="checkbox" id="評決を下す"/></td>
+<td class="question-text">評決を下す</td>
+<td class="answer-text">render a verdict</td>
+</tr>
+<tr class="item 人を有罪とする">
+<td><input class="uk-checkbox" type="checkbox" id="人を有罪とする"/></td>
+<td class="question-text">人を有罪とする</td>
+<td class="answer-text">convict a person</td>
+</tr>
+<tr class="item 罰金を課す">
+<td><input class="uk-checkbox" type="checkbox" id="罰金を課す"/></td>
+<td class="question-text">罰金を課す</td>
+<td class="answer-text">impose a fine</td>
+</tr>
+<tr class="item 司法に干渉する">
+<td><input class="uk-checkbox" type="checkbox" id="司法に干渉する"/></td>
+<td class="question-text">司法に干渉する</td>
+<td class="answer-text">obstruct justice</td>
+</tr>
+<tr class="item 職権の乱用">
+<td><input class="uk-checkbox" type="checkbox" id="職権の乱用"/></td>
+<td class="question-text">職権の乱用</td>
+<td class="answer-text">abuse of office</td>
+</tr>
+<tr class="item 権力にしがみつく">
+<td><input class="uk-checkbox" type="checkbox" id="権力にしがみつく"/></td>
+<td class="question-text">権力にしがみつく</td>
+<td class="answer-text">cling to power</td>
+</tr>
+<tr class="item 派閥争い">
+<td><input class="uk-checkbox" type="checkbox" id="派閥争い"/></td>
+<td class="question-text">派閥争い</td>
+<td class="answer-text">factional strife</td>
+</tr>
+<tr class="item 影響力を行使する">
+<td><input class="uk-checkbox" type="checkbox" id="影響力を行使する"/></td>
+<td class="question-text">影響力を行使する</td>
+<td class="answer-text">exert influence</td>
+</tr>
+<tr class="item 影響力の範囲">
+<td><input class="uk-checkbox" type="checkbox" id="影響力の範囲"/></td>
+<td class="question-text">影響力の範囲</td>
+<td class="answer-text">sphere of influence</td>
+</tr>
+<tr class="item 有能な役人">
+<td><input class="uk-checkbox" type="checkbox" id="有能な役人"/></td>
+<td class="question-text">有能な役人</td>
+<td class="answer-text">a competent official</td>
+</tr>
+<tr class="item 無能な役人">
+<td><input class="uk-checkbox" type="checkbox" id="無能な役人"/></td>
+<td class="question-text">無能な役人</td>
+<td class="answer-text">an incompetent official</td>
+</tr>
+<tr class="item 職を辞する">
+<td><input class="uk-checkbox" type="checkbox" id="職を辞する"/></td>
+<td class="question-text">職を辞する</td>
+<td class="answer-text">resign the post</td>
+</tr>
+<tr class="item 腐敗した政治">
+<td><input class="uk-checkbox" type="checkbox" id="腐敗した政治"/></td>
+<td class="question-text">腐敗した政治</td>
+<td class="answer-text">corrupt politics</td>
+</tr>
+<tr class="item 少数派">
+<td><input class="uk-checkbox" type="checkbox" id="少数派"/></td>
+<td class="question-text">少数派</td>
+<td class="answer-text">minority groups</td>
+</tr>
+<tr class="item 人種差別">
+<td><input class="uk-checkbox" type="checkbox" id="人種差別"/></td>
+<td class="question-text">人種差別</td>
+<td class="answer-text">racial discrimination</td>
+</tr>
+<tr class="item 人の自由を奪う">
+<td><input class="uk-checkbox" type="checkbox" id="人の自由を奪う"/></td>
+<td class="question-text">人の自由を奪う</td>
+<td class="answer-text">deprive the people of liberty</td>
+</tr>
+<tr class="item 苛酷な扱い">
+<td><input class="uk-checkbox" type="checkbox" id="苛酷な扱い"/></td>
+<td class="question-text">苛酷な扱い</td>
+<td class="answer-text">harsh treatment</td>
+</tr>
+<tr class="item 同等の扱い">
+<td><input class="uk-checkbox" type="checkbox" id="同等の扱い"/></td>
+<td class="question-text">同等の扱い</td>
+<td class="answer-text">equal treatment</td>
+</tr>
+<tr class="item 民主主義にあこがれる">
+<td><input class="uk-checkbox" type="checkbox" id="民主主義にあこがれる"/></td>
+<td class="question-text">民主主義にあこがれる</td>
+<td class="answer-text">yearn for democracy</td>
+</tr>
+<tr class="item 世論を形成する">
+<td><input class="uk-checkbox" type="checkbox" id="世論を形成する"/></td>
+<td class="question-text">世論を形成する</td>
+<td class="answer-text">mold public opinion</td>
+</tr>
+<tr class="item 主義主張を宣伝する">
+<td><input class="uk-checkbox" type="checkbox" id="主義主張を宣伝する"/></td>
+<td class="question-text">主義主張を宣伝する</td>
+<td class="answer-text">spread propaganda</td>
+</tr>
+<tr class="item アメリカ憲法">
+<td><input class="uk-checkbox" type="checkbox" id="アメリカ憲法"/></td>
+<td class="question-text">アメリカ憲法</td>
+<td class="answer-text">the American Constitution</td>
+</tr>
+<tr class="item 合衆国議会">
+<td><input class="uk-checkbox" type="checkbox" id="合衆国議会"/></td>
+<td class="question-text">合衆国議会</td>
+<td class="answer-text">the United States Congress</td>
+</tr>
+<tr class="item 英国議会">
+<td><input class="uk-checkbox" type="checkbox" id="英国議会"/></td>
+<td class="question-text">英国議会</td>
+<td class="answer-text">the British Parliament</td>
+</tr>
+<tr class="item 政治集会">
+<td><input class="uk-checkbox" type="checkbox" id="政治集会"/></td>
+<td class="question-text">政治集会</td>
+<td class="answer-text">a political convention</td>
+</tr>
+<tr class="item 圧倒的多数">
+<td><input class="uk-checkbox" type="checkbox" id="圧倒的多数"/></td>
+<td class="question-text">圧倒的多数</td>
+<td class="answer-text">an overwhelming majority</td>
+</tr>
+<tr class="item 代表を選挙で選ぶ">
+<td><input class="uk-checkbox" type="checkbox" id="代表を選挙で選ぶ"/></td>
+<td class="question-text">代表を選挙で選ぶ</td>
+<td class="answer-text">elect a representative</td>
+</tr>
+<tr class="item 傑出した政治家">
+<td><input class="uk-checkbox" type="checkbox" id="傑出した政治家"/></td>
+<td class="question-text">傑出した政治家</td>
+<td class="answer-text">a distinguished statesman</td>
+</tr>
+<tr class="item 領土紛争を解決する">
+<td><input class="uk-checkbox" type="checkbox" id="領土紛争を解決する"/></td>
+<td class="question-text">領土紛争を解決する</td>
+<td class="answer-text">settle territorial disputes</td>
+</tr>
+<tr class="item 主権を宣言する">
+<td><input class="uk-checkbox" type="checkbox" id="主権を宣言する"/></td>
+<td class="question-text">主権を宣言する</td>
+<td class="answer-text">proclaim sovereignty</td>
+</tr>
+<tr class="item 国としてのまとまり">
+<td><input class="uk-checkbox" type="checkbox" id="国としてのまとまり"/></td>
+<td class="question-text">国としてのまとまり</td>
+<td class="answer-text">national unity</td>
+</tr>
+<tr class="item 日本の国籍">
+<td><input class="uk-checkbox" type="checkbox" id="日本の国籍"/></td>
+<td class="question-text">日本の国籍</td>
+<td class="answer-text">Japanese nationality</td>
+</tr>
+<tr class="item 外交関係">
+<td><input class="uk-checkbox" type="checkbox" id="外交関係"/></td>
+<td class="question-text">外交関係</td>
+<td class="answer-text">diplomatic relations</td>
+</tr>
+<tr class="item 使節を派遣する">
+<td><input class="uk-checkbox" type="checkbox" id="使節を派遣する"/></td>
+<td class="question-text">使節を派遣する</td>
+<td class="answer-text">dispatch a mission</td>
+</tr>
+<tr class="item 緊張を緩和する">
+<td><input class="uk-checkbox" type="checkbox" id="緊張を緩和する"/></td>
+<td class="question-text">緊張を緩和する</td>
+<td class="answer-text">lessen the tension</td>
+</tr>
+<tr class="item 政治を変革する">
+<td><input class="uk-checkbox" type="checkbox" id="政治を変革する"/></td>
+<td class="question-text">政治を変革する</td>
+<td class="answer-text">transform politics</td>
+</tr>
+<tr class="item 賢明な政策">
+<td><input class="uk-checkbox" type="checkbox" id="賢明な政策"/></td>
+<td class="question-text">賢明な政策</td>
+<td class="answer-text">a prudent policy</td>
+</tr>
+<tr class="item 慎重な計画">
+<td><input class="uk-checkbox" type="checkbox" id="慎重な計画"/></td>
+<td class="question-text">慎重な計画</td>
+<td class="answer-text">deliberate planning</td>
+</tr>
+<tr class="item 計画に干渉する">
+<td><input class="uk-checkbox" type="checkbox" id="計画に干渉する"/></td>
+<td class="question-text">計画に干渉する</td>
+<td class="answer-text">interfere with their plan</td>
+</tr>
+<tr class="item 保守的な意見">
+<td><input class="uk-checkbox" type="checkbox" id="保守的な意見"/></td>
+<td class="question-text">保守的な意見</td>
+<td class="answer-text">a conservative opinion</td>
+</tr>
+<tr class="item 怒れる群衆">
+<td><input class="uk-checkbox" type="checkbox" id="怒れる群衆"/></td>
+<td class="question-text">怒れる群衆</td>
+<td class="answer-text">an angry mob</td>
+</tr>
+<tr class="item デモを行う">
+<td><input class="uk-checkbox" type="checkbox" id="デモを行う"/></td>
+<td class="question-text">デモを行う</td>
+<td class="answer-text">stage a demonstration</td>
+</tr>
+<tr class="item 猛烈な反対">
+<td><input class="uk-checkbox" type="checkbox" id="猛烈な反対"/></td>
+<td class="question-text">猛烈な反対</td>
+<td class="answer-text">fierce opposition</td>
+</tr>
+<tr class="item 反対勢力をつぶす">
+<td><input class="uk-checkbox" type="checkbox" id="反対勢力をつぶす"/></td>
+<td class="question-text">反対勢力をつぶす</td>
+<td class="answer-text">crush the opposition</td>
+</tr>
+<tr class="item かなりの抵抗">
+<td><input class="uk-checkbox" type="checkbox" id="かなりの抵抗"/></td>
+<td class="question-text">かなりの抵抗</td>
+<td class="answer-text">considerable resistance</td>
+</tr>
+<tr class="item 激しい抵抗">
+<td><input class="uk-checkbox" type="checkbox" id="激しい抵抗"/></td>
+<td class="question-text">激しい抵抗</td>
+<td class="answer-text">violent resistance</td>
+</tr>
+<tr class="item 反乱を起こす">
+<td><input class="uk-checkbox" type="checkbox" id="反乱を起こす"/></td>
+<td class="question-text">反乱を起こす</td>
+<td class="answer-text">rise up in revolt</td>
+</tr>
+<tr class="item その後の展開">
+<td><input class="uk-checkbox" type="checkbox" id="その後の展開"/></td>
+<td class="question-text">その後の展開</td>
+<td class="answer-text">subsequent developments</td>
+</tr>
+<tr class="item 防衛問題">
+<td><input class="uk-checkbox" type="checkbox" id="防衛問題"/></td>
+<td class="question-text">防衛問題</td>
+<td class="answer-text">defense issues</td>
+</tr>
+<tr class="item 軍事費用">
+<td><input class="uk-checkbox" type="checkbox" id="軍事費用"/></td>
+<td class="question-text">軍事費用</td>
+<td class="answer-text">military expenditures</td>
+</tr>
+<tr class="item 武器輸出を禁止する">
+<td><input class="uk-checkbox" type="checkbox" id="武器輸出を禁止する"/></td>
+<td class="question-text">武器輸出を禁止する</td>
+<td class="answer-text">ban arms exports</td>
+</tr>
+<tr class="item 恐ろしい武力を使う">
+<td><input class="uk-checkbox" type="checkbox" id="恐ろしい武力を使う"/></td>
+<td class="question-text">恐ろしい武力を使う</td>
+<td class="answer-text">use lethal force</td>
+</tr>
+<tr class="item 強力な武器">
+<td><input class="uk-checkbox" type="checkbox" id="強力な武器"/></td>
+<td class="question-text">強力な武器</td>
+<td class="answer-text">a potent weapon</td>
+</tr>
+<tr class="item 戦争を予期する">
+<td><input class="uk-checkbox" type="checkbox" id="戦争を予期する"/></td>
+<td class="question-text">戦争を予期する</td>
+<td class="answer-text">anticipate a war</td>
+</tr>
+<tr class="item 隣国に侵入する">
+<td><input class="uk-checkbox" type="checkbox" id="隣国に侵入する"/></td>
+<td class="question-text">隣国に侵入する</td>
+<td class="answer-text">invade a neighboring country</td>
+</tr>
+<tr class="item 領土を支配する">
+<td><input class="uk-checkbox" type="checkbox" id="領土を支配する"/></td>
+<td class="question-text">領土を支配する</td>
+<td class="answer-text">control the territory</td>
+</tr>
+<tr class="item 長年の同盟軍同盟国">
+<td><input class="uk-checkbox" type="checkbox" id="長年の同盟軍同盟国"/></td>
+<td class="question-text">長年の同盟軍（同盟国）</td>
+<td class="answer-text">a long-time ally</td>
+</tr>
+<tr class="item 戦争の勃発">
+<td><input class="uk-checkbox" type="checkbox" id="戦争の勃発"/></td>
+<td class="question-text">戦争の勃発</td>
+<td class="answer-text">the outbreak of war</td>
+</tr>
+<tr class="item しぶとい敵">
+<td><input class="uk-checkbox" type="checkbox" id="しぶとい敵"/></td>
+<td class="question-text">しぶとい敵</td>
+<td class="answer-text">stubborn force</td>
+</tr>
+<tr class="item 戦いで死ぬ">
+<td><input class="uk-checkbox" type="checkbox" id="戦いで死ぬ"/></td>
+<td class="question-text">戦いで死ぬ</td>
+<td class="answer-text">perish in battle</td>
+</tr>
+<tr class="item 反戦感情">
+<td><input class="uk-checkbox" type="checkbox" id="反戦感情"/></td>
+<td class="question-text">反戦感情</td>
+<td class="answer-text">anti-war sentiment</td>
+</tr>
+<tr class="item 白旗は降伏の印">
+<td><input class="uk-checkbox" type="checkbox" id="白旗は降伏の印"/></td>
+<td class="question-text">白旗は降伏の印</td>
+<td class="answer-text">A white flag signifies surrender.</td>
+</tr>
+<tr class="item 軍を撤退させる">
+<td><input class="uk-checkbox" type="checkbox" id="軍を撤退させる"/></td>
+<td class="question-text">軍を撤退させる</td>
+<td class="answer-text">withdraw troops</td>
+</tr>
+<tr class="item 名誉ある撤退">
+<td><input class="uk-checkbox" type="checkbox" id="名誉ある撤退"/></td>
+<td class="question-text">名誉ある撤退</td>
+<td class="answer-text">an honorable withdrawal</td>
+</tr>
+<tr class="item 勝利軍">
+<td><input class="uk-checkbox" type="checkbox" id="勝利軍"/></td>
+<td class="question-text">勝利軍</td>
+<td class="answer-text">the triumphant troops</td>
+</tr>
+<tr class="item 難民キャンプ">
+<td><input class="uk-checkbox" type="checkbox" id="難民キャンプ"/></td>
+<td class="question-text">難民キャンプ</td>
+<td class="answer-text">refugee camps</td>
+</tr>
+<tr class="item 戦争の脅威">
+<td><input class="uk-checkbox" type="checkbox" id="戦争の脅威"/></td>
+<td class="question-text">戦争の脅威</td>
+<td class="answer-text">the menace of war</td>
+</tr>
+<tr class="item 戦争の傷跡">
+<td><input class="uk-checkbox" type="checkbox" id="戦争の傷跡"/></td>
+<td class="question-text">戦争の傷跡</td>
+<td class="answer-text">the scars of war</td>
+</tr>
+<tr class="item 秩序を取り戻す">
+<td><input class="uk-checkbox" type="checkbox" id="秩序を取り戻す"/></td>
+<td class="question-text">秩序を取り戻す</td>
+<td class="answer-text">restore order</td>
+</tr>
+<tr class="item 安全を保つ">
+<td><input class="uk-checkbox" type="checkbox" id="安全を保つ"/></td>
+<td class="question-text">安全を保つ</td>
+<td class="answer-text">maintain security</td>
+</tr>
+<tr class="item 生物兵器を使った戦争">
+<td><input class="uk-checkbox" type="checkbox" id="生物兵器を使った戦争"/></td>
+<td class="question-text">生物兵器を使った戦争</td>
+<td class="answer-text">biological warfare</td>
+</tr>
+<tr class="item 核爆発">
+<td><input class="uk-checkbox" type="checkbox" id="核爆発"/></td>
+<td class="question-text">核爆発</td>
+<td class="answer-text">nuclear explosion</td>
+</tr>
+<tr class="item 核兵器を廃止する">
+<td><input class="uk-checkbox" type="checkbox" id="核兵器を廃止する"/></td>
+<td class="question-text">核兵器を廃止する</td>
+<td class="answer-text">abolish nuclear arms</td>
+</tr>
+<tr class="item スリにご用心">
+<td><input class="uk-checkbox" type="checkbox" id="スリにご用心"/></td>
+<td class="question-text">スリにご用心！</td>
+<td class="answer-text">Beware of pickpockets!</td>
+</tr>
+<tr class="item バッグをひったくる">
+<td><input class="uk-checkbox" type="checkbox" id="バッグをひったくる"/></td>
+<td class="question-text">バッグをひったくる</td>
+<td class="answer-text">snatch her purse</td>
+</tr>
+<tr class="item 自転車泥棒">
+<td><input class="uk-checkbox" type="checkbox" id="自転車泥棒"/></td>
+<td class="question-text">自転車泥棒</td>
+<td class="answer-text">a bicycle thief</td>
+</tr>
+<tr class="item 警報装置を設置する">
+<td><input class="uk-checkbox" type="checkbox" id="警報装置を設置する"/></td>
+<td class="question-text">警報装置を設置する</td>
+<td class="answer-text">install an alarm system</td>
+</tr>
+<tr class="item 犯人を逮捕する">
+<td><input class="uk-checkbox" type="checkbox" id="犯人を逮捕する"/></td>
+<td class="question-text">犯人を逮捕する</td>
+<td class="answer-text">arrest a criminal</td>
+</tr>
+<tr class="item 乱暴な運転者">
+<td><input class="uk-checkbox" type="checkbox" id="乱暴な運転者"/></td>
+<td class="question-text">乱暴な運転者</td>
+<td class="answer-text">a reckless driver</td>
+</tr>
+<tr class="item 警告を無視する">
+<td><input class="uk-checkbox" type="checkbox" id="警告を無視する"/></td>
+<td class="question-text">警告を無視する</td>
+<td class="answer-text">disregard a warning</td>
+</tr>
+<tr class="item 正面衝突をする">
+<td><input class="uk-checkbox" type="checkbox" id="正面衝突をする"/></td>
+<td class="question-text">正面衝突をする</td>
+<td class="answer-text">collide head-on</td>
+</tr>
+<tr class="item 緊急着陸">
+<td><input class="uk-checkbox" type="checkbox" id="緊急着陸"/></td>
+<td class="question-text">緊急着陸</td>
+<td class="answer-text">an emergency landing</td>
+</tr>
+<tr class="item 着陸のために高度を下げる">
+<td><input class="uk-checkbox" type="checkbox" id="着陸のために高度を下げる"/></td>
+<td class="question-text">着陸のために高度を下げる</td>
+<td class="answer-text">descend for landing</td>
+</tr>
+<tr class="item ７人の乗組員">
+<td><input class="uk-checkbox" type="checkbox" id="７人の乗組員"/></td>
+<td class="question-text">７人の乗組員</td>
+<td class="answer-text">a crew of seven</td>
+</tr>
+<tr class="item 空の惨事">
+<td><input class="uk-checkbox" type="checkbox" id="空の惨事"/></td>
+<td class="question-text">空の惨事</td>
+<td class="answer-text">an air disaster</td>
+</tr>
+<tr class="item 海に墜落する">
+<td><input class="uk-checkbox" type="checkbox" id="海に墜落する"/></td>
+<td class="question-text">海に墜落する</td>
+<td class="answer-text">crash into the sea</td>
+</tr>
+<tr class="item 素早い救出">
+<td><input class="uk-checkbox" type="checkbox" id="素早い救出"/></td>
+<td class="question-text">素早い救出</td>
+<td class="answer-text">prompt rescue</td>
+</tr>
+<tr class="item 行方不明の人を見つける">
+<td><input class="uk-checkbox" type="checkbox" id="行方不明の人を見つける"/></td>
+<td class="question-text">行方不明の人を見つける</td>
+<td class="answer-text">locate the missing man</td>
+</tr>
+<tr class="item 無事を確かめる">
+<td><input class="uk-checkbox" type="checkbox" id="無事を確かめる"/></td>
+<td class="question-text">無事を確かめる</td>
+<td class="answer-text">ascertain their safety</td>
+</tr>
+<tr class="item 犠牲者の身元を確認する">
+<td><input class="uk-checkbox" type="checkbox" id="犠牲者の身元を確認する"/></td>
+<td class="question-text">犠牲者の身元を確認する</td>
+<td class="answer-text">identify the victims</td>
+</tr>
+<tr class="item 補償を要求する">
+<td><input class="uk-checkbox" type="checkbox" id="補償を要求する"/></td>
+<td class="question-text">補償を要求する</td>
+<td class="answer-text">demand compensation</td>
+</tr>
+<tr class="item ゴミを棄てる">
+<td><input class="uk-checkbox" type="checkbox" id="ゴミを棄てる"/></td>
+<td class="question-text">ゴミを棄てる</td>
+<td class="answer-text">discard the trash</td>
+</tr>
+<tr class="item 汚物を川に流す">
+<td><input class="uk-checkbox" type="checkbox" id="汚物を川に流す"/></td>
+<td class="question-text">汚物を川に流す</td>
+<td class="answer-text">discharge waste into the river</td>
+</tr>
+<tr class="item 汚染の源">
+<td><input class="uk-checkbox" type="checkbox" id="汚染の源"/></td>
+<td class="question-text">汚染の源</td>
+<td class="answer-text">a source of pollution</td>
+</tr>
+<tr class="item 具体的な対応策">
+<td><input class="uk-checkbox" type="checkbox" id="具体的な対応策"/></td>
+<td class="question-text">具体的な対応策</td>
+<td class="answer-text">concrete measures</td>
+</tr>
+<tr class="item いたずら坊主">
+<td><input class="uk-checkbox" type="checkbox" id="いたずら坊主"/></td>
+<td class="question-text">いたずら坊主</td>
+<td class="answer-text">a mischievous child</td>
+</tr>
+<tr class="item 人間の特性">
+<td><input class="uk-checkbox" type="checkbox" id="人間の特性"/></td>
+<td class="question-text">人間の特性</td>
+<td class="answer-text">human attributes</td>
+</tr>
+<tr class="item 持って生まれた才能">
+<td><input class="uk-checkbox" type="checkbox" id="持って生まれた才能"/></td>
+<td class="question-text">持って生まれた才能</td>
+<td class="answer-text">natural endowment</td>
+</tr>
+<tr class="item 知的な生き物">
+<td><input class="uk-checkbox" type="checkbox" id="知的な生き物"/></td>
+<td class="question-text">知的な生き物</td>
+<td class="answer-text">an intelligent creature</td>
+</tr>
+<tr class="item 優雅な動作">
+<td><input class="uk-checkbox" type="checkbox" id="優雅な動作"/></td>
+<td class="question-text">優雅な動作</td>
+<td class="answer-text">graceful movements</td>
+</tr>
+<tr class="item 硬い関節">
+<td><input class="uk-checkbox" type="checkbox" id="硬い関節"/></td>
+<td class="question-text">硬い関節</td>
+<td class="answer-text">stiff joints</td>
+</tr>
+<tr class="item 頭を掻く">
+<td><input class="uk-checkbox" type="checkbox" id="頭を掻く"/></td>
+<td class="question-text">頭を掻く</td>
+<td class="answer-text">scratch your head</td>
+</tr>
+<tr class="item 足を引きずる">
+<td><input class="uk-checkbox" type="checkbox" id="足を引きずる"/></td>
+<td class="question-text">足を引きずる</td>
+<td class="answer-text">drag your feet</td>
+</tr>
+<tr class="item 肩をすくめる">
+<td><input class="uk-checkbox" type="checkbox" id="肩をすくめる"/></td>
+<td class="question-text">肩をすくめる</td>
+<td class="answer-text">shrug your shoulders</td>
+</tr>
+<tr class="item 手首を回わす">
+<td><input class="uk-checkbox" type="checkbox" id="手首を回わす"/></td>
+<td class="question-text">手首を回わす</td>
+<td class="answer-text">rotate your wrist</td>
+</tr>
+<tr class="item 濃い眉">
+<td><input class="uk-checkbox" type="checkbox" id="濃い眉"/></td>
+<td class="question-text">濃い眉</td>
+<td class="answer-text">thick eyebrows</td>
+</tr>
+<tr class="item 静脈と動脈">
+<td><input class="uk-checkbox" type="checkbox" id="静脈と動脈"/></td>
+<td class="question-text">静脈と動脈</td>
+<td class="answer-text">veins and arteries</td>
+</tr>
+<tr class="item 口ひげを生やす">
+<td><input class="uk-checkbox" type="checkbox" id="口ひげを生やす"/></td>
+<td class="question-text">口ひげを生やす</td>
+<td class="answer-text">grow a mustache</td>
+</tr>
+<tr class="item 髪を染める">
+<td><input class="uk-checkbox" type="checkbox" id="髪を染める"/></td>
+<td class="question-text">髪を染める</td>
+<td class="answer-text">dye your hair</td>
+</tr>
+<tr class="item 直立の姿勢">
+<td><input class="uk-checkbox" type="checkbox" id="直立の姿勢"/></td>
+<td class="question-text">直立の姿勢</td>
+<td class="answer-text">upright posture</td>
+</tr>
+<tr class="item 大きなクシャミ">
+<td><input class="uk-checkbox" type="checkbox" id="大きなクシャミ"/></td>
+<td class="question-text">大きなクシャミ</td>
+<td class="answer-text">a violent sneeze</td>
+</tr>
+<tr class="item 食欲をなくす">
+<td><input class="uk-checkbox" type="checkbox" id="食欲をなくす"/></td>
+<td class="question-text">食欲をなくす</td>
+<td class="answer-text">lose your appetite</td>
+</tr>
+<tr class="item 輝くような健康">
+<td><input class="uk-checkbox" type="checkbox" id="輝くような健康"/></td>
+<td class="question-text">輝くような健康</td>
+<td class="answer-text">radiant health</td>
+</tr>
+<tr class="item 永遠の若さ">
+<td><input class="uk-checkbox" type="checkbox" id="永遠の若さ"/></td>
+<td class="question-text">永遠の若さ</td>
+<td class="answer-text">eternal youth</td>
+</tr>
+<tr class="item ストレスと憂うつ">
+<td><input class="uk-checkbox" type="checkbox" id="ストレスと憂うつ"/></td>
+<td class="question-text">ストレスと憂うつ</td>
+<td class="answer-text">stress and depression</td>
+</tr>
+<tr class="item ストレスに対処する">
+<td><input class="uk-checkbox" type="checkbox" id="ストレスに対処する"/></td>
+<td class="question-text">ストレスに対処する</td>
+<td class="answer-text">cope with stress</td>
+</tr>
+<tr class="item ストレスに耐える">
+<td><input class="uk-checkbox" type="checkbox" id="ストレスに耐える"/></td>
+<td class="question-text">ストレスに耐える</td>
+<td class="answer-text">withstand stress</td>
+</tr>
+<tr class="item 炎症を起こしている喉">
+<td><input class="uk-checkbox" type="checkbox" id="炎症を起こしている喉"/></td>
+<td class="question-text">炎症を起こしている喉</td>
+<td class="answer-text">a sore throat</td>
+</tr>
+<tr class="item 鋭い胃の痛み">
+<td><input class="uk-checkbox" type="checkbox" id="鋭い胃の痛み"/></td>
+<td class="question-text">鋭い胃の痛み</td>
+<td class="answer-text">acute stomach pain</td>
+</tr>
+<tr class="item 原因を見極める">
+<td><input class="uk-checkbox" type="checkbox" id="原因を見極める"/></td>
+<td class="question-text">原因を見極める</td>
+<td class="answer-text">discern the cause</td>
+</tr>
+<tr class="item 内出血">
+<td><input class="uk-checkbox" type="checkbox" id="内出血"/></td>
+<td class="question-text">内出血</td>
+<td class="answer-text">internal bleeding</td>
+</tr>
+<tr class="item 病気と戦う">
+<td><input class="uk-checkbox" type="checkbox" id="病気と戦う"/></td>
+<td class="question-text">病気と戦う</td>
+<td class="answer-text">combat sickness</td>
+</tr>
+<tr class="item 効果的な治療法">
+<td><input class="uk-checkbox" type="checkbox" id="効果的な治療法"/></td>
+<td class="question-text">効果的な治療法</td>
+<td class="answer-text">an effective remedy</td>
+</tr>
+<tr class="item 一時的な症状">
+<td><input class="uk-checkbox" type="checkbox" id="一時的な症状"/></td>
+<td class="question-text">一時的な症状</td>
+<td class="answer-text">a temporary symptom</td>
+</tr>
+<tr class="item レントゲン検査">
+<td><input class="uk-checkbox" type="checkbox" id="レントゲン検査"/></td>
+<td class="question-text">レントゲン検査</td>
+<td class="answer-text">an X-ray examination</td>
+</tr>
+<tr class="item 検査のための標本">
+<td><input class="uk-checkbox" type="checkbox" id="検査のための標本"/></td>
+<td class="question-text">検査のための標本</td>
+<td class="answer-text">a test specimen</td>
+</tr>
+<tr class="item 感染を防ぐ">
+<td><input class="uk-checkbox" type="checkbox" id="感染を防ぐ"/></td>
+<td class="question-text">感染を防ぐ</td>
+<td class="answer-text">prevent infection</td>
+</tr>
+<tr class="item 患者を隔離する">
+<td><input class="uk-checkbox" type="checkbox" id="患者を隔離する"/></td>
+<td class="question-text">患者を隔離する</td>
+<td class="answer-text">isolate the patient</td>
+</tr>
+<tr class="item 行動を制限する">
+<td><input class="uk-checkbox" type="checkbox" id="行動を制限する"/></td>
+<td class="question-text">行動を制限する</td>
+<td class="answer-text">restrict his movements</td>
+</tr>
+<tr class="item 喫煙の害">
+<td><input class="uk-checkbox" type="checkbox" id="喫煙の害"/></td>
+<td class="question-text">喫煙の害</td>
+<td class="answer-text">the hazards of smoking</td>
+</tr>
+<tr class="item 薬などで吐かせる">
+<td><input class="uk-checkbox" type="checkbox" id="薬などで吐かせる"/></td>
+<td class="question-text">（薬などで）吐かせる</td>
+<td class="answer-text">induce vomiting</td>
+</tr>
+<tr class="item アルコール依存症">
+<td><input class="uk-checkbox" type="checkbox" id="アルコール依存症"/></td>
+<td class="question-text">アルコール依存症</td>
+<td class="answer-text">alcohol dependency</td>
+</tr>
+<tr class="item 外科手術を受ける">
+<td><input class="uk-checkbox" type="checkbox" id="外科手術を受ける"/></td>
+<td class="question-text">外科手術を受ける</td>
+<td class="answer-text">undergo surgery</td>
+</tr>
+<tr class="item 肝臓移植">
+<td><input class="uk-checkbox" type="checkbox" id="肝臓移植"/></td>
+<td class="question-text">肝臓移植</td>
+<td class="answer-text">liver transplant</td>
+</tr>
+<tr class="item 外部の刺激">
+<td><input class="uk-checkbox" type="checkbox" id="外部の刺激"/></td>
+<td class="question-text">外部の刺激</td>
+<td class="answer-text">an external stimulus</td>
+</tr>
+<tr class="item 刺激に反応する">
+<td><input class="uk-checkbox" type="checkbox" id="刺激に反応する"/></td>
+<td class="question-text">刺激に反応する</td>
+<td class="answer-text">react to stimuli</td>
+</tr>
+<tr class="item 微妙な差異">
+<td><input class="uk-checkbox" type="checkbox" id="微妙な差異"/></td>
+<td class="question-text">微妙な差異</td>
+<td class="answer-text">a subtle distinction</td>
+</tr>
+<tr class="item 注目すべき違い">
+<td><input class="uk-checkbox" type="checkbox" id="注目すべき違い"/></td>
+<td class="question-text">注目すべき違い</td>
+<td class="answer-text">a notable difference</td>
+</tr>
+<tr class="item ぷんと匂う香水">
+<td><input class="uk-checkbox" type="checkbox" id="ぷんと匂う香水"/></td>
+<td class="question-text">ぷんと匂う香水</td>
+<td class="answer-text">a whiff of perfume</td>
+</tr>
+<tr class="item 花の香り">
+<td><input class="uk-checkbox" type="checkbox" id="花の香り"/></td>
+<td class="question-text">花の香り</td>
+<td class="answer-text">floral scents</td>
+</tr>
+<tr class="item 異国の趣">
+<td><input class="uk-checkbox" type="checkbox" id="異国の趣"/></td>
+<td class="question-text">異国の趣</td>
+<td class="answer-text">an exotic flavor</td>
+</tr>
+<tr class="item 彼女の姿をかいま見る">
+<td><input class="uk-checkbox" type="checkbox" id="彼女の姿をかいま見る"/></td>
+<td class="question-text">彼女の姿をかいま見る</td>
+<td class="answer-text">catch a glimpse of her</td>
+</tr>
+<tr class="item 彼女の存在を意識する">
+<td><input class="uk-checkbox" type="checkbox" id="彼女の存在を意識する"/></td>
+<td class="question-text">彼女の存在を意識する</td>
+<td class="answer-text">acknowledge her presence</td>
+</tr>
+<tr class="item 視界から消えていく">
+<td><input class="uk-checkbox" type="checkbox" id="視界から消えていく"/></td>
+<td class="question-text">視界から消えていく</td>
+<td class="answer-text">fade from sight</td>
+</tr>
+<tr class="item 眺めを妨げる">
+<td><input class="uk-checkbox" type="checkbox" id="眺めを妨げる"/></td>
+<td class="question-text">眺めを妨げる</td>
+<td class="answer-text">obstruct the view</td>
+</tr>
+<tr class="item 女性の感性">
+<td><input class="uk-checkbox" type="checkbox" id="女性の感性"/></td>
+<td class="question-text">女性の感性</td>
+<td class="answer-text">feminine sensibilities</td>
+</tr>
+<tr class="item 女性心理学">
+<td><input class="uk-checkbox" type="checkbox" id="女性心理学"/></td>
+<td class="question-text">女性心理学</td>
+<td class="answer-text">female psychology</td>
+</tr>
+<tr class="item 傷つきやすい若い男性">
+<td><input class="uk-checkbox" type="checkbox" id="傷つきやすい若い男性"/></td>
+<td class="question-text">傷つきやすい若い男性</td>
+<td class="answer-text">a sensitive young man</td>
+</tr>
+<tr class="item 昼寝をする">
+<td><input class="uk-checkbox" type="checkbox" id="昼寝をする"/></td>
+<td class="question-text">昼寝をする</td>
+<td class="answer-text">take a nap</td>
+</tr>
+<tr class="item 耐えがたいいびき">
+<td><input class="uk-checkbox" type="checkbox" id="耐えがたいいびき"/></td>
+<td class="question-text">耐えがたいいびき</td>
+<td class="answer-text">intolerable snoring</td>
+</tr>
+<tr class="item 寝ているふりをする">
+<td><input class="uk-checkbox" type="checkbox" id="寝ているふりをする"/></td>
+<td class="question-text">寝ているふりをする</td>
+<td class="answer-text">pretend to be asleep</td>
+</tr>
+<tr class="item 鋭敏な頭脳">
+<td><input class="uk-checkbox" type="checkbox" id="鋭敏な頭脳"/></td>
+<td class="question-text">鋭敏な頭脳</td>
+<td class="answer-text">an alert mind</td>
+</tr>
+<tr class="item 人並み外れた才能">
+<td><input class="uk-checkbox" type="checkbox" id="人並み外れた才能"/></td>
+<td class="question-text">人並み外れた才能</td>
+<td class="answer-text">extraordinary talent</td>
+</tr>
+<tr class="item 信じがたき無知">
+<td><input class="uk-checkbox" type="checkbox" id="信じがたき無知"/></td>
+<td class="question-text">信じがたき無知</td>
+<td class="answer-text">incredible ignorance</td>
+</tr>
+<tr class="item 信念の誓い">
+<td><input class="uk-checkbox" type="checkbox" id="信念の誓い"/></td>
+<td class="question-text">信念の誓い</td>
+<td class="answer-text">a New Year's resolution</td>
+</tr>
+<tr class="item 産みの苦しみを乗り越える">
+<td><input class="uk-checkbox" type="checkbox" id="産みの苦しみを乗り越える"/></td>
+<td class="question-text">産みの苦しみを乗り越える</td>
+<td class="answer-text">survive the pains of labor</td>
+</tr>
+<tr class="item 断固たる行動">
+<td><input class="uk-checkbox" type="checkbox" id="断固たる行動"/></td>
+<td class="question-text">断固たる行動</td>
+<td class="answer-text">a resolute action</td>
+</tr>
+<tr class="item 必死の試み">
+<td><input class="uk-checkbox" type="checkbox" id="必死の試み"/></td>
+<td class="question-text">必死の試み</td>
+<td class="answer-text">a desperate attempt</td>
+</tr>
+<tr class="item より一層の努力">
+<td><input class="uk-checkbox" type="checkbox" id="より一層の努力"/></td>
+<td class="question-text">より一層の努力</td>
+<td class="answer-text">further efforts</td>
+</tr>
+<tr class="item 継続的な努力">
+<td><input class="uk-checkbox" type="checkbox" id="継続的な努力"/></td>
+<td class="question-text">継続的な努力</td>
+<td class="answer-text">continual efforts</td>
+</tr>
+<tr class="item 最大限の努力">
+<td><input class="uk-checkbox" type="checkbox" id="最大限の努力"/></td>
+<td class="question-text">最大限の努力</td>
+<td class="answer-text">utmost efforts</td>
+</tr>
+<tr class="item 努力を再開する">
+<td><input class="uk-checkbox" type="checkbox" id="努力を再開する"/></td>
+<td class="question-text">努力を再開する</td>
+<td class="answer-text">resume your efforts</td>
+</tr>
+<tr class="item 無益な努力をする">
+<td><input class="uk-checkbox" type="checkbox" id="無益な努力をする"/></td>
+<td class="question-text">無益な努力をする</td>
+<td class="answer-text">endeavor in vain</td>
+</tr>
+<tr class="item 危機を解決する">
+<td><input class="uk-checkbox" type="checkbox" id="危機を解決する"/></td>
+<td class="question-text">危機を解決する</td>
+<td class="answer-text">resolve the crisis</td>
+</tr>
+<tr class="item まともな解決">
+<td><input class="uk-checkbox" type="checkbox" id="まともな解決"/></td>
+<td class="question-text">まともな解決</td>
+<td class="answer-text">a sane solution</td>
+</tr>
+<tr class="item すばらしい成功">
+<td><input class="uk-checkbox" type="checkbox" id="すばらしい成功"/></td>
+<td class="question-text">すばらしい成功</td>
+<td class="answer-text">a brilliant success</td>
+</tr>
+<tr class="item 部分的な勝利">
+<td><input class="uk-checkbox" type="checkbox" id="部分的な勝利"/></td>
+<td class="question-text">部分的な勝利</td>
+<td class="answer-text">a partial victory</td>
+</tr>
+<tr class="item 決定的な勝利">
+<td><input class="uk-checkbox" type="checkbox" id="決定的な勝利"/></td>
+<td class="question-text">決定的な勝利</td>
+<td class="answer-text">a decisive victory</td>
+</tr>
+<tr class="item 究極の勝利">
+<td><input class="uk-checkbox" type="checkbox" id="究極の勝利"/></td>
+<td class="question-text">究極の勝利</td>
+<td class="answer-text">ultimate victory</td>
+</tr>
+<tr class="item 世界的な名声">
+<td><input class="uk-checkbox" type="checkbox" id="世界的な名声"/></td>
+<td class="question-text">世界的な名声</td>
+<td class="answer-text">a worldwide reputation</td>
+</tr>
+<tr class="item 成功の方程式">
+<td><input class="uk-checkbox" type="checkbox" id="成功の方程式"/></td>
+<td class="question-text">成功の方程式</td>
+<td class="answer-text">the formula for success</td>
+</tr>
+<tr class="item 成功の見込み">
+<td><input class="uk-checkbox" type="checkbox" id="成功の見込み"/></td>
+<td class="question-text">成功の見込み</td>
+<td class="answer-text">probability of success</td>
+</tr>
+<tr class="item 結果をあれこれ推測する">
+<td><input class="uk-checkbox" type="checkbox" id="結果をあれこれ推測する"/></td>
+<td class="question-text">結果をあれこれ推測する</td>
+<td class="answer-text">speculate about the outcome</td>
+</tr>
+<tr class="item 結果を予測する">
+<td><input class="uk-checkbox" type="checkbox" id="結果を予測する"/></td>
+<td class="question-text">結果を予測する</td>
+<td class="answer-text">predict the outcome</td>
+</tr>
+<tr class="item 不運な結果">
+<td><input class="uk-checkbox" type="checkbox" id="不運な結果"/></td>
+<td class="question-text">不運な結果</td>
+<td class="answer-text">an unfortunate outcome</td>
+</tr>
+<tr class="item 皮肉な結果">
+<td><input class="uk-checkbox" type="checkbox" id="皮肉な結果"/></td>
+<td class="question-text">皮肉な結果</td>
+<td class="answer-text">an ironic consequence</td>
+</tr>
+<tr class="item 連続する不幸">
+<td><input class="uk-checkbox" type="checkbox" id="連続する不幸"/></td>
+<td class="question-text">連続する不幸</td>
+<td class="answer-text">successive misfortunes</td>
+</tr>
+<tr class="item 意図的な詐欺">
+<td><input class="uk-checkbox" type="checkbox" id="意図的な詐欺"/></td>
+<td class="question-text">意図的な詐欺</td>
+<td class="answer-text">intentional deceit</td>
+</tr>
+<tr class="item サインを偽造する">
+<td><input class="uk-checkbox" type="checkbox" id="サインを偽造する"/></td>
+<td class="question-text">サインを偽造する</td>
+<td class="answer-text">forge her signature</td>
+</tr>
+<tr class="item 馬鹿げた言い訳">
+<td><input class="uk-checkbox" type="checkbox" id="馬鹿げた言い訳"/></td>
+<td class="question-text">馬鹿げた言い訳</td>
+<td class="answer-text">ridiculous excuses</td>
+</tr>
+<tr class="item 全責任を負う">
+<td><input class="uk-checkbox" type="checkbox" id="全責任を負う"/></td>
+<td class="question-text">全責任を負う</td>
+<td class="answer-text">assume full responsibility</td>
+</tr>
+<tr class="item 証拠を手に彼と対決する">
+<td><input class="uk-checkbox" type="checkbox" id="証拠を手に彼と対決する"/></td>
+<td class="question-text">証拠を手に彼と対決する</td>
+<td class="answer-text">confront him with the evidence</td>
+</tr>
+<tr class="item 大切なのは">
+<td><input class="uk-checkbox" type="checkbox" id="大切なのは"/></td>
+<td class="question-text">大切なのは</td>
+<td class="answer-text">what counts is 〜</td>
+</tr>
+<tr class="item 勇気と根気">
+<td><input class="uk-checkbox" type="checkbox" id="勇気と根気"/></td>
+<td class="question-text">勇気と根気</td>
+<td class="answer-text">courage and endurance</td>
+</tr>
+<tr class="item 忍耐と決意">
+<td><input class="uk-checkbox" type="checkbox" id="忍耐と決意"/></td>
+<td class="question-text">忍耐と決意</td>
+<td class="answer-text">patience and determination</td>
+</tr>
+<tr class="item 献身と忠誠">
+<td><input class="uk-checkbox" type="checkbox" id="献身と忠誠"/></td>
+<td class="question-text">献身と忠誠</td>
+<td class="answer-text">devotion and loyalty</td>
+</tr>
+<tr class="item 自発的な行動">
+<td><input class="uk-checkbox" type="checkbox" id="自発的な行動"/></td>
+<td class="question-text">自発的な行動</td>
+<td class="answer-text">spontaneous activities</td>
+</tr>
+<tr class="item 思考を集中する">
+<td><input class="uk-checkbox" type="checkbox" id="思考を集中する"/></td>
+<td class="question-text">思考を集中する</td>
+<td class="answer-text">focus your thoughts</td>
+</tr>
+<tr class="item 問題をじっくり考える">
+<td><input class="uk-checkbox" type="checkbox" id="問題をじっくり考える"/></td>
+<td class="question-text">問題をじっくり考える</td>
+<td class="answer-text">ponder an issue</td>
+</tr>
+<tr class="item 自由な連想">
+<td><input class="uk-checkbox" type="checkbox" id="自由な連想"/></td>
+<td class="question-text">自由な連想</td>
+<td class="answer-text">free association</td>
+</tr>
+<tr class="item 深い洞察">
+<td><input class="uk-checkbox" type="checkbox" id="深い洞察"/></td>
+<td class="question-text">深い洞察</td>
+<td class="answer-text">a profound insight</td>
+</tr>
+<tr class="item 潜在能力を発揮する">
+<td><input class="uk-checkbox" type="checkbox" id="潜在能力を発揮する"/></td>
+<td class="question-text">潜在能力を発揮する</td>
+<td class="answer-text">fulfill your potential</td>
+</tr>
+<tr class="item 新しい解決策を思いつく">
+<td><input class="uk-checkbox" type="checkbox" id="新しい解決策を思いつく"/></td>
+<td class="question-text">新しい解決策を思いつく</td>
+<td class="answer-text">conceive a new solution</td>
+</tr>
+<tr class="item 代わりの解決策">
+<td><input class="uk-checkbox" type="checkbox" id="代わりの解決策"/></td>
+<td class="question-text">代わりの解決策</td>
+<td class="answer-text">an alternative solution</td>
+</tr>
+<tr class="item 素晴らしい考え">
+<td><input class="uk-checkbox" type="checkbox" id="素晴らしい考え"/></td>
+<td class="question-text">素晴らしい考え</td>
+<td class="answer-text">a marvelous idea</td>
+</tr>
+<tr class="item かすかな思い出">
+<td><input class="uk-checkbox" type="checkbox" id="かすかな思い出"/></td>
+<td class="question-text">かすかな思い出</td>
+<td class="answer-text">a dim recollection</td>
+</tr>
+<tr class="item 楽しい思い出">
+<td><input class="uk-checkbox" type="checkbox" id="楽しい思い出"/></td>
+<td class="question-text">楽しい思い出</td>
+<td class="answer-text">fond remembrances</td>
+</tr>
+<tr class="item 記憶にずっと残る">
+<td><input class="uk-checkbox" type="checkbox" id="記憶にずっと残る"/></td>
+<td class="question-text">記憶にずっと残る</td>
+<td class="answer-text">linger in your memory</td>
+</tr>
+<tr class="item 長く残る印象">
+<td><input class="uk-checkbox" type="checkbox" id="長く残る印象"/></td>
+<td class="question-text">長く残る印象</td>
+<td class="answer-text">a lasting impression</td>
+</tr>
+<tr class="item 正確な予言者">
+<td><input class="uk-checkbox" type="checkbox" id="正確な予言者"/></td>
+<td class="question-text">正確な予言者</td>
+<td class="answer-text">an accurate prophet</td>
+</tr>
+<tr class="item 惨事を予見する">
+<td><input class="uk-checkbox" type="checkbox" id="惨事を予見する"/></td>
+<td class="question-text">惨事を予見する</td>
+<td class="answer-text">foresee disaster</td>
+</tr>
+<tr class="item 予言を裏づける">
+<td><input class="uk-checkbox" type="checkbox" id="予言を裏づける"/></td>
+<td class="question-text">予言を裏づける</td>
+<td class="answer-text">confirm a prophecy</td>
+</tr>
+<tr class="item 楽観的な予測">
+<td><input class="uk-checkbox" type="checkbox" id="楽観的な予測"/></td>
+<td class="question-text">楽観的な予測</td>
+<td class="answer-text">an optimistic prediction</td>
+</tr>
+<tr class="item 悲観的な見通し">
+<td><input class="uk-checkbox" type="checkbox" id="悲観的な見通し"/></td>
+<td class="question-text">悲観的な見通し</td>
+<td class="answer-text">a pessimistic outlook</td>
+</tr>
+<tr class="item 暗い見通し">
+<td><input class="uk-checkbox" type="checkbox" id="暗い見通し"/></td>
+<td class="question-text">暗い見通し</td>
+<td class="answer-text">gloomy outlooks</td>
+</tr>
+<tr class="item という懸念を否定する">
+<td><input class="uk-checkbox" type="checkbox" id="という懸念を否定する"/></td>
+<td class="question-text">〜という懸念を否定する</td>
+<td class="answer-text">dismiss concern that 〜</td>
+</tr>
+<tr class="item 天気予報">
+<td><input class="uk-checkbox" type="checkbox" id="天気予報"/></td>
+<td class="question-text">天気予報</td>
+<td class="answer-text">the weather forecast</td>
+</tr>
+<tr class="item 流行の話題">
+<td><input class="uk-checkbox" type="checkbox" id="流行の話題"/></td>
+<td class="question-text">流行の話題</td>
+<td class="answer-text">a fashionable topic</td>
+</tr>
+<tr class="item 世間に流布している考え方">
+<td><input class="uk-checkbox" type="checkbox" id="世間に流布している考え方"/></td>
+<td class="question-text">世間に流布している考え方</td>
+<td class="answer-text">a prevailing concept</td>
+</tr>
+<tr class="item 抽象的な概念">
+<td><input class="uk-checkbox" type="checkbox" id="抽象的な概念"/></td>
+<td class="question-text">抽象的な概念</td>
+<td class="answer-text">abstract concepts</td>
+</tr>
+<tr class="item 矛盾する事実">
+<td><input class="uk-checkbox" type="checkbox" id="矛盾する事実"/></td>
+<td class="question-text">矛盾する事実</td>
+<td class="answer-text">paradoxical facts</td>
+</tr>
+<tr class="item 問題の核心">
+<td><input class="uk-checkbox" type="checkbox" id="問題の核心"/></td>
+<td class="question-text">問題の核心</td>
+<td class="answer-text">the core of the problem</td>
+</tr>
+<tr class="item 合理的な説明">
+<td><input class="uk-checkbox" type="checkbox" id="合理的な説明"/></td>
+<td class="question-text">合理的な説明</td>
+<td class="answer-text">a rational explanation</td>
+</tr>
+<tr class="item 建設的な対話">
+<td><input class="uk-checkbox" type="checkbox" id="建設的な対話"/></td>
+<td class="question-text">建設的な対話</td>
+<td class="answer-text">a constructive dialogue</td>
+</tr>
+<tr class="item 本質の議論">
+<td><input class="uk-checkbox" type="checkbox" id="本質の議論"/></td>
+<td class="question-text">本質の議論</td>
+<td class="answer-text">an argument of substance</td>
+</tr>
+<tr class="item 筋の通らない言い分">
+<td><input class="uk-checkbox" type="checkbox" id="筋の通らない言い分"/></td>
+<td class="question-text">筋の通らない言い分</td>
+<td class="answer-text">an illogical argument</td>
+</tr>
+<tr class="item せっかちな結論">
+<td><input class="uk-checkbox" type="checkbox" id="せっかちな結論"/></td>
+<td class="question-text">せっかちな結論</td>
+<td class="answer-text">a hasty conclusion</td>
+</tr>
+<tr class="item 意見の衝突">
+<td><input class="uk-checkbox" type="checkbox" id="意見の衝突"/></td>
+<td class="question-text">意見の衝突</td>
+<td class="answer-text">clash of opinions</td>
+</tr>
+<tr class="item 論争に割り込む">
+<td><input class="uk-checkbox" type="checkbox" id="論争に割り込む"/></td>
+<td class="question-text">論争に割り込む</td>
+<td class="answer-text">intervene in the dispute</td>
+</tr>
+<tr class="item 話し合いの調停をする">
+<td><input class="uk-checkbox" type="checkbox" id="話し合いの調停をする"/></td>
+<td class="question-text">話し合いの調停をする</td>
+<td class="answer-text">mediate talks</td>
+</tr>
+<tr class="item 意見に同意する">
+<td><input class="uk-checkbox" type="checkbox" id="意見に同意する"/></td>
+<td class="question-text">意見に同意する</td>
+<td class="answer-text">assent to the opinion</td>
+</tr>
+<tr class="item 反対を取り下げる">
+<td><input class="uk-checkbox" type="checkbox" id="反対を取り下げる"/></td>
+<td class="question-text">反対を取り下げる</td>
+<td class="answer-text">withdraw your objection</td>
+</tr>
+<tr class="item 現実の認識">
+<td><input class="uk-checkbox" type="checkbox" id="現実の認識"/></td>
+<td class="question-text">現実の認識</td>
+<td class="answer-text">perception of reality</td>
+</tr>
+<tr class="item 表面的な認識">
+<td><input class="uk-checkbox" type="checkbox" id="表面的な認識"/></td>
+<td class="question-text">表面的な認識</td>
+<td class="answer-text">superficial recognition</td>
+</tr>
+<tr class="item 自分の判断に頼る">
+<td><input class="uk-checkbox" type="checkbox" id="自分の判断に頼る"/></td>
+<td class="question-text">自分の判断に頼る</td>
+<td class="answer-text">rely on your own judgment</td>
+</tr>
+<tr class="item 冷静な考え">
+<td><input class="uk-checkbox" type="checkbox" id="冷静な考え"/></td>
+<td class="question-text">冷静な考え</td>
+<td class="answer-text">sober thoughts</td>
+</tr>
+<tr class="item 偏らない判断">
+<td><input class="uk-checkbox" type="checkbox" id="偏らない判断"/></td>
+<td class="question-text">偏らない判断</td>
+<td class="answer-text">impartial judgment</td>
+</tr>
+<tr class="item を強調する">
+<td><input class="uk-checkbox" type="checkbox" id="を強調する"/></td>
+<td class="question-text">〜を強調する</td>
+<td class="answer-text">put the emphasis on 〜</td>
+</tr>
+<tr class="item 価値ある行為">
+<td><input class="uk-checkbox" type="checkbox" id="価値ある行為"/></td>
+<td class="question-text">価値ある行為</td>
+<td class="answer-text">a worthy deed</td>
+</tr>
+<tr class="item 提案を馬鹿にする">
+<td><input class="uk-checkbox" type="checkbox" id="提案を馬鹿にする"/></td>
+<td class="question-text">提案を馬鹿にする</td>
+<td class="answer-text">ridicule the suggestion</td>
+</tr>
+<tr class="item 屈辱を感じる">
+<td><input class="uk-checkbox" type="checkbox" id="屈辱を感じる"/></td>
+<td class="question-text">屈辱を感じる</td>
+<td class="answer-text">feel humiliated</td>
+</tr>
+<tr class="item 批判的な言葉">
+<td><input class="uk-checkbox" type="checkbox" id="批判的な言葉"/></td>
+<td class="question-text">批判的な言葉</td>
+<td class="answer-text">a critical comment</td>
+</tr>
+<tr class="item 批判に腹を立てる">
+<td><input class="uk-checkbox" type="checkbox" id="批判に腹を立てる"/></td>
+<td class="question-text">批判に腹を立てる</td>
+<td class="answer-text">resent criticism</td>
+</tr>
+<tr class="item 暴力を非難する">
+<td><input class="uk-checkbox" type="checkbox" id="暴力を非難する"/></td>
+<td class="question-text">暴力を非難する</td>
+<td class="answer-text">condemn violence</td>
+</tr>
+<tr class="item に非難を浴びせる">
+<td><input class="uk-checkbox" type="checkbox" id="に非難を浴びせる"/></td>
+<td class="question-text">〜に非難を浴びせる</td>
+<td class="answer-text">hurl accusations at 〜</td>
+</tr>
+<tr class="item 致命的な欠陥">
+<td><input class="uk-checkbox" type="checkbox" id="致命的な欠陥"/></td>
+<td class="question-text">致命的な欠陥</td>
+<td class="answer-text">a fatal defect</td>
+</tr>
+<tr class="item 欠陥を探り当てる">
+<td><input class="uk-checkbox" type="checkbox" id="欠陥を探り当てる"/></td>
+<td class="question-text">欠陥を探り当てる</td>
+<td class="answer-text">detect the defect</td>
+</tr>
+<tr class="item 欠陥を直す">
+<td><input class="uk-checkbox" type="checkbox" id="欠陥を直す"/></td>
+<td class="question-text">欠陥を直す</td>
+<td class="answer-text">correct the defect</td>
+</tr>
+<tr class="item 欠点を見過ごす">
+<td><input class="uk-checkbox" type="checkbox" id="欠点を見過ごす"/></td>
+<td class="question-text">欠点を見過ごす</td>
+<td class="answer-text">overlook a fault</td>
+</tr>
+<tr class="item 性格の傾向">
+<td><input class="uk-checkbox" type="checkbox" id="性格の傾向"/></td>
+<td class="question-text">性格の傾向</td>
+<td class="answer-text">personality traits</td>
+</tr>
+<tr class="item 柔軟な態度">
+<td><input class="uk-checkbox" type="checkbox" id="柔軟な態度"/></td>
+<td class="question-text">柔軟な態度</td>
+<td class="answer-text">a flexible attitude</td>
+</tr>
+<tr class="item 無関心な態度">
+<td><input class="uk-checkbox" type="checkbox" id="無関心な態度"/></td>
+<td class="question-text">無関心な態度</td>
+<td class="answer-text">an indifferent attitude</td>
+</tr>
+<tr class="item 卑俗な好奇心">
+<td><input class="uk-checkbox" type="checkbox" id="卑俗な好奇心"/></td>
+<td class="question-text">卑俗な好奇心</td>
+<td class="answer-text">a vulgar curiosity</td>
+</tr>
+<tr class="item いやな性質">
+<td><input class="uk-checkbox" type="checkbox" id="いやな性質"/></td>
+<td class="question-text">いやな性質</td>
+<td class="answer-text">a nasty disposition</td>
+</tr>
+<tr class="item ふさぎこむ性質">
+<td><input class="uk-checkbox" type="checkbox" id="ふさぎこむ性質"/></td>
+<td class="question-text">ふさぎこむ性質</td>
+<td class="answer-text">a melancholy disposition</td>
+</tr>
+<tr class="item 孤独に暮らす">
+<td><input class="uk-checkbox" type="checkbox" id="孤独に暮らす"/></td>
+<td class="question-text">孤独に暮らす</td>
+<td class="answer-text">live in solitude</td>
+</tr>
+<tr class="item 愚かな行動をする">
+<td><input class="uk-checkbox" type="checkbox" id="愚かな行動をする"/></td>
+<td class="question-text">愚かな行動をする</td>
+<td class="answer-text">behave like an idiot</td>
+</tr>
+<tr class="item 異常な行動">
+<td><input class="uk-checkbox" type="checkbox" id="異常な行動"/></td>
+<td class="question-text">異常な行動</td>
+<td class="answer-text">abnormal behavior</td>
+</tr>
+<tr class="item 思いやりのある人">
+<td><input class="uk-checkbox" type="checkbox" id="思いやりのある人"/></td>
+<td class="question-text">思いやりのある人</td>
+<td class="answer-text">a thoughtful person</td>
+</tr>
+<tr class="item 彼女の親切に報いる">
+<td><input class="uk-checkbox" type="checkbox" id="彼女の親切に報いる"/></td>
+<td class="question-text">彼女の親切に報いる</td>
+<td class="answer-text">repay her kindness</td>
+</tr>
+<tr class="item 不安をかきたてる">
+<td><input class="uk-checkbox" type="checkbox" id="不安をかきたてる"/></td>
+<td class="question-text">不安をかきたてる</td>
+<td class="answer-text">spark concern</td>
+</tr>
+<tr class="item 疑惑を引き起こす">
+<td><input class="uk-checkbox" type="checkbox" id="疑惑を引き起こす"/></td>
+<td class="question-text">疑惑を引き起こす</td>
+<td class="answer-text">arouse suspicion</td>
+</tr>
+<tr class="item お互いに慰めあう">
+<td><input class="uk-checkbox" type="checkbox" id="お互いに慰めあう"/></td>
+<td class="question-text">お互いに慰めあう</td>
+<td class="answer-text">console each other</td>
+</tr>
+<tr class="item 励ましの言葉">
+<td><input class="uk-checkbox" type="checkbox" id="励ましの言葉"/></td>
+<td class="question-text">励ましの言葉</td>
+<td class="answer-text">encouraging words</td>
+</tr>
+<tr class="item に幸せを感じる">
+<td><input class="uk-checkbox" type="checkbox" id="に幸せを感じる"/></td>
+<td class="question-text">〜に幸せを感じる</td>
+<td class="answer-text">derive happiness from 〜</td>
+</tr>
+<tr class="item 安堵のため息">
+<td><input class="uk-checkbox" type="checkbox" id="安堵のため息"/></td>
+<td class="question-text">安堵のため息</td>
+<td class="answer-text">a sigh of relief</td>
+</tr>
+<tr class="item 感謝の気持ちを表す">
+<td><input class="uk-checkbox" type="checkbox" id="感謝の気持ちを表す"/></td>
+<td class="question-text">感謝の気持ちを表す</td>
+<td class="answer-text">express gratitude</td>
+</tr>
+<tr class="item 気品と魅力">
+<td><input class="uk-checkbox" type="checkbox" id="気品と魅力"/></td>
+<td class="question-text">気品と魅力</td>
+<td class="answer-text">grace and charm</td>
+</tr>
+<tr class="item 落着きと自信">
+<td><input class="uk-checkbox" type="checkbox" id="落着きと自信"/></td>
+<td class="question-text">落着きと自信</td>
+<td class="answer-text">poise and confidence</td>
+</tr>
+<tr class="item 称賛に値する">
+<td><input class="uk-checkbox" type="checkbox" id="称賛に値する"/></td>
+<td class="question-text">称賛に値する</td>
+<td class="answer-text">deserve praise</td>
+</tr>
+<tr class="item おどおどした態度">
+<td><input class="uk-checkbox" type="checkbox" id="おどおどした態度"/></td>
+<td class="question-text">おどおどした態度</td>
+<td class="answer-text">a timid attitude</td>
+</tr>
+<tr class="item 大変な臆病者">
+<td><input class="uk-checkbox" type="checkbox" id="大変な臆病者"/></td>
+<td class="question-text">大変な臆病者</td>
+<td class="answer-text">a terrible coward</td>
+</tr>
+<tr class="item 彼に軽蔑心を抱く">
+<td><input class="uk-checkbox" type="checkbox" id="彼に軽蔑心を抱く"/></td>
+<td class="question-text">彼に軽蔑心を抱く</td>
+<td class="answer-text">hold him in contempt</td>
+</tr>
+<tr class="item びくびくするな">
+<td><input class="uk-checkbox" type="checkbox" id="びくびくするな"/></td>
+<td class="question-text">びくびくするな！</td>
+<td class="answer-text">Don't be scared!</td>
+</tr>
+<tr class="item 若者をとりこにする">
+<td><input class="uk-checkbox" type="checkbox" id="若者をとりこにする"/></td>
+<td class="question-text">若者をとりこにする</td>
+<td class="answer-text">fascinate the young</td>
+</tr>
+<tr class="item 疲れた様子">
+<td><input class="uk-checkbox" type="checkbox" id="疲れた様子"/></td>
+<td class="question-text">疲れた様子</td>
+<td class="answer-text">a weary look</td>
+</tr>
+<tr class="item がっくりくる知らせ">
+<td><input class="uk-checkbox" type="checkbox" id="がっくりくる知らせ"/></td>
+<td class="question-text">がっくりくる知らせ</td>
+<td class="answer-text">depressing news</td>
+</tr>
+<tr class="item 困惑の表情">
+<td><input class="uk-checkbox" type="checkbox" id="困惑の表情"/></td>
+<td class="question-text">困惑の表情</td>
+<td class="answer-text">a bewildered look</td>
+</tr>
+<tr class="item がっかりするな">
+<td><input class="uk-checkbox" type="checkbox" id="がっかりするな"/></td>
+<td class="question-text">がっかりするな！</td>
+<td class="answer-text">Don't be discouraged!</td>
+</tr>
+<tr class="item 面食らったのは">
+<td><input class="uk-checkbox" type="checkbox" id="面食らったのは"/></td>
+<td class="question-text">面食らったのは</td>
+<td class="answer-text">to my dismay</td>
+</tr>
+<tr class="item 精神的な虚しさ">
+<td><input class="uk-checkbox" type="checkbox" id="精神的な虚しさ"/></td>
+<td class="question-text">精神的な虚しさ</td>
+<td class="answer-text">spiritual void</td>
+</tr>
+<tr class="item 空想にふける">
+<td><input class="uk-checkbox" type="checkbox" id="空想にふける"/></td>
+<td class="question-text">空想にふける</td>
+<td class="answer-text">indulge in fantasy</td>
+</tr>
+<tr class="item 幻想を生み出す">
+<td><input class="uk-checkbox" type="checkbox" id="幻想を生み出す"/></td>
+<td class="question-text">幻想を生み出す</td>
+<td class="answer-text">create an illusion</td>
+</tr>
+<tr class="item 幻想を持ち続ける">
+<td><input class="uk-checkbox" type="checkbox" id="幻想を持ち続ける"/></td>
+<td class="question-text">幻想を持ち続ける</td>
+<td class="answer-text">sustain the illusion</td>
+</tr>
+<tr class="item 不幸は類を求める">
+<td><input class="uk-checkbox" type="checkbox" id="不幸は類を求める"/></td>
+<td class="question-text">不幸は類を求める</td>
+<td class="answer-text">Misery loves company.</td>
+</tr>
+<tr class="item 畏怖の念">
+<td><input class="uk-checkbox" type="checkbox" id="畏怖の念"/></td>
+<td class="question-text">畏怖の念</td>
+<td class="answer-text">a feeling of awe</td>
+</tr>
+<tr class="item こわい経験">
+<td><input class="uk-checkbox" type="checkbox" id="こわい経験"/></td>
+<td class="question-text">こわい経験</td>
+<td class="answer-text">a dreadful experience</td>
+</tr>
+<tr class="item おそろしい叫び声">
+<td><input class="uk-checkbox" type="checkbox" id="おそろしい叫び声"/></td>
+<td class="question-text">おそろしい叫び声</td>
+<td class="answer-text">awful screams</td>
+</tr>
+<tr class="item とてつもない叫び声">
+<td><input class="uk-checkbox" type="checkbox" id="とてつもない叫び声"/></td>
+<td class="question-text">とてつもない叫び声</td>
+<td class="answer-text">a tremendous shout</td>
+</tr>
+<tr class="item 金切り声をあげる">
+<td><input class="uk-checkbox" type="checkbox" id="金切り声をあげる"/></td>
+<td class="question-text">金切り声をあげる</td>
+<td class="answer-text">let out a shriek</td>
+</tr>
+<tr class="item 激しく泣きじゃくる">
+<td><input class="uk-checkbox" type="checkbox" id="激しく泣きじゃくる"/></td>
+<td class="question-text">激しく泣きじゃくる</td>
+<td class="answer-text">sob bitterly</td>
+</tr>
+<tr class="item 劣等感">
+<td><input class="uk-checkbox" type="checkbox" id="劣等感"/></td>
+<td class="question-text">劣等感</td>
+<td class="answer-text">an inferiority complex</td>
+</tr>
+<tr class="item 優越感">
+<td><input class="uk-checkbox" type="checkbox" id="優越感"/></td>
+<td class="question-text">優越感</td>
+<td class="answer-text">a superiority complex</td>
+</tr>
+<tr class="item 絶え間ない焦燥感">
+<td><input class="uk-checkbox" type="checkbox" id="絶え間ない焦燥感"/></td>
+<td class="question-text">絶え間ない焦燥感</td>
+<td class="answer-text">a restless urge</td>
+</tr>
+<tr class="item その考えに身震いする">
+<td><input class="uk-checkbox" type="checkbox" id="その考えに身震いする"/></td>
+<td class="question-text">その考えに身震いする</td>
+<td class="answer-text">shudder at the idea</td>
+</tr>
+<tr class="item 一時的な衝動">
+<td><input class="uk-checkbox" type="checkbox" id="一時的な衝動"/></td>
+<td class="question-text">一時的な衝動</td>
+<td class="answer-text">a momentary impulse</td>
+</tr>
+<tr class="item 衝動を抑える">
+<td><input class="uk-checkbox" type="checkbox" id="衝動を抑える"/></td>
+<td class="question-text">衝動を抑える</td>
+<td class="answer-text">restrain the impulse</td>
+</tr>
+<tr class="item 自分を責める">
+<td><input class="uk-checkbox" type="checkbox" id="自分を責める"/></td>
+<td class="question-text">自分を責める</td>
+<td class="answer-text">reproach yourself</td>
+</tr>
+<tr class="item 愚行を嘆く">
+<td><input class="uk-checkbox" type="checkbox" id="愚行を嘆く"/></td>
+<td class="question-text">愚行を嘆く</td>
+<td class="answer-text">lament his folly</td>
+</tr>
+<tr class="item 運命を嘆く">
+<td><input class="uk-checkbox" type="checkbox" id="運命を嘆く"/></td>
+<td class="question-text">運命を嘆く</td>
+<td class="answer-text">deplore her fate</td>
+</tr>
+<tr class="item 嘆かわしい出来事">
+<td><input class="uk-checkbox" type="checkbox" id="嘆かわしい出来事"/></td>
+<td class="question-text">嘆かわしい出来事</td>
+<td class="answer-text">a deplorable event</td>
+</tr>
+<tr class="item イライラさせられる">
+<td><input class="uk-checkbox" type="checkbox" id="イライラさせられる"/></td>
+<td class="question-text">イライラさせられる</td>
+<td class="answer-text">irritating habits</td>
+</tr>
+<tr class="item 自尊心を傷つける">
+<td><input class="uk-checkbox" type="checkbox" id="自尊心を傷つける"/></td>
+<td class="question-text">自尊心を傷つける</td>
+<td class="answer-text">offend his dignity</td>
+</tr>
+<tr class="item 心の中の敵意">
+<td><input class="uk-checkbox" type="checkbox" id="心の中の敵意"/></td>
+<td class="question-text">心の中の敵意</td>
+<td class="answer-text">an inner hostility</td>
+</tr>
+<tr class="item カッとして">
+<td><input class="uk-checkbox" type="checkbox" id="カッとして"/></td>
+<td class="question-text">カッとして</td>
+<td class="answer-text">in a fury</td>
+</tr>
+<tr class="item 激しい怒り">
+<td><input class="uk-checkbox" type="checkbox" id="激しい怒り"/></td>
+<td class="question-text">激しい怒り</td>
+<td class="answer-text">a violent rage</td>
+</tr>
+<tr class="item 声などが怒りで震える">
+<td><input class="uk-checkbox" type="checkbox" id="声などが怒りで震える"/></td>
+<td class="question-text">（声などが）怒りで震える</td>
+<td class="answer-text">vibrate with rage</td>
+</tr>
+<tr class="item 怒鳴らないでよ">
+<td><input class="uk-checkbox" type="checkbox" id="怒鳴らないでよ"/></td>
+<td class="question-text">怒鳴らないでよ</td>
+<td class="answer-text">Don't yell at me.</td>
+</tr>
+<tr class="item よこしまな考え">
+<td><input class="uk-checkbox" type="checkbox" id="よこしまな考え"/></td>
+<td class="question-text">よこしまな考え</td>
+<td class="answer-text">a wicked thought</td>
+</tr>
+<tr class="item 悪人の顔つき">
+<td><input class="uk-checkbox" type="checkbox" id="悪人の顔つき"/></td>
+<td class="question-text">悪人の顔つき</td>
+<td class="answer-text">an evil countenance</td>
+</tr>
+<tr class="item 気違いじみた嫉妬">
+<td><input class="uk-checkbox" type="checkbox" id="気違いじみた嫉妬"/></td>
+<td class="question-text">気違いじみた嫉妬</td>
+<td class="answer-text">insane jealousy</td>
+</tr>
+<tr class="item 復讐を誓う">
+<td><input class="uk-checkbox" type="checkbox" id="復讐を誓う"/></td>
+<td class="question-text">復讐を誓う</td>
+<td class="answer-text">vow revenge</td>
+</tr>
+<tr class="item 精神的な苦痛">
+<td><input class="uk-checkbox" type="checkbox" id="精神的な苦痛"/></td>
+<td class="question-text">精神的な苦痛</td>
+<td class="answer-text">mental torment</td>
+</tr>
+<tr class="item 精神的な苦悩">
+<td><input class="uk-checkbox" type="checkbox" id="精神的な苦悩"/></td>
+<td class="question-text">精神的な苦悩</td>
+<td class="answer-text">mental anguish</td>
+</tr>
+<tr class="item みすぼらしい服装">
+<td><input class="uk-checkbox" type="checkbox" id="みすぼらしい服装"/></td>
+<td class="question-text">みすぼらしい服装</td>
+<td class="answer-text">shabby clothes</td>
+</tr>
+<tr class="item 粗い綿の布地">
+<td><input class="uk-checkbox" type="checkbox" id="粗い綿の布地"/></td>
+<td class="question-text">粗い綿の布地</td>
+<td class="answer-text">coarse cotton cloth</td>
+</tr>
+<tr class="item 泥だらけの靴">
+<td><input class="uk-checkbox" type="checkbox" id="泥だらけの靴"/></td>
+<td class="question-text">泥だらけの靴</td>
+<td class="answer-text">muddy shoes</td>
+</tr>
+<tr class="item 汚いぼろをまとって">
+<td><input class="uk-checkbox" type="checkbox" id="汚いぼろをまとって"/></td>
+<td class="question-text">汚いぼろをまとって</td>
+<td class="answer-text">in filthy rags</td>
+</tr>
+<tr class="item 防水の衣服">
+<td><input class="uk-checkbox" type="checkbox" id="防水の衣服"/></td>
+<td class="question-text">防水の衣服</td>
+<td class="answer-text">a rainproof garment</td>
+</tr>
+<tr class="item 豪華な衣装">
+<td><input class="uk-checkbox" type="checkbox" id="豪華な衣装"/></td>
+<td class="question-text">豪華な衣装</td>
+<td class="answer-text">a gorgeous costume</td>
+</tr>
+<tr class="item 細心の配慮と創造性に富んだドレス">
+<td><input class="uk-checkbox" type="checkbox" id="細心の配慮と創造性に富んだドレス"/></td>
+<td class="question-text">細心の配慮と創造性に富んだドレス</td>
+<td class="answer-text">dress with care and imagination</td>
+</tr>
+<tr class="item 金銀の装飾品">
+<td><input class="uk-checkbox" type="checkbox" id="金銀の装飾品"/></td>
+<td class="question-text">金銀の装飾品</td>
+<td class="answer-text">gold and silver ornaments</td>
+</tr>
+<tr class="item ファッション傾向">
+<td><input class="uk-checkbox" type="checkbox" id="ファッション傾向"/></td>
+<td class="question-text">ファッション傾向</td>
+<td class="answer-text">fashion trends</td>
+</tr>
+<tr class="item ミニスカートを復活させる">
+<td><input class="uk-checkbox" type="checkbox" id="ミニスカートを復活させる"/></td>
+<td class="question-text">ミニスカートを復活させる</td>
+<td class="answer-text">revive the miniskirt</td>
+</tr>
+<tr class="item 独創性に富むデザイナー">
+<td><input class="uk-checkbox" type="checkbox" id="独創性に富むデザイナー"/></td>
+<td class="question-text">独創性に富むデザイナー</td>
+<td class="answer-text">an ingenious designer</td>
+</tr>
+<tr class="item 奇抜なデザイン">
+<td><input class="uk-checkbox" type="checkbox" id="奇抜なデザイン"/></td>
+<td class="question-text">奇抜なデザイン</td>
+<td class="answer-text">a fantastic design</td>
+</tr>
+<tr class="item 個性を主張する">
+<td><input class="uk-checkbox" type="checkbox" id="個性を主張する"/></td>
+<td class="question-text">個性を主張する</td>
+<td class="answer-text">assert her individuality</td>
+</tr>
+<tr class="item 軽い飲食物を出す">
+<td><input class="uk-checkbox" type="checkbox" id="軽い飲食物を出す"/></td>
+<td class="question-text">軽い飲食物を出す</td>
+<td class="answer-text">serve refreshments</td>
+</tr>
+<tr class="item 健全な食事">
+<td><input class="uk-checkbox" type="checkbox" id="健全な食事"/></td>
+<td class="question-text">健全な食事</td>
+<td class="answer-text">a wholesome diet</td>
+</tr>
+<tr class="item バランスのとれた栄養">
+<td><input class="uk-checkbox" type="checkbox" id="バランスのとれた栄養"/></td>
+<td class="question-text">バランスのとれた栄養</td>
+<td class="answer-text">balanced nutrition</td>
+</tr>
+<tr class="item オレンジをしぼる">
+<td><input class="uk-checkbox" type="checkbox" id="オレンジをしぼる"/></td>
+<td class="question-text">オレンジをしぼる</td>
+<td class="answer-text">squeeze an orange</td>
+</tr>
+<tr class="item ピーナッツを煎る">
+<td><input class="uk-checkbox" type="checkbox" id="ピーナッツを煎る"/></td>
+<td class="question-text">ピーナッツを煎る</td>
+<td class="answer-text">roast peanuts</td>
+</tr>
+<tr class="item 砂糖を溶かす">
+<td><input class="uk-checkbox" type="checkbox" id="砂糖を溶かす"/></td>
+<td class="question-text">砂糖を溶かす</td>
+<td class="answer-text">dissolve sugar</td>
+</tr>
+<tr class="item 葉巻をくゆらす">
+<td><input class="uk-checkbox" type="checkbox" id="葉巻をくゆらす"/></td>
+<td class="question-text">葉巻をくゆらす</td>
+<td class="answer-text">puff on cigar</td>
+</tr>
+<tr class="item 喫煙を控える">
+<td><input class="uk-checkbox" type="checkbox" id="喫煙を控える"/></td>
+<td class="question-text">喫煙を控える</td>
+<td class="answer-text">refrain from smoking</td>
+</tr>
+<tr class="item パンをミルクに浸す">
+<td><input class="uk-checkbox" type="checkbox" id="パンをミルクに浸す"/></td>
+<td class="question-text">パンをミルクに浸す</td>
+<td class="answer-text">dip the bread in milk</td>
+</tr>
+<tr class="item マーガリンをバターの代わりに使う">
+<td><input class="uk-checkbox" type="checkbox" id="マーガリンをバターの代わりに使う"/></td>
+<td class="question-text">マーガリンをバターの代わりに使う</td>
+<td class="answer-text">substitute margarine for butter</td>
+</tr>
+<tr class="item アルコール飲料">
+<td><input class="uk-checkbox" type="checkbox" id="アルコール飲料"/></td>
+<td class="question-text">アルコール飲料</td>
+<td class="answer-text">alcoholic beverages</td>
+</tr>
+<tr class="item 腐った果物">
+<td><input class="uk-checkbox" type="checkbox" id="腐った果物"/></td>
+<td class="question-text">腐った果物</td>
+<td class="answer-text">rotten fruit</td>
+</tr>
+<tr class="item 人口密度">
+<td><input class="uk-checkbox" type="checkbox" id="人口密度"/></td>
+<td class="question-text">人口密度</td>
+<td class="answer-text">population density</td>
+</tr>
+<tr class="item 泊まる所を探す">
+<td><input class="uk-checkbox" type="checkbox" id="泊まる所を探す"/></td>
+<td class="question-text">泊まる所を探す</td>
+<td class="answer-text">find lodgings</td>
+</tr>
+<tr class="item 独身寮">
+<td><input class="uk-checkbox" type="checkbox" id="独身寮"/></td>
+<td class="question-text">独身寮</td>
+<td class="answer-text">bachelor apartments</td>
+</tr>
+<tr class="item 鍵を差しこむ">
+<td><input class="uk-checkbox" type="checkbox" id="鍵を差しこむ"/></td>
+<td class="question-text">鍵を差しこむ</td>
+<td class="answer-text">insert the key</td>
+</tr>
+<tr class="item 鍵穴からのぞく">
+<td><input class="uk-checkbox" type="checkbox" id="鍵穴からのぞく"/></td>
+<td class="question-text">鍵穴からのぞく</td>
+<td class="answer-text">peep through the keyhole</td>
+</tr>
+<tr class="item こっそりと忍び込む">
+<td><input class="uk-checkbox" type="checkbox" id="こっそりと忍び込む"/></td>
+<td class="question-text">こっそりと忍び込む</td>
+<td class="answer-text">creep in stealthily</td>
+</tr>
+<tr class="item 内部の装飾">
+<td><input class="uk-checkbox" type="checkbox" id="内部の装飾"/></td>
+<td class="question-text">内部の装飾</td>
+<td class="answer-text">interior decoration</td>
+</tr>
+<tr class="item 暖房装置">
+<td><input class="uk-checkbox" type="checkbox" id="暖房装置"/></td>
+<td class="question-text">暖房装置</td>
+<td class="answer-text">a heating apparatus</td>
+</tr>
+<tr class="item 燃料の蓄え">
+<td><input class="uk-checkbox" type="checkbox" id="燃料の蓄え"/></td>
+<td class="question-text">燃料の蓄え</td>
+<td class="answer-text">fuel reserves</td>
+</tr>
+<tr class="item 暖炉の炎">
+<td><input class="uk-checkbox" type="checkbox" id="暖炉の炎"/></td>
+<td class="question-text">暖炉の炎</td>
+<td class="answer-text">the blaze in the hearth</td>
+</tr>
+<tr class="item 部屋を明るくする">
+<td><input class="uk-checkbox" type="checkbox" id="部屋を明るくする"/></td>
+<td class="question-text">部屋を明るくする</td>
+<td class="answer-text">brighten the room</td>
+</tr>
+<tr class="item 湯船につかる">
+<td><input class="uk-checkbox" type="checkbox" id="湯船につかる"/></td>
+<td class="question-text">湯船につかる</td>
+<td class="answer-text">soak in the tub</td>
+</tr>
+<tr class="item 石けんの泡">
+<td><input class="uk-checkbox" type="checkbox" id="石けんの泡"/></td>
+<td class="question-text">石けんの泡</td>
+<td class="answer-text">soap bubbles</td>
+</tr>
+<tr class="item 壁のひび割れ">
+<td><input class="uk-checkbox" type="checkbox" id="壁のひび割れ"/></td>
+<td class="question-text">壁のひび割れ</td>
+<td class="answer-text">a crack in the wall</td>
+</tr>
+<tr class="item 埃っぽい廊下">
+<td><input class="uk-checkbox" type="checkbox" id="埃っぽい廊下"/></td>
+<td class="question-text">埃っぽい廊下</td>
+<td class="answer-text">a dusty corridor</td>
+</tr>
+<tr class="item ほうきで掃く">
+<td><input class="uk-checkbox" type="checkbox" id="ほうきで掃く"/></td>
+<td class="question-text">ほうきで掃く</td>
+<td class="answer-text">sweep with a broom</td>
+</tr>
+<tr class="item 散らかした物を片付ける">
+<td><input class="uk-checkbox" type="checkbox" id="散らかした物を片付ける"/></td>
+<td class="question-text">散らかした物を片付ける</td>
+<td class="answer-text">clear up the mess</td>
+</tr>
+<tr class="item 大理石の床">
+<td><input class="uk-checkbox" type="checkbox" id="大理石の床"/></td>
+<td class="question-text">大理石の床</td>
+<td class="answer-text">a marble floor</td>
+</tr>
+<tr class="item 階段をころがり落ちる">
+<td><input class="uk-checkbox" type="checkbox" id="階段をころがり落ちる"/></td>
+<td class="question-text">階段をころがり落ちる</td>
+<td class="answer-text">tumble down the stairs</td>
+</tr>
+<tr class="item 衛星を打ち上げる">
+<td><input class="uk-checkbox" type="checkbox" id="衛星を打ち上げる"/></td>
+<td class="question-text">衛星を打ち上げる</td>
+<td class="answer-text">launch a satellite</td>
+</tr>
+<tr class="item 液体燃料">
+<td><input class="uk-checkbox" type="checkbox" id="液体燃料"/></td>
+<td class="question-text">液体燃料</td>
+<td class="answer-text">liquid fuel</td>
+</tr>
+<tr class="item 月の軌道">
+<td><input class="uk-checkbox" type="checkbox" id="月の軌道"/></td>
+<td class="question-text">月の軌道</td>
+<td class="answer-text">lunar orbit</td>
+</tr>
+<tr class="item 天文学と占星術">
+<td><input class="uk-checkbox" type="checkbox" id="天文学と占星術"/></td>
+<td class="question-text">天文学と占星術</td>
+<td class="answer-text">astronomy and astrology</td>
+</tr>
+<tr class="item 重力の法則">
+<td><input class="uk-checkbox" type="checkbox" id="重力の法則"/></td>
+<td class="question-text">重力の法則</td>
+<td class="answer-text">the law of gravity</td>
+</tr>
+<tr class="item 地球の引力">
+<td><input class="uk-checkbox" type="checkbox" id="地球の引力"/></td>
+<td class="question-text">地球の引力</td>
+<td class="answer-text">the earth's gravitation</td>
+</tr>
+<tr class="item 赤道近くに">
+<td><input class="uk-checkbox" type="checkbox" id="赤道近くに"/></td>
+<td class="question-text">赤道近くに</td>
+<td class="answer-text">near the equator</td>
+</tr>
+<tr class="item 潮の干満">
+<td><input class="uk-checkbox" type="checkbox" id="潮の干満"/></td>
+<td class="question-text">潮の干満</td>
+<td class="answer-text">ebb and flow</td>
+</tr>
+<tr class="item 地理的な境界">
+<td><input class="uk-checkbox" type="checkbox" id="地理的な境界"/></td>
+<td class="question-text">地理的な境界</td>
+<td class="answer-text">geographical boundaries</td>
+</tr>
+<tr class="item 田舎の風景">
+<td><input class="uk-checkbox" type="checkbox" id="田舎の風景"/></td>
+<td class="question-text">田舎の風景</td>
+<td class="answer-text">rural scenery</td>
+</tr>
+<tr class="item 木陰の田舎道">
+<td><input class="uk-checkbox" type="checkbox" id="木陰の田舎道"/></td>
+<td class="question-text">木陰の田舎道</td>
+<td class="answer-text">a shady country lane</td>
+</tr>
+<tr class="item イバラの茂み">
+<td><input class="uk-checkbox" type="checkbox" id="イバラの茂み"/></td>
+<td class="question-text">イバラの茂み</td>
+<td class="answer-text">thorn bushes</td>
+</tr>
+<tr class="item 湿った粘土">
+<td><input class="uk-checkbox" type="checkbox" id="湿った粘土"/></td>
+<td class="question-text">湿った粘土</td>
+<td class="answer-text">moist clay</td>
+</tr>
+<tr class="item 苔むした石">
+<td><input class="uk-checkbox" type="checkbox" id="苔むした石"/></td>
+<td class="question-text">苔むした石</td>
+<td class="answer-text">mossy stones</td>
+</tr>
+<tr class="item 速い流れ">
+<td><input class="uk-checkbox" type="checkbox" id="速い流れ"/></td>
+<td class="question-text">速い流れ</td>
+<td class="answer-text">swift current</td>
+</tr>
+<tr class="item 浅瀬">
+<td><input class="uk-checkbox" type="checkbox" id="浅瀬"/></td>
+<td class="question-text">浅瀬</td>
+<td class="answer-text">shallow water</td>
+</tr>
+<tr class="item 浜辺の小石">
+<td><input class="uk-checkbox" type="checkbox" id="浜辺の小石"/></td>
+<td class="question-text">浜辺の小石</td>
+<td class="answer-text">pebbles on the beach</td>
+</tr>
+<tr class="item すばらしい光景">
+<td><input class="uk-checkbox" type="checkbox" id="すばらしい光景"/></td>
+<td class="question-text">すばらしい光景</td>
+<td class="answer-text">a striking spectacle</td>
+</tr>
+<tr class="item 日焼けした漁師">
+<td><input class="uk-checkbox" type="checkbox" id="日焼けした漁師"/></td>
+<td class="question-text">日焼けした漁師</td>
+<td class="answer-text">a tanned fisherman</td>
+</tr>
+<tr class="item ほのかな光線">
+<td><input class="uk-checkbox" type="checkbox" id="ほのかな光線"/></td>
+<td class="question-text">ほのかな光線</td>
+<td class="answer-text">faint beams of light</td>
+</tr>
+<tr class="item かすかな光">
+<td><input class="uk-checkbox" type="checkbox" id="かすかな光"/></td>
+<td class="question-text">かすかな光</td>
+<td class="answer-text">a gleam of light</td>
+</tr>
+<tr class="item さびれた村">
+<td><input class="uk-checkbox" type="checkbox" id="さびれた村"/></td>
+<td class="question-text">さびれた村</td>
+<td class="answer-text">a wretched village</td>
+</tr>
+<tr class="item 豊富な資源">
+<td><input class="uk-checkbox" type="checkbox" id="豊富な資源"/></td>
+<td class="question-text">豊富な資源</td>
+<td class="answer-text">abundant resources</td>
+</tr>
+<tr class="item 乏しい資源">
+<td><input class="uk-checkbox" type="checkbox" id="乏しい資源"/></td>
+<td class="question-text">乏しい資源</td>
+<td class="answer-text">a scarce resource</td>
+</tr>
+<tr class="item 手に入る資源">
+<td><input class="uk-checkbox" type="checkbox" id="手に入る資源"/></td>
+<td class="question-text">手に入る資源</td>
+<td class="answer-text">available resources</td>
+</tr>
+<tr class="item 船を操縦する">
+<td><input class="uk-checkbox" type="checkbox" id="船を操縦する"/></td>
+<td class="question-text">船を操縦する</td>
+<td class="answer-text">navigate a ship</td>
+</tr>
+<tr class="item 原始的な航海術">
+<td><input class="uk-checkbox" type="checkbox" id="原始的な航海術"/></td>
+<td class="question-text">原始的な航海術</td>
+<td class="answer-text">primitive navigation</td>
+</tr>
+<tr class="item 水に飛び込む">
+<td><input class="uk-checkbox" type="checkbox" id="水に飛び込む"/></td>
+<td class="question-text">水に飛び込む</td>
+<td class="answer-text">plunge into the water</td>
+</tr>
+<tr class="item 漂流する氷">
+<td><input class="uk-checkbox" type="checkbox" id="漂流する氷"/></td>
+<td class="question-text">漂流する氷</td>
+<td class="answer-text">drifting ice</td>
+</tr>
+<tr class="item 氷山の一角">
+<td><input class="uk-checkbox" type="checkbox" id="氷山の一角"/></td>
+<td class="question-text">氷山の一角</td>
+<td class="answer-text">the tip of the iceberg</td>
+</tr>
+<tr class="item 温暖な気候">
+<td><input class="uk-checkbox" type="checkbox" id="温暖な気候"/></td>
+<td class="question-text">温暖な気候</td>
+<td class="answer-text">a temperate climate</td>
+</tr>
+<tr class="item 露のしずく">
+<td><input class="uk-checkbox" type="checkbox" id="露のしずく"/></td>
+<td class="question-text">露のしずく</td>
+<td class="answer-text">dew drops</td>
+</tr>
+<tr class="item 霧の中に消える">
+<td><input class="uk-checkbox" type="checkbox" id="霧の中に消える"/></td>
+<td class="question-text">霧の中に消える</td>
+<td class="answer-text">vanish in the mist</td>
+</tr>
+<tr class="item 濃い霧">
+<td><input class="uk-checkbox" type="checkbox" id="濃い霧"/></td>
+<td class="question-text">濃い霧</td>
+<td class="answer-text">dense mist</td>
+</tr>
+<tr class="item 村を包む">
+<td><input class="uk-checkbox" type="checkbox" id="村を包む"/></td>
+<td class="question-text">村を包む</td>
+<td class="answer-text">envelop the town</td>
+</tr>
+<tr class="item 霜の害">
+<td><input class="uk-checkbox" type="checkbox" id="霜の害"/></td>
+<td class="question-text">霜の害</td>
+<td class="answer-text">frost damage</td>
+</tr>
+<tr class="item 雷鳴と稲妻">
+<td><input class="uk-checkbox" type="checkbox" id="雷鳴と稲妻"/></td>
+<td class="question-text">雷鳴と稲妻</td>
+<td class="answer-text">thunder and lightning</td>
+</tr>
+<tr class="item わずかな降雨">
+<td><input class="uk-checkbox" type="checkbox" id="わずかな降雨"/></td>
+<td class="question-text">わずかな降雨</td>
+<td class="answer-text">scant rainfall</td>
+</tr>
+<tr class="item イナゴの大発生">
+<td><input class="uk-checkbox" type="checkbox" id="イナゴの大発生"/></td>
+<td class="question-text">イナゴの大発生</td>
+<td class="answer-text">a plague of locusts</td>
+</tr>
+<tr class="item みじめな生活状態">
+<td><input class="uk-checkbox" type="checkbox" id="みじめな生活状態"/></td>
+<td class="question-text">みじめな生活状態</td>
+<td class="answer-text">miserable living conditions</td>
+</tr>
+<tr class="item 耐えられない暑さ">
+<td><input class="uk-checkbox" type="checkbox" id="耐えられない暑さ"/></td>
+<td class="question-text">耐えられない暑さ</td>
+<td class="answer-text">unbearable heat</td>
+</tr>
+<tr class="item 肥沃な土壌">
+<td><input class="uk-checkbox" type="checkbox" id="肥沃な土壌"/></td>
+<td class="question-text">肥沃な土壌</td>
+<td class="answer-text">fertile soil</td>
+</tr>
+<tr class="item 不毛の砂漠">
+<td><input class="uk-checkbox" type="checkbox" id="不毛の砂漠"/></td>
+<td class="question-text">不毛の砂漠</td>
+<td class="answer-text">a barren desert</td>
+</tr>
+<tr class="item 畑を耕す">
+<td><input class="uk-checkbox" type="checkbox" id="畑を耕す"/></td>
+<td class="question-text">畑を耕す</td>
+<td class="answer-text">plow fields</td>
+</tr>
+<tr class="item 農薬を散布する">
+<td><input class="uk-checkbox" type="checkbox" id="農薬を散布する"/></td>
+<td class="question-text">農薬を散布する</td>
+<td class="answer-text">spray pesticides</td>
+</tr>
+<tr class="item 蜜蜂の巣">
+<td><input class="uk-checkbox" type="checkbox" id="蜜蜂の巣"/></td>
+<td class="question-text">蜜蜂の巣</td>
+<td class="answer-text">a bee live</td>
+</tr>
+<tr class="item 干し草の山が積まれた牧草地">
+<td><input class="uk-checkbox" type="checkbox" id="干し草の山が積まれた牧草地"/></td>
+<td class="question-text">干し草の山が積まれた牧草地</td>
+<td class="answer-text">a field of hay-stacks</td>
+</tr>
+<tr class="item 羊を飼育する">
+<td><input class="uk-checkbox" type="checkbox" id="羊を飼育する"/></td>
+<td class="question-text">羊を飼育する</td>
+<td class="answer-text">breed sheep</td>
+</tr>
+<tr class="item 牛の一群">
+<td><input class="uk-checkbox" type="checkbox" id="牛の一群"/></td>
+<td class="question-text">牛の一群</td>
+<td class="answer-text">a herd of cattle</td>
+</tr>
+<tr class="item 豚を屠殺する">
+<td><input class="uk-checkbox" type="checkbox" id="豚を屠殺する"/></td>
+<td class="question-text">豚を屠殺する</td>
+<td class="answer-text">slaughter the hogs</td>
+</tr>
+<tr class="item 酪農製品">
+<td><input class="uk-checkbox" type="checkbox" id="酪農製品"/></td>
+<td class="question-text">酪農製品</td>
+<td class="answer-text">dairy products</td>
+</tr>
+<tr class="item 木を切り倒す">
+<td><input class="uk-checkbox" type="checkbox" id="木を切り倒す"/></td>
+<td class="question-text">木を切り倒す</td>
+<td class="answer-text">chop down trees</td>
+</tr>
+<tr class="item オノの刃">
+<td><input class="uk-checkbox" type="checkbox" id="オノの刃"/></td>
+<td class="question-text">オノの刃</td>
+<td class="answer-text">the axe blade</td>
+</tr>
+<tr class="item 木の幹">
+<td><input class="uk-checkbox" type="checkbox" id="木の幹"/></td>
+<td class="question-text">木の幹</td>
+<td class="answer-text">a tree trunk</td>
+</tr>
+<tr class="item 梯子に登る">
+<td><input class="uk-checkbox" type="checkbox" id="梯子に登る"/></td>
+<td class="question-text">梯子に登る</td>
+<td class="answer-text">climb the ladder</td>
+</tr>
+<tr class="item 枝を刈り込む">
+<td><input class="uk-checkbox" type="checkbox" id="枝を刈り込む"/></td>
+<td class="question-text">枝を刈り込む</td>
+<td class="answer-text">trim the branches</td>
+</tr>
+<tr class="item 毒キノコ">
+<td><input class="uk-checkbox" type="checkbox" id="毒キノコ"/></td>
+<td class="question-text">毒キノコ</td>
+<td class="answer-text">poisonous mushrooms</td>
+</tr>
+<tr class="item じゃがいもの皮をむく">
+<td><input class="uk-checkbox" type="checkbox" id="じゃがいもの皮をむく"/></td>
+<td class="question-text">じゃがいもの皮をむく</td>
+<td class="answer-text">peel a potato</td>
+</tr>
+<tr class="item 厄介な雑草">
+<td><input class="uk-checkbox" type="checkbox" id="厄介な雑草"/></td>
+<td class="question-text">厄介な雑草</td>
+<td class="answer-text">a troublesome weed</td>
+</tr>
+<tr class="item 立ち枯れる未完に終わる">
+<td><input class="uk-checkbox" type="checkbox" id="立ち枯れる未完に終わる"/></td>
+<td class="question-text">立ち枯れる（未完に終わる）</td>
+<td class="answer-text">wither on the vine</td>
+</tr>
+<tr class="item 動物をいじめるな">
+<td><input class="uk-checkbox" type="checkbox" id="動物をいじめるな"/></td>
+<td class="question-text">動物をいじめるな</td>
+<td class="answer-text">Don't tease the animals.</td>
+</tr>
+<tr class="item 消滅しかかっている種">
+<td><input class="uk-checkbox" type="checkbox" id="消滅しかかっている種"/></td>
+<td class="question-text">消滅しかかっている種</td>
+<td class="answer-text">a vanishing species</td>
+</tr>
+<tr class="item 迷子の子犬">
+<td><input class="uk-checkbox" type="checkbox" id="迷子の子犬"/></td>
+<td class="question-text">迷子の子犬</td>
+<td class="answer-text">a stray puppy</td>
+</tr>
+<tr class="item 犬に向かって取って来い">
+<td><input class="uk-checkbox" type="checkbox" id="犬に向かって取って来い"/></td>
+<td class="question-text">（犬に向かって）取って来い</td>
+<td class="answer-text">Fetch!</td>
+</tr>
+<tr class="item この辺りは鹿が多く棲む">
+<td><input class="uk-checkbox" type="checkbox" id="この辺りは鹿が多く棲む"/></td>
+<td class="question-text">この辺りは鹿が多く棲む</td>
+<td class="answer-text">Deer abound in this area.</td>
+</tr>
+<tr class="item 吠えるライオン">
+<td><input class="uk-checkbox" type="checkbox" id="吠えるライオン"/></td>
+<td class="question-text">吠えるライオン</td>
+<td class="answer-text">a roaring lion</td>
+</tr>
+<tr class="item 唸る雌ライオン">
+<td><input class="uk-checkbox" type="checkbox" id="唸る雌ライオン"/></td>
+<td class="question-text">唸る雌ライオン</td>
+<td class="answer-text">a growling lioness</td>
+</tr>
+<tr class="item 獲物に飛びかかる">
+<td><input class="uk-checkbox" type="checkbox" id="獲物に飛びかかる"/></td>
+<td class="question-text">獲物に飛びかかる</td>
+<td class="answer-text">leap upon the prey</td>
+</tr>
+<tr class="item トラを手なずける">
+<td><input class="uk-checkbox" type="checkbox" id="トラを手なずける"/></td>
+<td class="question-text">トラを手なずける</td>
+<td class="answer-text">tame a tiger</td>
+</tr>
+<tr class="item ハエや蚊">
+<td><input class="uk-checkbox" type="checkbox" id="ハエや蚊"/></td>
+<td class="question-text">ハエや蚊</td>
+<td class="answer-text">flies and mosquitoes</td>
+</tr>
+<tr class="item 蜂のように刺す">
+<td><input class="uk-checkbox" type="checkbox" id="蜂のように刺す"/></td>
+<td class="question-text">蜂のように刺す</td>
+<td class="answer-text">sting like a bee</td>
+</tr>
+<tr class="item 子羊のようにおとなしい">
+<td><input class="uk-checkbox" type="checkbox" id="子羊のようにおとなしい"/></td>
+<td class="question-text">子羊のようにおとなしい</td>
+<td class="answer-text">meek as a lamb</td>
+</tr>
+<tr class="item キツネのようにずる賢い">
+<td><input class="uk-checkbox" type="checkbox" id="キツネのようにずる賢い"/></td>
+<td class="question-text">キツネのようにずる賢い</td>
+<td class="answer-text">cunning as a fox</td>
+</tr>
+<tr class="item ワナにはまる">
+<td><input class="uk-checkbox" type="checkbox" id="ワナにはまる"/></td>
+<td class="question-text">ワナにはまる</td>
+<td class="answer-text">fall into a trap</td>
+</tr>
+<tr class="item きらきら輝く金">
+<td><input class="uk-checkbox" type="checkbox" id="きらきら輝く金"/></td>
+<td class="question-text">きらきら輝く金</td>
+<td class="answer-text">sparkling gold</td>
+</tr>
+<tr class="item こわれやすい物質">
+<td><input class="uk-checkbox" type="checkbox" id="こわれやすい物質"/></td>
+<td class="question-text">こわれやすい物質</td>
+<td class="answer-text">frail substance</td>
+</tr>
+<tr class="item 銀メダルを授与する">
+<td><input class="uk-checkbox" type="checkbox" id="銀メダルを授与する"/></td>
+<td class="question-text">銀メダルを授与する</td>
+<td class="answer-text">bestow a silver medal</td>
+</tr>
+</tbody>
+    </table>
+</body>
+</html>

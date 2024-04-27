@@ -49,6 +49,8 @@ def split_text_equals_annotations(text):
     return texts, equals, annotations
 
 class QAItem:
+    INVERT_QA = False
+
     def __init__(self, q_text, a_text):
         self._q_text = q_text
         self._a_text = a_text
@@ -76,13 +78,15 @@ class QAItem:
     def a_text(self):
         return self._a_text
 
-    @staticmethod
-    def parse_line(line):
+    @classmethod
+    def parse_line(cls, line):
         m = re.search(':=', line)
         if not m:
             raise ValueError(f'Unexpected line: {line}')
         q_text = line[0:m.span()[0]].strip()
         a_text = line[m.span()[1]:].strip()
+        if cls.INVERT_QA:
+            q_text, a_text = a_text, q_text
 
         q_texts, q_equals, q_annotations = split_text_equals_annotations(q_text)
         a_texts, a_equals, a_annotations = split_text_equals_annotations(a_text)
@@ -152,6 +156,19 @@ def _parse_QA_file(filename):
             components.extend(parsed_components)
     return components
 
+class ItemIDManager:
+    item_ids = set()
+
+    @classmethod
+    def get_unique_item_id(cls, item_id):
+        for i in range(2, 1000):
+            if item_id not in cls.item_ids:
+                cls.item_ids.add(item_id)
+                break
+            print(f'Warning: Duplicated item id: {item_id}')
+            item_id = f'{item_id}-{i}'
+        return item_id
+
 def construct_content(components):
     content = ''
     # content += '<thead>'
@@ -163,7 +180,7 @@ def construct_content(components):
         if isinstance(component, QAComment):
             content += '<tr class="comment"><td colspan="3">' + str(component) + '</td></tr>\n'
         elif isinstance(component, QAItem):
-            item_id = component.item_id
+            item_id = ItemIDManager.get_unique_item_id(component.item_id)
             content += f'<tr class="item {item_id}">\n'
             content += f'<td><input class="uk-checkbox" type="checkbox" id="{item_id}"/></td>\n'
             content += f'<td class="question-text">{component.q_text}</td>\n'
@@ -175,6 +192,7 @@ def construct_content(components):
     return content
 
 def main(args):
+    QAItem.INVERT_QA = args.invert_QA
     stem_name = os.path.splitext(os.path.basename(args.input_file))[0]
     components = _parse_QA_file(args.input_file)
     page_content = construct_content(components)
@@ -224,6 +242,7 @@ def make_index_page(output_dir):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--output_dir', '-d', help='Output directory', required=False, default=DEFAULT_OUTPUT_DIR)
+    parser.add_argument('--invert-QA', help='Invert the order of question and answer', required=False, default=False, action='store_true')
     parser.add_argument('input_file', help='Input file')
     args = parser.parse_args()
 

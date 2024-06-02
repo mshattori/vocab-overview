@@ -142,6 +142,8 @@ def _parse_QA_line(line):
     line = line.strip()
     if line.startswith('#'):
         return QAComment.parse_line(line)
+    elif re.fullmatch('\(.+\)', line):
+        return [QAAnnotation(line[1:-1])]
     else:
         return QAItem.parse_line(line)
 

@@ -10,6 +10,18 @@
             background: rgba(255, 255, 255, 0.8) !important;
             box-shadow: none !important;
         }
+        .footer {
+            background: rgba(255, 255, 255, 0.5);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: right;
+            padding: 10px;
+            display: none; /* Hide initially */
+        }
+        .footer #scrollPercentage {
+            margin-right: 20px;
+        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/js/uikit-icons.min.js"></script>
@@ -17,6 +29,7 @@
     <script src="checkbox.js"></script>
     <script src="set-position.js"></script>
     <script src="toggle-answers.js"></script>
+    <script src="footer.js"></script>
     <link rel="stylesheet" href="table.css" />
 </head>
 <body>
@@ -37,5 +50,8 @@
     <table class="uk-table uk-table-divider">
         %CONTENT%
     </table>
+    <div class="footer">
+        <span id="scrollPercentage">0%</span>
+    </div>
 </body>
 </html>

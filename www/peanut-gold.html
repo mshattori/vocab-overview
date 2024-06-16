@@ -10,6 +10,18 @@
             background: rgba(255, 255, 255, 0.8) !important;
             box-shadow: none !important;
         }
+        .footer {
+            background: rgba(255, 255, 255, 0.5);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: right;
+            padding: 10px;
+            display: none; /* Hide initially */
+        }
+        .footer #scrollPercentage {
+            margin-right: 20px;
+        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/js/uikit-icons.min.js"></script>
@@ -17,6 +29,7 @@
     <script src="checkbox.js"></script>
     <script src="set-position.js"></script>
     <script src="toggle-answers.js"></script>
+    <script src="footer.js"></script>
     <link rel="stylesheet" href="table.css" />
 </head>
 <body>
@@ -1284,6 +1297,7 @@
 <td class="question-text">敬虔なキリスト教徒</td>
 <td class="answer-text">devout Christians</td>
 </tr>
+<tr class="note 敬虔なキリスト教徒"><td colspan="3" class="answer-text">devout/dɪvάʊt/: 信心深い; 心からの; e.g. a devaut vow</td></tr>
 <tr class="item 聖書を貴ぶ">
 <td><input class="uk-checkbox" type="checkbox" id="聖書を貴ぶ"/></td>
 <td class="question-text">聖書を貴ぶ</td>
@@ -1749,6 +1763,7 @@
 <td class="question-text">弱者を食い物にする</td>
 <td class="answer-text">devour the weaker</td>
 </tr>
+<tr class="note 弱者を食い物にする"><td colspan="3" class="answer-text">devour/dɪvάʊɚ/: むさぼり食う; むさぼり読む; cf. devout/dɪvάʊt/: 信心深い</td></tr>
 <tr class="item 泥棒を追いつめる">
 <td><input class="uk-checkbox" type="checkbox" id="泥棒を追いつめる"/></td>
 <td class="question-text">泥棒を追いつめる</td>
@@ -2240,6 +2255,7 @@
 <td class="question-text">〜に短剣を突き刺す</td>
 <td class="answer-text">thrust a dagger into 〜</td>
 </tr>
+<tr class="note に短剣を突き刺す"><td colspan="3" class="answer-text">thrust: ぐいと押す; 突き刺す; e.g. thrust him aside; thrust out your tongue</td></tr>
 <tr class="item 死体を埋める">
 <td><input class="uk-checkbox" type="checkbox" id="死体を埋める"/></td>
 <td class="question-text">死体を埋める</td>
@@ -3930,5 +3946,8 @@
 </tr>
 </tbody>
     </table>
+    <div class="footer">
+        <span id="scrollPercentage">0%</span>
+    </div>
 </body>
 </html>

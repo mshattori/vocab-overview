@@ -10,6 +10,18 @@
             background: rgba(255, 255, 255, 0.8) !important;
             box-shadow: none !important;
         }
+        .footer {
+            background: rgba(255, 255, 255, 0.5);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: right;
+            padding: 10px;
+            display: none; /* Hide initially */
+        }
+        .footer #scrollPercentage {
+            margin-right: 20px;
+        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/js/uikit-icons.min.js"></script>
@@ -17,6 +29,7 @@
     <script src="checkbox.js"></script>
     <script src="set-position.js"></script>
     <script src="toggle-answers.js"></script>
+    <script src="footer.js"></script>
     <link rel="stylesheet" href="table.css" />
 </head>
 <body>
@@ -91,6 +104,7 @@
 <td class="question-text">文法や語法</td>
 <td class="answer-text">grammar and usage</td>
 </tr>
+<tr class="note 文法や語法"><td colspan="3" class="answer-text">-gram:「書かれたもの」という意味 anagram, telegram, program, diagram, etc.; cf.glamour: (幻惑的な)魅惑; (女性の性的)魅力</td></tr>
 <tr class="item 文法の細部">
 <td><input class="uk-checkbox" type="checkbox" id="文法の細部"/></td>
 <td class="question-text">文法の細部</td>
@@ -327,6 +341,7 @@
 <td class="question-text">目ざましい努力をする</td>
 <td class="answer-text">make a splendid effort</td>
 </tr>
+<tr class="note 目ざましい努力をする"><td colspan="3" class="answer-text">splendid: 華麗な,輝かしい,すばらしい ref. remarkable: 注目すべき,非凡な; cf. significant: 重要な,有意な</td></tr>
 <tr class="item 努力をに限定する">
 <td><input class="uk-checkbox" type="checkbox" id="努力をに限定する"/></td>
 <td class="question-text">努力を〜に限定する</td>
@@ -337,11 +352,12 @@
 <td class="question-text">最重要ポイント</td>
 <td class="answer-text">a vital point</td>
 </tr>
-<tr class="item 絶えざる繰り返し">
-<td><input class="uk-checkbox" type="checkbox" id="絶えざる繰り返し"/></td>
-<td class="question-text">絶えざる繰り返し</td>
+<tr class="item 終わりのない繰り返し">
+<td><input class="uk-checkbox" type="checkbox" id="終わりのない繰り返し"/></td>
+<td class="question-text">終わりのない繰り返し</td>
 <td class="answer-text">endless repetition</td>
 </tr>
+<tr class="note 終わりのない繰り返し"><td colspan="3" class="answer-text">cf. perpetual: 終わりのない,無期限の; inifinite: 無限の; eternal: 永遠の; everlasting: 継続する</td></tr>
 <tr class="item うんざりするほどの宿題">
 <td><input class="uk-checkbox" type="checkbox" id="うんざりするほどの宿題"/></td>
 <td class="question-text">うんざりするほどの宿題</td>
@@ -392,6 +408,7 @@
 <td class="question-text">博士号を授与する</td>
 <td class="answer-text">grant a doctorate</td>
 </tr>
+<tr class="note 博士号を授与する"><td colspan="3" class="answer-text">grant /grǽnt/: vt.(権利を)許諾する; (歎願を)承諾する; n.助成金, 補助金=subsidy, 奨学金=scholarship</td></tr>
 <tr class="item 従順な息子">
 <td><input class="uk-checkbox" type="checkbox" id="従順な息子"/></td>
 <td class="question-text">従順な息子</td>
@@ -420,8 +437,9 @@
 <tr class="item 親に悩みを打ち明ける">
 <td><input class="uk-checkbox" type="checkbox" id="親に悩みを打ち明ける"/></td>
 <td class="question-text">親に悩みを打ち明ける</td>
-<td class="answer-text">confide in your parents</td>
+<td class="answer-text">confide in your parents with worries</td>
 </tr>
+<tr class="note 親に悩みを打ち明ける"><td colspan="3" class="answer-text">confide in someone about/with/that ~: ～を信用して秘密などを打ち明ける</td></tr>
 <tr class="item 親の同意">
 <td><input class="uk-checkbox" type="checkbox" id="親の同意"/></td>
 <td class="question-text">親の同意</td>
@@ -3924,5 +3942,8 @@
 </tr>
 </tbody>
     </table>
+    <div class="footer">
+        <span id="scrollPercentage">0%</span>
+    </div>
 </body>
 </html>

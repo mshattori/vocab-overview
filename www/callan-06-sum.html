@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Callan 06 Sum</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/css/uikit.min.css" />
+    <style>
+        .transparent-navbar {
+            background: rgba(255, 255, 255, 0.8) !important;
+            box-shadow: none !important;
+        }
+        .footer {
+            background: rgba(255, 255, 255, 0.5);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: right;
+            padding: 10px;
+            display: none; /* Hide initially */
+        }
+        .footer #scrollPercentage {
+            margin-right: 20px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/js/uikit-icons.min.js"></script>
+    <script src="local-context.js"></script>
+    <script src="checkbox.js"></script>
+    <script src="set-position.js"></script>
+    <script src="toggle-answers.js"></script>
+    <script src="footer.js"></script>
+    <link rel="stylesheet" href="table.css" />
+</head>
+<body>
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; show-on-up: true">
+        <nav class="uk-navbar-container transparent-navbar" uk-navbar>
+            <div class="uk-navbar-right">
+                <a class="uk-navbar-toggle uk-navbar-toggle-animate" uk-navbar-toggle-icon href="#"></a>
+                <div class="uk-navbar-dropdown">
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li><a href="#" id="clear-checkboxes">Clear Checkboxes</a></li>
+                        <li><a href="#" id="toggle-unchecked">Hide/Show Unchecked</a></li>
+                        <li><a href="#" id="toggle-answers">Hide/Show Answers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <table class="uk-table uk-table-divider">
+        <tbody>
+<tr class="item What-do-you-supposed-happen-if-there-were-suddenly-no-water-in-the-world">
+<td><input class="uk-checkbox" type="checkbox" id="What-do-you-supposed-happen-if-there-were-suddenly-no-water-in-the-world"/></td>
+<td class="question-text">What do you suppose'd happen if there were suddenly no water in the world?</td>
+<td class="answer-text">I suppose we'd all die of thirst if there were suddenly no water in the world?</td>
+</tr>
+<tr class="item Supposing-today-were-Sunday-whered-you-be-now">
+<td><input class="uk-checkbox" type="checkbox" id="Supposing-today-were-Sunday-whered-you-be-now"/></td>
+<td class="question-text">Supposing today were Sunday, where'd you be now?</td>
+<td class="answer-text">Supposing today were Sunday, I'd be at home now.</td>
+</tr>
+<tr class="item Supposing-you-lost-your-passport-what-would-you-do">
+<td><input class="uk-checkbox" type="checkbox" id="Supposing-you-lost-your-passport-what-would-you-do"/></td>
+<td class="question-text">Supposing you lost your passport, what would you do?</td>
+<td class="answer-text">Supposing I lost my passport, I'd immediately tell the police.</td>
+</tr>
+<tr class="item Does-good-wine-usually-become-cheaper-and-cheaper-as-it-becomes-older">
+<td><input class="uk-checkbox" type="checkbox" id="Does-good-wine-usually-become-cheaper-and-cheaper-as-it-becomes-older"/></td>
+<td class="question-text">Does good wine usually become cheaper and cheaper as it becomes older?</td>
+<td class="answer-text">No, good wine doesn't usually become cheaper and cheaper as it becomes older, it usually becomes more and more expensive.</td>
+</tr>
+<tr class="item When-do-we-use-the-word-they-them-etc-to-talk-about-just-one-person">
+<td><input class="uk-checkbox" type="checkbox" id="When-do-we-use-the-word-they-them-etc-to-talk-about-just-one-person"/></td>
+<td class="question-text">When do we use the word "they", "them" etc. to talk about just one person?</td>
+<td class="answer-text">We use the word "they", "them" etc. to talk about just one person when we don't know if the person is a man or women.</td>
+</tr>
+<tr class="item Would-you-say-you-were-good-at-recognizing-people-after-not-having-seen-them-for-several-years">
+<td><input class="uk-checkbox" type="checkbox" id="Would-you-say-you-were-good-at-recognizing-people-after-not-having-seen-them-for-several-years"/></td>
+<td class="question-text">Would you say you were good at recognizing people after not having seen them for several years?.</td>
+<td class="answer-text">No, I wouldn't say I was good at recognizing people after not having seen them for several years.</td>
+</tr>
+<tr class="note Would-you-say-you-were-good-at-recognizing-people-after-not-having-seen-them-for-several-years"><td colspan="3" class="answer-text">Would you say ...? = Do you think ...?; 仮定法で使う</td></tr>
+<tr class="item Would-you-say-you-spoke-English-rather-well-now">
+<td><input class="uk-checkbox" type="checkbox" id="Would-you-say-you-spoke-English-rather-well-now"/></td>
+<td class="question-text">Would you say you spoke English rather well now?</td>
+<td class="answer-text">Yes, I would say I spoke English rather well now.</td>
+</tr>
+<tr class="note Would-you-say-you-spoke-English-rather-well-now"><td colspan="3" class="answer-text">rather = quite</td></tr>
+<tr class="item Which-would-you-rather-do-this-evening-read-a-book-watch-television-or-go-to-the-cinema">
+<td><input class="uk-checkbox" type="checkbox" id="Which-would-you-rather-do-this-evening-read-a-book-watch-television-or-go-to-the-cinema"/></td>
+<td class="question-text">Which would you rather do this evening: read a book, watch television, or go to the cinema?</td>
+<td class="answer-text">I would rather watch television this evening than read a book, or go to the cinema.</td>
+</tr>
+<tr class="note Which-would-you-rather-do-this-evening-read-a-book-watch-television-or-go-to-the-cinema"><td colspan="3" class="answer-text">would rather = would prefer to</td></tr>
+<tr class="item Do-you-have-very-much-faith-in-your-government">
+<td><input class="uk-checkbox" type="checkbox" id="Do-you-have-very-much-faith-in-your-government"/></td>
+<td class="question-text">Do you have very much faith in your government?</td>
+<td class="answer-text">No I don't have very much faith in your government.</td>
+</tr>
+<tr class="note Do-you-have-very-much-faith-in-your-government"><td colspan="3" class="answer-text">faith: 信用; 信仰 Christian faith キリスト信仰=キリスト教</td></tr>
+<tr class="item Tell-me-what-you-have-decided-to-do-this-evening">
+<td><input class="uk-checkbox" type="checkbox" id="Tell-me-what-you-have-decided-to-do-this-evening"/></td>
+<td class="question-text">Tell me what you have decided to do this evening?</td>
+<td class="answer-text">I'm going to have a drink with my friend this evening.</td>
+</tr>
+<tr class="note Tell-me-what-you-have-decided-to-do-this-evening"><td colspan="3" class="answer-text">決まっている予定を述べる; be going to~ で決まった予定を述べる</td></tr>
+<tr class="item Is-this-my-top-lip">
+<td><input class="uk-checkbox" type="checkbox" id="Is-this-my-top-lip"/></td>
+<td class="question-text">Is this my top lip?</td>
+<td class="answer-text">No, it's your bottom lip.</td>
+</tr>
+<tr class="item When-do-we-usually-use-the-empathic-do">
+<td><input class="uk-checkbox" type="checkbox" id="When-do-we-usually-use-the-empathic-do"/></td>
+<td class="question-text">When do we usually use the empathic "do"?</td>
+<td class="answer-text">We usually use the empathic "do" to deny something that someone has said because we know it is not true.</td>
+</tr>
+<tr class="item Tell-me-another-use-of-the-empathic-do">
+<td><input class="uk-checkbox" type="checkbox" id="Tell-me-another-use-of-the-empathic-do"/></td>
+<td class="question-text">Tell me another use of the empathic "do"?</td>
+<td class="answer-text">Another use of the empathic "do" is in an exclamation.</td>
+</tr>
+<tr class="note Tell-me-another-use-of-the-empathic-do"><td colspan="3" class="answer-text">感嘆文</td></tr>
+<tr class="item What-are-the-five-different-meanings-of-the-word-fair">
+<td><input class="uk-checkbox" type="checkbox" id="What-are-the-five-different-meanings-of-the-word-fair"/></td>
+<td class="question-text">What are the five different meanings of the word "fair"?</td>
+<td class="answer-text">The five different meanings of the word "fair" are fair hair, industrial and agricultural fairs, just, moderate, and funfair.</td>
+</tr>
+<tr class="item Do-people-become-darker-and-darker-in-hair-color-as-we-go-towards-the-north-of-Europe">
+<td><input class="uk-checkbox" type="checkbox" id="Do-people-become-darker-and-darker-in-hair-color-as-we-go-towards-the-north-of-Europe"/></td>
+<td class="question-text">Do people become darker and darker in hair color as we go towards the north of Europe?</td>
+<td class="answer-text">No, people don't become darker and darker in hair color as we go towards the north of Europe; they become fairer and fairer.</td>
+</tr>
+<tr class="item What-do-we-call-a-paper-handkerchief">
+<td><input class="uk-checkbox" type="checkbox" id="What-do-we-call-a-paper-handkerchief"/></td>
+<td class="question-text">What do we call a paper handkerchief?</td>
+<td class="answer-text">We call a paper handkerchief a tissue.</td>
+</tr>
+<tr class="item The-time-now-is-10-oclock-If-I-went-out-of-the-room-and-said-Ill-be-back-in-an-hour-at-what-time-would-I-return">
+<td><input class="uk-checkbox" type="checkbox" id="The-time-now-is-10-oclock-If-I-went-out-of-the-room-and-said-Ill-be-back-in-an-hour-at-what-time-would-I-return"/></td>
+<td class="question-text">The time now is 10 o'clock. If I went out of the room and said "I'll be back in an hour", at what time would I return?</td>
+<td class="answer-text">If you went out of the room and said "I'll be back in an hour", you'd return at 11 o'clock.</td>
+</tr>
+<tr class="item If-on-the-other-hand-I-went-out-of-the-room-and-said-Ill-be-back-within-an-hour-at-what-time-would-I-return">
+<td><input class="uk-checkbox" type="checkbox" id="If-on-the-other-hand-I-went-out-of-the-room-and-said-Ill-be-back-within-an-hour-at-what-time-would-I-return"/></td>
+<td class="question-text">If, on the other hand, I went out of the room and said "I'll be back within an hour", at what time would I return?</td>
+<td class="answer-text">If, on the other hand, you went out of the room and said "I'll be back within an hour", you'd return at anytime betwee now and 11 o'clock.</td>
+</tr>
+<tr class="item Do-you-think-that-the-difference-between-the-people-of-one-country-and-those-of-another-is-mainly-a-question-of-language">
+<td><input class="uk-checkbox" type="checkbox" id="Do-you-think-that-the-difference-between-the-people-of-one-country-and-those-of-another-is-mainly-a-question-of-language"/></td>
+<td class="question-text">Do you think that the difference between the people of one country and those of another is mainly a question of language?</td>
+<td class="answer-text">No, I don't think that the difference between the people of one country and those of another is mainly a question of language.</td>
+</tr>
+<tr class="note Do-you-think-that-the-difference-between-the-people-of-one-country-and-those-of-another-is-mainly-a-question-of-language"><td colspan="3" class="answer-text">主に言葉の問題</td></tr>
+<tr class="item Will-most-shops-in-this-town-have-shut-by-eleven-oclock-this-evening">
+<td><input class="uk-checkbox" type="checkbox" id="Will-most-shops-in-this-town-have-shut-by-eleven-oclock-this-evening"/></td>
+<td class="question-text">Will most shops in this town have shut by eleven o'clock this evening?</td>
+<td class="answer-text">Yes, most shops in this town will have shut, by eleven o'clock this evening.</td>
+</tr>
+<tr class="note Will-most-shops-in-this-town-have-shut-by-eleven-oclock-this-evening"><td colspan="3" class="answer-text">=closed</td></tr>
+<tr class="item In-which-situations-do-we-say-Cheers">
+<td><input class="uk-checkbox" type="checkbox" id="In-which-situations-do-we-say-Cheers"/></td>
+<td class="question-text">In which situations do we say "Cheers!"?</td>
+<td class="answer-text">We say "Cheers!" to express good wishes, when we have a drink with somebody, to say "thank you", and to say "good bye".</td>
+</tr>
+<tr class="note In-which-situations-do-we-say-Cheers"><td colspan="3" class="answer-text">幸運を祈る</td></tr>
+<tr class="item What-joint-of-the-arm-is-this">
+<td><input class="uk-checkbox" type="checkbox" id="What-joint-of-the-arm-is-this"/></td>
+<td class="question-text">What joint of the arm is this?</td>
+<td class="answer-text">That joint of the arm is the shoulder / the elbow / the wrist.</td>
+</tr>
+<tr class="item What-the-letters-e-g-are-the-abbreviation-of">
+<td><input class="uk-checkbox" type="checkbox" id="What-the-letters-e-g-are-the-abbreviation-of"/></td>
+<td class="question-text">What the letters "e.g." are the abbreviation of?</td>
+<td class="answer-text">The letters "e.g." are the abbreviation of "exempli gratia" from the Latin, which means "for example".</td>
+</tr>
+<tr class="item Do-you-have-to-have-permission-from-the-state-to-own-a-gun-in-your-country">
+<td><input class="uk-checkbox" type="checkbox" id="Do-you-have-to-have-permission-from-the-state-to-own-a-gun-in-your-country"/></td>
+<td class="question-text">Do you have to have permission from the state to own a gun in your country?</td>
+<td class="answer-text">Yes, you have to have permission from the state to own a gun in my country.</td>
+</tr>
+<tr class="note Do-you-have-to-have-permission-from-the-state-to-own-a-gun-in-your-country"><td colspan="3" class="answer-text">state = 国, 国家</td></tr>
+<tr class="item When-you-fill-in-a-passport-application-form-what-must-you-state">
+<td><input class="uk-checkbox" type="checkbox" id="When-you-fill-in-a-passport-application-form-what-must-you-state"/></td>
+<td class="question-text">When you fill in a passport application form, what must you state?</td>
+<td class="answer-text">When I fill in a passport application form, I must state my name, my address, my date of birth, my occupation, etc.</td>
+</tr>
+<tr class="note When-you-fill-in-a-passport-application-form-what-must-you-state"><td colspan="3" class="answer-text">state = 公式に言う</td></tr>
+<tr class="item When-you-make-a-formal-written-statement-to-the-police-do-you-have-to-put-your-signature-at-the-end">
+<td><input class="uk-checkbox" type="checkbox" id="When-you-make-a-formal-written-statement-to-the-police-do-you-have-to-put-your-signature-at-the-end"/></td>
+<td class="question-text">When you make a formal written statement to the police, do you have to put your signature at the end?</td>
+<td class="answer-text">Yes, when you make a formal written statement, to the police, you have to put your signature at the end.</td>
+</tr>
+<tr class="note When-you-make-a-formal-written-statement-to-the-police-do-you-have-to-put-your-signature-at-the-end"><td colspan="3" class="answer-text">供述</td></tr>
+<tr class="item Whos-the-brainiest-member-of-you-familiy">
+<td><input class="uk-checkbox" type="checkbox" id="Whos-the-brainiest-member-of-you-familiy"/></td>
+<td class="question-text">Who's the brainiest member of you familiy?</td>
+<td class="answer-text">I'm the brainiest member of my familiy.</td>
+</tr>
+<tr class="note Whos-the-brainiest-member-of-you-familiy"><td colspan="3" class="answer-text">brainy = intelligent, smart</td></tr>
+<tr class="item Did-the-sun-rise-early-this-morning">
+<td><input class="uk-checkbox" type="checkbox" id="Did-the-sun-rise-early-this-morning"/></td>
+<td class="question-text">Did the sun rise early this morning?</td>
+<td class="answer-text">Yes the sun rose early this morning.</td>
+</tr>
+<tr class="item About-how-high-are-the-walls-of-this-room-in-feet">
+<td><input class="uk-checkbox" type="checkbox" id="About-how-high-are-the-walls-of-this-room-in-feet"/></td>
+<td class="question-text">About how high are the walls of this room in feet?</td>
+<td class="answer-text">The walls of this room are about 8 feet high?</td>
+</tr>
+<tr class="item About-how-long-is-the-table-in-feet">
+<td><input class="uk-checkbox" type="checkbox" id="About-how-long-is-the-table-in-feet"/></td>
+<td class="question-text">About how long is the table in feet?</td>
+<td class="answer-text">The table is about 4 feet long.</td>
+</tr>
+<tr class="item About-how-tall-do-you-think-you-are-in-feet-and-inches">
+<td><input class="uk-checkbox" type="checkbox" id="About-how-tall-do-you-think-you-are-in-feet-and-inches"/></td>
+<td class="question-text">About how tall do you think you are in feet and inches?</td>
+<td class="answer-text">I think I'm about 5 feet and 7 inches tall.</td>
+</tr>
+<tr class="item About-how-many-kilometres-are-there-in-a-mile">
+<td><input class="uk-checkbox" type="checkbox" id="About-how-many-kilometres-are-there-in-a-mile"/></td>
+<td class="question-text">About how many kilometres are there in a mile?</td>
+<td class="answer-text">There are about 1.6 kilometres in a mile?</td>
+</tr>
+<tr class="item If-a-kilometre-equals-about-0-6-of-a-mile-how-far-is-it-from-here-to-the-nearest-town-in-miles">
+<td><input class="uk-checkbox" type="checkbox" id="If-a-kilometre-equals-about-0-6-of-a-mile-how-far-is-it-from-here-to-the-nearest-town-in-miles"/></td>
+<td class="question-text">If a kilometre equals about 0.6, of a mile, how far is it from here to the nearest town in miles?</td>
+<td class="answer-text">If a kilometre equals about point six of a mile, it's about 10 miles from here to the nearest town.</td>
+</tr>
+<tr class="note If-a-kilometre-equals-about-0-6-of-a-mile-how-far-is-it-from-here-to-the-nearest-town-in-miles"><td colspan="3" class="answer-text">point six</td></tr>
+<tr class="item If-you-fell-over-while-running-along-the-street-might-you-hurt-yourself">
+<td><input class="uk-checkbox" type="checkbox" id="If-you-fell-over-while-running-along-the-street-might-you-hurt-yourself"/></td>
+<td class="question-text">If you fell over while running along the street, might you hurt yourself?</td>
+<td class="answer-text">Yes, if I fell over while running along the street, I might hurt myself.</td>
+</tr>
+<tr class="note If-you-fell-over-while-running-along-the-street-might-you-hurt-yourself"><td colspan="3" class="answer-text">hurt onself: 怪我をする, 痛める</td></tr>
+<tr class="item Have-you-ever-been-hurt-while-playing-sport">
+<td><input class="uk-checkbox" type="checkbox" id="Have-you-ever-been-hurt-while-playing-sport"/></td>
+<td class="question-text">Have you ever been hurt while playing sport?</td>
+<td class="answer-text">Yes, I've been hurt while playing sport.</td>
+</tr>
+<tr class="note Have-you-ever-been-hurt-while-playing-sport"><td colspan="3" class="answer-text">vt. hurt - hurt - hurt</td></tr>
+<tr class="item Would-you-be-glad-if-you-were-told-you-had-won-the-lottery">
+<td><input class="uk-checkbox" type="checkbox" id="Would-you-be-glad-if-you-were-told-you-had-won-the-lottery"/></td>
+<td class="question-text">Would you be glad if you were told you had won the lottery?</td>
+<td class="answer-text">Yes, I'd be glad if I were told I'd won the lottery.</td>
+</tr>
+<tr class="item What-are-two-other-words-for-ill">
+<td><input class="uk-checkbox" type="checkbox" id="What-are-two-other-words-for-ill"/></td>
+<td class="question-text">What are two other words for "ill"?</td>
+<td class="answer-text">Two other words for "ill" are "sick" and "unwell".</td>
+</tr>
+<tr class="item Whats-another-meaning-of-to-be-sick-besides-to-be-unwell">
+<td><input class="uk-checkbox" type="checkbox" id="Whats-another-meaning-of-to-be-sick-besides-to-be-unwell"/></td>
+<td class="question-text">What's another meaning of "to be sick" besides "to be unwell".</td>
+<td class="answer-text">Another meaning of "to be sick" besides "to be unwell" is "to vomit".</td>
+</tr>
+<tr class="note Whats-another-meaning-of-to-be-sick-besides-to-be-unwell"><td colspan="3" class="answer-text">e.g. The boy was sick in the car.</td></tr>
+<tr class="item Have-you-ever-caught-a-train-just-as-it-was-leaving-the-platform">
+<td><input class="uk-checkbox" type="checkbox" id="Have-you-ever-caught-a-train-just-as-it-was-leaving-the-platform"/></td>
+<td class="question-text">Have you ever caught a train just as it was leaving the platform?</td>
+<td class="answer-text">Yes, I've sometimes caught a train just as it was leaving the platform.</td>
+</tr>
+<tr class="note Have-you-ever-caught-a-train-just-as-it-was-leaving-the-platform"><td colspan="3" class="answer-text">just as = at the same time as</td></tr>
+<tr class="item I-think-I-will-go-to-London-tommorow---What-did-I-say">
+<td><input class="uk-checkbox" type="checkbox" id="I-think-I-will-go-to-London-tommorow---What-did-I-say"/></td>
+<td class="question-text">"I think I will go to London tommorow" - What did I say?</td>
+<td class="answer-text">You said that you would go to London tomorrow.</td>
+</tr>
+<tr class="item She-is-speaking-to-you---What-did-I-say">
+<td><input class="uk-checkbox" type="checkbox" id="She-is-speaking-to-you---What-did-I-say"/></td>
+<td class="question-text">"She is speaking to you" - What did I say?</td>
+<td class="answer-text">You said that she was speaking to me.</td>
+</tr>
+<tr class="item I-ate-too-much-for-dinner---What-did-I-say">
+<td><input class="uk-checkbox" type="checkbox" id="I-ate-too-much-for-dinner---What-did-I-say"/></td>
+<td class="question-text">"I ate too much for dinner" - What did I say?</td>
+<td class="answer-text">You said you had eaten too much for dinner.</td>
+</tr>
+<tr class="item Did-people-believe-in-the-old-days-the-world-was-round">
+<td><input class="uk-checkbox" type="checkbox" id="Did-people-believe-in-the-old-days-the-world-was-round"/></td>
+<td class="question-text">Did people believe in the old days the world was round?</td>
+<td class="answer-text">No, people didn't believe in the old days the world was round; they believed it was flat.</td>
+</tr>
+<tr class="item Would-you-think-it-was-a-great-pity-if-you-went-for-a-picnic-in-the-country-and-it-rained">
+<td><input class="uk-checkbox" type="checkbox" id="Would-you-think-it-was-a-great-pity-if-you-went-for-a-picnic-in-the-country-and-it-rained"/></td>
+<td class="question-text">Would you think it was a great pity if you went for a picnic in the country and it rained?</td>
+<td class="answer-text">Yes, I'd think it was a great pity if I went for a picnic in the country and it raind.</td>
+</tr>
+<tr class="note Would-you-think-it-was-a-great-pity-if-you-went-for-a-picnic-in-the-country-and-it-rained"><td colspan="3" class="answer-text">picnic = a informal meal eaten outside or on an excursion</td></tr>
+<tr class="item What-kind-of-people-do-you-pity-most">
+<td><input class="uk-checkbox" type="checkbox" id="What-kind-of-people-do-you-pity-most"/></td>
+<td class="question-text">What kind of people do you pity most?</td>
+<td class="answer-text">I pity ill people most.</td>
+</tr>
+<tr class="note What-kind-of-people-do-you-pity-most"><td colspan="3" class="answer-text">気の毒に思う</td></tr>
+<tr class="item Have-you-ever-been-blown-off-your-feet-by-the-wind">
+<td><input class="uk-checkbox" type="checkbox" id="Have-you-ever-been-blown-off-your-feet-by-the-wind"/></td>
+<td class="question-text">Have you ever been blown off your feet by the wind?</td>
+<td class="answer-text">No, I've never been blown off my feet by the wind.</td>
+</tr>
+<tr class="item Can-you-go-for-a-holiday-whenever-you-like-Why-or-why-not">
+<td><input class="uk-checkbox" type="checkbox" id="Can-you-go-for-a-holiday-whenever-you-like-Why-or-why-not"/></td>
+<td class="question-text">Can you go for a holiday whenever you like? Why or why not?</td>
+<td class="answer-text">No, I can't go for a holiday whenever I like. Because I have to work for most of the year.</td>
+</tr>
+<tr class="note Can-you-go-for-a-holiday-whenever-you-like-Why-or-why-not"><td colspan="3" class="answer-text">=go on holiday:休暇で出かける/旅行する</td></tr>
+<tr class="item Do-you-always-tell-the-truth-Why-or-why-not">
+<td><input class="uk-checkbox" type="checkbox" id="Do-you-always-tell-the-truth-Why-or-why-not"/></td>
+<td class="question-text">Do you always tell the truth? Why or why not?</td>
+<td class="answer-text">No, I don't always tell the truth, sometimes I tell lies. Because it's sometimes necessary to tell lies in order not to be unpleasant.</td>
+</tr>
+<tr class="item Why-are-you-in-the-habit-of-missing-trains-and-buses">
+<td><input class="uk-checkbox" type="checkbox" id="Why-are-you-in-the-habit-of-missing-trains-and-buses"/></td>
+<td class="question-text">Why are you in the habit of missing trains and buses?</td>
+<td class="answer-text">Because I always leave everything to the last minute and then I have to hurry.</td>
+</tr>
+<tr class="item Why-arent-you-in-the-habit-of-missing-trains-and-buses">
+<td><input class="uk-checkbox" type="checkbox" id="Why-arent-you-in-the-habit-of-missing-trains-and-buses"/></td>
+<td class="question-text">Why aren't you in the habit of missing trains and buses?</td>
+<td class="answer-text">Because I always give myself plenty of time to catch trains and buses.</td>
+</tr>
+<tr class="item Do-you-think-a-union-of-all-the-countries-of-Europe-will-ever-be-possible">
+<td><input class="uk-checkbox" type="checkbox" id="Do-you-think-a-union-of-all-the-countries-of-Europe-will-ever-be-possible"/></td>
+<td class="question-text">Do you think a union of all the countries of Europe will ever be possible?</td>
+<td class="answer-text">No, I don't think a union of all the countries of Europe will ever be possible.</td>
+</tr>
+<tr class="item Are-you-in-favor-of-trade-unions">
+<td><input class="uk-checkbox" type="checkbox" id="Are-you-in-favor-of-trade-unions"/></td>
+<td class="question-text">Are you in favor of trade unions?</td>
+<td class="answer-text">Yes, I'm in favor of trade unions.</td>
+</tr>
+<tr class="note Are-you-in-favor-of-trade-unions"><td colspan="3" class="answer-text">賛成している, 味方している</td></tr>
+<tr class="item Do-the-days-lengthen-or-shorten-as-we-go-towards-summer">
+<td><input class="uk-checkbox" type="checkbox" id="Do-the-days-lengthen-or-shorten-as-we-go-towards-summer"/></td>
+<td class="question-text">Do the days lengthen or shorten as we go towards summer?</td>
+<td class="answer-text">The days lengthen as we go towards summer.</td>
+</tr>
+<tr class="item What-does-the-verb-to-darken-mean">
+<td><input class="uk-checkbox" type="checkbox" id="What-does-the-verb-to-darken-mean"/></td>
+<td class="question-text">What does the verb "to darken" mean?</td>
+<td class="answer-text">The verb "to darken" means "to make doeker" or "to get daker".</td>
+</tr>
+<tr class="item What-is-an-ache">
+<td><input class="uk-checkbox" type="checkbox" id="What-is-an-ache"/></td>
+<td class="question-text">What is an ache?</td>
+<td class="answer-text">An ache is a continuous physical pain, such as toothache, headache, stomach ache, earache, etc.</td>
+</tr>
+<tr class="item When-we-borrow-money-ought-we-to-pay-it-back-as-soon-as-possible">
+<td><input class="uk-checkbox" type="checkbox" id="When-we-borrow-money-ought-we-to-pay-it-back-as-soon-as-possible"/></td>
+<td class="question-text">When we borrow money ought we to pay it back as soon as possible?</td>
+<td class="answer-text">Yes, when we borrow money, we ought to pay it back as soon as possible.</td>
+</tr>
+<tr class="item Is-the-surface-of-this-table-rough">
+<td><input class="uk-checkbox" type="checkbox" id="Is-the-surface-of-this-table-rough"/></td>
+<td class="question-text">Is the surface of this table rough?</td>
+<td class="answer-text">No, the surface of this table isn't rough, it's smooth.</td>
+</tr>
+<tr class="note Is-the-surface-of-this-table-rough"><td colspan="3" class="answer-text">ざらざらしている</td></tr>
+<tr class="item If-someone-tells-you-that-theyre-feeling-rough-what-do-they-mean">
+<td><input class="uk-checkbox" type="checkbox" id="If-someone-tells-you-that-theyre-feeling-rough-what-do-they-mean"/></td>
+<td class="question-text">If someone tells you that they're feeling rough, what do they mean?</td>
+<td class="answer-text">If someone tells me that they're feeling rough, they mean they aren't feeling very well.</td>
+</tr>
+<tr class="note If-someone-tells-you-that-theyre-feeling-rough-what-do-they-mean"><td colspan="3" class="answer-text">気分が悪い</td></tr>
+<tr class="item When-you-travel-by-boat-do-you-perefer-the-sea-to-be-rough-Why">
+<td><input class="uk-checkbox" type="checkbox" id="When-you-travel-by-boat-do-you-perefer-the-sea-to-be-rough-Why"/></td>
+<td class="question-text">When you travel by boat, do you perefer the sea to be rough? Why?</td>
+<td class="answer-text">No, when I travel by boat, I don't perefer the sea to be rough; I pefer it to be calm. Because a rough sea makes me feel seasick.</td>
+</tr>
+<tr class="item Do-you-like-rough-weather">
+<td><input class="uk-checkbox" type="checkbox" id="Do-you-like-rough-weather"/></td>
+<td class="question-text">Do you like rough weather?</td>
+<td class="answer-text">No, I don't like rough wether, I prefer calm wether.</td>
+</tr>
+<tr class="item Which-do-you-think-is-the-roughest-sport-one-can-play">
+<td><input class="uk-checkbox" type="checkbox" id="Which-do-you-think-is-the-roughest-sport-one-can-play"/></td>
+<td class="question-text">Which do you think is the roughest sport one can play?</td>
+<td class="answer-text">I think maybe rugby is the roughest sport one can play.</td>
+</tr>
+<tr class="item What-do-we-usually-mean-by-the-word-ground">
+<td><input class="uk-checkbox" type="checkbox" id="What-do-we-usually-mean-by-the-word-ground"/></td>
+<td class="question-text">What do we usually mean by the word "ground"?</td>
+<td class="answer-text">By the "ground", we usually mean the surface of the land.</td>
+</tr>
+<tr class="note What-do-we-usually-mean-by-the-word-ground"><td colspan="3" class="answer-text">地面, 地表</td></tr>
+<tr class="item Are-there-any-shops-in-this-town-build-below-the-level-of-the-ground">
+<td><input class="uk-checkbox" type="checkbox" id="Are-there-any-shops-in-this-town-build-below-the-level-of-the-ground"/></td>
+<td class="question-text">Are there any shops in this town build below the level of the ground?</td>
+<td class="answer-text">Yes, there are some shops in this town build below the level of the ground.</td>
+</tr>
+<tr class="note Are-there-any-shops-in-this-town-build-below-the-level-of-the-ground"><td colspan="3" class="answer-text">地面, 地表</td></tr>
+<tr class="item When-a-table-is-not-level-what-must-we-do">
+<td><input class="uk-checkbox" type="checkbox" id="When-a-table-is-not-level-what-must-we-do"/></td>
+<td class="question-text">When a table is not level, what must we do?</td>
+<td class="answer-text">When a table is not level, we must put something under one of its legs.</td>
+</tr>
+<tr class="item Whats-on-the-ground-floor-of-this-building">
+<td><input class="uk-checkbox" type="checkbox" id="Whats-on-the-ground-floor-of-this-building"/></td>
+<td class="question-text">What's on the ground floor of this building?</td>
+<td class="answer-text">There's an entrance area and cafe on the ground floor of this building., <米> the first floor</td>
+</tr>
+<tr class="note Whats-on-the-ground-floor-of-this-building"><td colspan="3" class="answer-text">一階; <英>では二階</td></tr>
+<tr class="item Are-the-grounds-of-some-famous-old-buildings-in-this-country-open-to-the-public">
+<td><input class="uk-checkbox" type="checkbox" id="Are-the-grounds-of-some-famous-old-buildings-in-this-country-open-to-the-public"/></td>
+<td class="question-text">Are the grounds of some famous old buildings in this country open to the public?</td>
+<td class="answer-text">Yes, the grounds of some famous old buildings in this country open to the public.</td>
+</tr>
+<tr class="note Are-the-grounds-of-some-famous-old-buildings-in-this-country-open-to-the-public"><td colspan="3" class="answer-text"><複数形>庭, 庭園</td></tr>
+<tr class="item How-do-we-make-the-imperative-in-English">
+<td><input class="uk-checkbox" type="checkbox" id="How-do-we-make-the-imperative-in-English"/></td>
+<td class="question-text">How do we make the imperative, in English?</td>
+<td class="answer-text">We make the imperative in English by using the infinitive without to.</td>
+</tr>
+<tr class="note How-do-we-make-the-imperative-in-English"><td colspan="3" class="answer-text">ɪmpérəṭɪv; the imperative mood 命令形; imperative:ぜひともしなければならない</td></tr>
+<tr class="item How-do-we-make-a-negatve-imperative">
+<td><input class="uk-checkbox" type="checkbox" id="How-do-we-make-a-negatve-imperative"/></td>
+<td class="question-text">How do we make a negatve imperative?</td>
+<td class="answer-text">We make a negatve imperative by putting the word "don't" before the infinitive.</td>
+</tr>
+<tr class="item Have-you-ever-been-late-for-work-because-youve-overslept">
+<td><input class="uk-checkbox" type="checkbox" id="Have-you-ever-been-late-for-work-because-youve-overslept"/></td>
+<td class="question-text">Have you ever been late for work because you've overslept?</td>
+<td class="answer-text">Yes, I've been late for work because I've overslept.</td>
+</tr>
+<tr class="note Have-you-ever-been-late-for-work-because-youve-overslept"><td colspan="3" class="answer-text">両方とも現在完了経験</td></tr>
+<tr class="item Are-nurses-and-doctors-in-busy-hospitals-often-overworked">
+<td><input class="uk-checkbox" type="checkbox" id="Are-nurses-and-doctors-in-busy-hospitals-often-overworked"/></td>
+<td class="question-text">Are nurses and doctors in busy hospitals often overworked?</td>
+<td class="answer-text">Yes, nurses and doctors in busy hospitals are often overworked.</td>
+</tr>
+<tr class="note Are-nurses-and-doctors-in-busy-hospitals-often-overworked"><td colspan="3" class="answer-text">overworkは自動詞・他動詞両方の用法があって、ここでは他動詞が受動態で使われている</td></tr>
+<tr class="item What-are-the-contraries-of-overcook-and-overpay">
+<td><input class="uk-checkbox" type="checkbox" id="What-are-the-contraries-of-overcook-and-overpay"/></td>
+<td class="question-text">What are the contraries of "overcook" and "overpay"?</td>
+<td class="answer-text">The contraries of "overcook" and "overpay" are "undercook" and "underpay".</td>
+</tr>
+<tr class="item What-happens-to-people-who-are-charged-by-the-police-with-commiting-serious-crimes">
+<td><input class="uk-checkbox" type="checkbox" id="What-happens-to-people-who-are-charged-by-the-police-with-commiting-serious-crimes"/></td>
+<td class="question-text">What happens to people who are charged by the police with commiting serious crimes?</td>
+<td class="answer-text">People who are charged by the police with commiting serious crimes are first take to cort, and if they are found guilty, they are sent to prison.</td>
+</tr>
+<tr class="note What-happens-to-people-who-are-charged-by-the-police-with-commiting-serious-crimes"><td colspan="3" class="answer-text">charge 人 with ...=...の罪で人を告発・非難する. to cort/prisonは本来の目的のために行くので無冠詞</td></tr>
+<tr class="item How-would-you-feel-if-you-were-told-to-charge-the-enemy-in-a-battle">
+<td><input class="uk-checkbox" type="checkbox" id="How-would-you-feel-if-you-were-told-to-charge-the-enemy-in-a-battle"/></td>
+<td class="question-text">How would you feel if you were told to charge the enemy in a battle?</td>
+<td class="answer-text">If I were told to charge the enemy in a battle, I'd probably feel very afraid.</td>
+</tr>
+<tr class="note How-would-you-feel-if-you-were-told-to-charge-the-enemy-in-a-battle"><td colspan="3" class="answer-text">突撃する,襲う</td></tr>
+<tr class="item If-you-were-seriously-overcharged-in-a-restrant-would-you-ask-to-speak-to-the-manager">
+<td><input class="uk-checkbox" type="checkbox" id="If-you-were-seriously-overcharged-in-a-restrant-would-you-ask-to-speak-to-the-manager"/></td>
+<td class="question-text">If you were seriously overcharged in a restrant, would you ask to speak to the manager?</td>
+<td class="answer-text">Yes, if I were seriously overcharged in a restrant, I'd ask to speak to the manager.</td>
+</tr>
+<tr class="note If-you-were-seriously-overcharged-in-a-restrant-would-you-ask-to-speak-to-the-manager"><td colspan="3" class="answer-text">vt.金額を請求する, n.料金,請求金額</td></tr>
+<tr class="item Whats-another-use-of-the-word-charge">
+<td><input class="uk-checkbox" type="checkbox" id="Whats-another-use-of-the-word-charge"/></td>
+<td class="question-text">What's another use of the word charge?</td>
+<td class="answer-text">Another use of the word charge is in charging a battery for example in a mobile phone.</td>
+</tr>
+<tr class="item At-what-time-of-day-are-the-streets-usually-at-their-clearest-as-regards-traffic">
+<td><input class="uk-checkbox" type="checkbox" id="At-what-time-of-day-are-the-streets-usually-at-their-clearest-as-regards-traffic"/></td>
+<td class="question-text">At what time of day are the streets usually at their clearest as regards traffic?</td>
+<td class="answer-text">The streets are usually at their clearest as regards traffic very early in the morning.</td>
+</tr>
+<tr class="item Can-you-make-yourself-clearly-understood-when-you-speak-English-in-everyday-situations">
+<td><input class="uk-checkbox" type="checkbox" id="Can-you-make-yourself-clearly-understood-when-you-speak-English-in-everyday-situations"/></td>
+<td class="question-text">Can you make yourself clearly understood when you speak English in everyday situations?</td>
+<td class="answer-text">Yes, I can make myself clrearly understood when I speak English in everyday situations.</td>
+</tr>
+<tr class="item If-you-could-play-host-to-three-famous-guests-which-three-famous-people-would-you-choose">
+<td><input class="uk-checkbox" type="checkbox" id="If-you-could-play-host-to-three-famous-guests-which-three-famous-people-would-you-choose"/></td>
+<td class="question-text">If you could play host to three famous guests, which three famous people would you choose?</td>
+<td class="answer-text">If I could play host to three famous guests, I'd choose Earon Mask, Jeff Bezos, and Bill Gates.</td>
+</tr>
+<tr class="item Have-you-ever-ridden-a-horse">
+<td><input class="uk-checkbox" type="checkbox" id="Have-you-ever-ridden-a-horse"/></td>
+<td class="question-text">Have you ever ridden a horse?</td>
+<td class="answer-text">Yes, I've ridden a horse.</td>
+</tr>
+<tr class="item If-you-were-a-judge-on-what-kind-of-criminals-would-you-be-most-severe">
+<td><input class="uk-checkbox" type="checkbox" id="If-you-were-a-judge-on-what-kind-of-criminals-would-you-be-most-severe"/></td>
+<td class="question-text">If you were a judge, on what kind of criminals would you be most severe?</td>
+<td class="answer-text">If I were a judge, the kind of criminals I'd be most severe on would be mass murderers.</td>
+</tr>
+<tr class="item What-do-people-say-they-see-when-they-receive-a-blow-on-the-head">
+<td><input class="uk-checkbox" type="checkbox" id="What-do-people-say-they-see-when-they-receive-a-blow-on-the-head"/></td>
+<td class="question-text">What do people say they see when they receive a blow on the head?</td>
+<td class="answer-text">People say they see stars when they receive a blow on the head.</td>
+</tr>
+<tr class="item What-kind-of-people-do-you-respect-most">
+<td><input class="uk-checkbox" type="checkbox" id="What-kind-of-people-do-you-respect-most"/></td>
+<td class="question-text">What kind of people do you respect most?</td>
+<td class="answer-text">The kind of people I respect most are people who can sacrifice themselves for others.</td>
+</tr>
+<tr class="item What-do-we-employ-to-cut-bread">
+<td><input class="uk-checkbox" type="checkbox" id="What-do-we-employ-to-cut-bread"/></td>
+<td class="question-text">What do we employ to cut bread?</td>
+<td class="answer-text">We employ a knife to cut bread.</td>
+</tr>
+<tr class="note What-do-we-employ-to-cut-bread"><td colspan="3" class="answer-text">to make use of</td></tr>
+<tr class="item What-could-happen-if-you-accidentally-put-a-red-sock-in-a-washing-machine-with-white-clothes">
+<td><input class="uk-checkbox" type="checkbox" id="What-could-happen-if-you-accidentally-put-a-red-sock-in-a-washing-machine-with-white-clothes"/></td>
+<td class="question-text">What could happen if you accidentally put a red sock in a washing machine with white clothes?</td>
+<td class="answer-text">If I accidentally put a red sock in a washing machine with white clothes, I could get pink clothes.</td>
+</tr>
+<tr class="item Whats-the-easiest-way-to-draw-out-cache">
+<td><input class="uk-checkbox" type="checkbox" id="Whats-the-easiest-way-to-draw-out-cache"/></td>
+<td class="question-text">What's the easiest way to draw out cache?</td>
+<td class="answer-text">The easiest way to draw out cache is to use a bank card in a cash machine.</td>
+</tr>
+<tr class="item Could-you-draw-a-completely-straight-line-without-the-help-of-a-ruler">
+<td><input class="uk-checkbox" type="checkbox" id="Could-you-draw-a-completely-straight-line-without-the-help-of-a-ruler"/></td>
+<td class="question-text">Could you draw a completely straight line without the help of a ruler?</td>
+<td class="answer-text">No I couldn't draw a completely straight line without the help of a ruler.</td>
+</tr>
+<tr class="item What-does-to-draw-the-curtains-mean">
+<td><input class="uk-checkbox" type="checkbox" id="What-does-to-draw-the-curtains-mean"/></td>
+<td class="question-text">What does "to draw the curtains" mean?</td>
+<td class="answer-text">"To draw the curtains" mean to pull them open or closed.</td>
+</tr>
+<tr class="item How-long-will-you-have-been-living-in-this-place-for-when-this-year-ends">
+<td><input class="uk-checkbox" type="checkbox" id="How-long-will-you-have-been-living-in-this-place-for-when-this-year-ends"/></td>
+<td class="question-text">How long will you have been living in this place for when this year ends?</td>
+<td class="answer-text">I'll have been living in this place for about 15 years when this year ends.</td>
+</tr>
+<tr class="item Generally-speaking-whats-the-difference-between-Earth-and-world">
+<td><input class="uk-checkbox" type="checkbox" id="Generally-speaking-whats-the-difference-between-Earth-and-world"/></td>
+<td class="question-text">Generally speaking, what's the difference between "Earth" and "world"?</td>
+<td class="answer-text">Generally speaking, the difference between "Earth" and "world" is that we use the word "Earth" in the astronomical sense, and "world" in the geographical sense.</td>
+</tr>
+<tr class="item By-what-means-can-we-draw-a-straight-line">
+<td><input class="uk-checkbox" type="checkbox" id="By-what-means-can-we-draw-a-straight-line"/></td>
+<td class="question-text">By what means can we draw a straight line?</td>
+<td class="answer-text">We can draw a straight line by means of a pen or a pencil and a ruler.</td>
+</tr>
+<tr class="note By-what-means-can-we-draw-a-straight-line"><td colspan="3" class="answer-text">means: 手段; by means of: ~によって/~を用いて</td></tr>
+<tr class="item By-what-means-do-you-come-to-school">
+<td><input class="uk-checkbox" type="checkbox" id="By-what-means-do-you-come-to-school"/></td>
+<td class="question-text">By what means do you come to school?</td>
+<td class="answer-text">I come to school by means of a train.</td>
+</tr>
+<tr class="item Would-you-rather-have-your-own-means-of-transport-than-use-public-transport">
+<td><input class="uk-checkbox" type="checkbox" id="Would-you-rather-have-your-own-means-of-transport-than-use-public-transport"/></td>
+<td class="question-text">Would you rather have your own means of transport than use public transport?</td>
+<td class="answer-text">No, I wouldn't rather have my own means of transport than use public transport.</td>
+</tr>
+<tr class="item Whats-the-best-way-to-maintain-a-good-figure">
+<td><input class="uk-checkbox" type="checkbox" id="Whats-the-best-way-to-maintain-a-good-figure"/></td>
+<td class="question-text">What's the best way to maintain a good figure.</td>
+<td class="answer-text">The best way to maintain a good figure is to take regular exercise and eat healthily.</td>
+</tr>
+<tr class="note Whats-the-best-way-to-maintain-a-good-figure"><td colspan="3" class="answer-text">体型・容姿</td></tr>
+<tr class="item Who-do-you-think-was-the-greatest-figure-in-history">
+<td><input class="uk-checkbox" type="checkbox" id="Who-do-you-think-was-the-greatest-figure-in-history"/></td>
+<td class="question-text">Who do you think was the greatest figure in history?</td>
+<td class="answer-text">I think Leonardo da Vinci was the greatest figure in history.</td>
+</tr>
+<tr class="note Who-do-you-think-was-the-greatest-figure-in-history"><td colspan="3" class="answer-text">人物=a character</td></tr>
+<tr class="item How-many-figures-are-there-in-the-number-of-your-house">
+<td><input class="uk-checkbox" type="checkbox" id="How-many-figures-are-there-in-the-number-of-your-house"/></td>
+<td class="question-text">How many figures are there in the number of your house?</td>
+<td class="answer-text">There are 6 figures in the number of my house.</td>
+</tr>
+<tr class="note How-many-figures-are-there-in-the-number-of-your-house"><td colspan="3" class="answer-text">数字; 桁</td></tr>
+<tr class="item If-you-went-to-live-in-another-country-do-you-think-you-would-quickly-adopt-the-way-of-living-in-that-country">
+<td><input class="uk-checkbox" type="checkbox" id="If-you-went-to-live-in-another-country-do-you-think-you-would-quickly-adopt-the-way-of-living-in-that-country"/></td>
+<td class="question-text">If you went to live in another country, do you think you would quickly adopt the way of living in that country?</td>
+<td class="answer-text">No, if I went to live in another country, I don't think I'd quickly adopt the way of living in that country?</td>
+</tr>
+<tr class="note If-you-went-to-live-in-another-country-do-you-think-you-would-quickly-adopt-the-way-of-living-in-that-country"><td colspan="3" class="answer-text">採用する, 取り入れる</td></tr>
+<tr class="item Whats-a-college">
+<td><input class="uk-checkbox" type="checkbox" id="Whats-a-college"/></td>
+<td class="question-text">What's a college?</td>
+<td class="answer-text">A college is a kind of school, or part of a university.</td>
+</tr>
+<tr class="item If-we-put-a-piece-of-wood-or-paper-into-a-flame-what-happens-to-it">
+<td><input class="uk-checkbox" type="checkbox" id="If-we-put-a-piece-of-wood-or-paper-into-a-flame-what-happens-to-it"/></td>
+<td class="question-text">If we put a piece of wood or paper into a flame, what happens to it?</td>
+<td class="answer-text">If we put a piece of wood or paper into a flame, it burns.</td>
+</tr>
+<tr class="item If-you-grew-tired-whatd-you-do">
+<td><input class="uk-checkbox" type="checkbox" id="If-you-grew-tired-whatd-you-do"/></td>
+<td class="question-text">If you grew tired, what'd you do?</td>
+<td class="answer-text">If I grew tired, I'd go to bed and sleep, or sit down and rest.</td>
+</tr>
+<tr class="item What-kind-of-matter-is-this-book-made-of">
+<td><input class="uk-checkbox" type="checkbox" id="What-kind-of-matter-is-this-book-made-of"/></td>
+<td class="question-text">What kind of matter is this book made of?</td>
+<td class="answer-text">This book is made of paper.</td>
+</tr>
+<tr class="note What-kind-of-matter-is-this-book-made-of"><td colspan="3" class="answer-text">物質</td></tr>
+<tr class="item How-long-do-you-expect-to-continue-living-in-the-place-where-you-live-now">
+<td><input class="uk-checkbox" type="checkbox" id="How-long-do-you-expect-to-continue-living-in-the-place-where-you-live-now"/></td>
+<td class="question-text">How long do you expect to continue living in the place where you live now?</td>
+<td class="answer-text">I expect to continue living in the place where you live now for about 20 years.</td>
+</tr>
+<tr class="item When-do-we-use-a-tail-question">
+<td><input class="uk-checkbox" type="checkbox" id="When-do-we-use-a-tail-question"/></td>
+<td class="question-text">When do we use a tail question?</td>
+<td class="answer-text">We use a tail question when we believe something is true, and we want somebody to confirm that we are right.</td>
+</tr>
+<tr class="item If-you-had-the-right-by-law-to-do-whatever-you-wished-whatd-you-do">
+<td><input class="uk-checkbox" type="checkbox" id="If-you-had-the-right-by-law-to-do-whatever-you-wished-whatd-you-do"/></td>
+<td class="question-text">If you had the right by law to do whatever you wished, what'd you do?</td>
+<td class="answer-text">If I had the right by law to do whatever I wished, I'd travel around the world without paying.</td>
+</tr>
+<tr class="item Whats-the-difference-between-the-words-on-and-onto">
+<td><input class="uk-checkbox" type="checkbox" id="Whats-the-difference-between-the-words-on-and-onto"/></td>
+<td class="question-text">Whats the difference between the words "on" and "onto"?</td>
+<td class="answer-text">The difference between the words "on" and "onto" is that we can use the word "on" for things that are moving or still, whereas we can use the word "onto" only for things that are moving.</td>
+</tr>
+<tr class="item Do-you-know-how-to-tie-a-tie">
+<td><input class="uk-checkbox" type="checkbox" id="Do-you-know-how-to-tie-a-tie"/></td>
+<td class="question-text">Do you know how to tie a tie?</td>
+<td class="answer-text">Yes, I know how to tie a tie. ~ No, I don't know how to tie a tie.</td>
+</tr>
+<tr class="item Do-you-spend-all-your-money-or-do-you-try-to-save-some-and-put-it-in-the-bank">
+<td><input class="uk-checkbox" type="checkbox" id="Do-you-spend-all-your-money-or-do-you-try-to-save-some-and-put-it-in-the-bank"/></td>
+<td class="question-text">Do you spend all your money or do you try to save some and put it in the bank?</td>
+<td class="answer-text">I don't spend all my money, I try to save some and put it in the bank.</td>
+</tr>
+<tr class="item If-you-saw-someone-in-difficulty-in-the-sea-how-would-you-try-to-save-their-life">
+<td><input class="uk-checkbox" type="checkbox" id="If-you-saw-someone-in-difficulty-in-the-sea-how-would-you-try-to-save-their-life"/></td>
+<td class="question-text">If you saw someone in difficulty in the sea, how would you try to save their life?</td>
+<td class="answer-text">If I saw someone in difficulty in the sea, I'd try to save their life by throwing a rope towards them.</td>
+</tr>
+<tr class="note If-you-saw-someone-in-difficulty-in-the-sea-how-would-you-try-to-save-their-life"><td colspan="3" class="answer-text">using they/them because we don't know if the preson is a man or woman</td></tr>
+<tr class="item What-does-an-old-man-carry-to-save-himself-from-falling-over-while-waking">
+<td><input class="uk-checkbox" type="checkbox" id="What-does-an-old-man-carry-to-save-himself-from-falling-over-while-waking"/></td>
+<td class="question-text">What does an old man carry to save himself from falling over while waking?</td>
+<td class="answer-text">An old man carries a walking stick to save himself from falling over while waking.</td>
+</tr>
+<tr class="item What-kind-of-things-does-your-country-mainly-trade-in">
+<td><input class="uk-checkbox" type="checkbox" id="What-kind-of-things-does-your-country-mainly-trade-in"/></td>
+<td class="question-text">What kind of things does your country mainly trade in?</td>
+<td class="answer-text">My country mainly trade in cars.</td>
+</tr>
+<tr class="note What-kind-of-things-does-your-country-mainly-trade-in"><td colspan="3" class="answer-text">trade in: 商う</td></tr>
+<tr class="item What-do-we-ususally-mean-by-a-trade">
+<td><input class="uk-checkbox" type="checkbox" id="What-do-we-ususally-mean-by-a-trade"/></td>
+<td class="question-text">What do we ususally mean by a trade?</td>
+<td class="answer-text">By a trade, we ususally mean a job that a person does mainly with their hands, and for which they need a special skill.</td>
+</tr>
+<tr class="note What-do-we-ususally-mean-by-a-trade"><td colspan="3" class="answer-text">生業, 職業; tradesman: 商人,自営業者, a merchant who owns or manages a shop</td></tr>
+<tr class="item Whats-the-closest-that-youve-ever-been-to-real-danger">
+<td><input class="uk-checkbox" type="checkbox" id="Whats-the-closest-that-youve-ever-been-to-real-danger"/></td>
+<td class="question-text">What's the closest that you've ever been to real danger?</td>
+<td class="answer-text">The closest that I've ever been to real danger was when I fell of a bicycle.</td>
+</tr>
+<tr class="item When-people-go-on-business-trips-do-their-companies-usually-pay-for-everything">
+<td><input class="uk-checkbox" type="checkbox" id="When-people-go-on-business-trips-do-their-companies-usually-pay-for-everything"/></td>
+<td class="question-text">When people go on business trips, do their companies usually pay for everything?</td>
+<td class="answer-text">Yes, when people go on business trips, their companies usually pay for everything.</td>
+</tr>
+<tr class="item Is-it-a-good-idea-to-give-ones-house-a-thorough-cleaning-from-top-to-bottom-every-now-and-again">
+<td><input class="uk-checkbox" type="checkbox" id="Is-it-a-good-idea-to-give-ones-house-a-thorough-cleaning-from-top-to-bottom-every-now-and-again"/></td>
+<td class="question-text">Is it a good idea to give one's house a thorough cleaning from top to bottom every now and again?</td>
+<td class="answer-text">Yes, it's a good idea to give one's house a thorough cleaning from top to bottom every now and again.</td>
+</tr>
+<tr class="item Do-you-prefer-to-watch-films-at-home-on-DVD-or-at-the-cinema-on-the-big-screen">
+<td><input class="uk-checkbox" type="checkbox" id="Do-you-prefer-to-watch-films-at-home-on-DVD-or-at-the-cinema-on-the-big-screen"/></td>
+<td class="question-text">Do you prefer to watch films at home on DVD, or at the cinema on the big screen?</td>
+<td class="answer-text">I prefer to watch films at the cinema on the big screen.</td>
+</tr>
+<tr class="item Whats-the-most-important-difference-between-tell-and-say">
+<td><input class="uk-checkbox" type="checkbox" id="Whats-the-most-important-difference-between-tell-and-say"/></td>
+<td class="question-text">What's the most important difference between "tell" and "say"?</td>
+<td class="answer-text">The most important difference between "tell" and "say" is that after "tell" we indicate the person we are speaking to, but after "say" we usually don't.</td>
+</tr>
+<tr class="item Have-you-ever-risen-before-the-sun-has-risen">
+<td><input class="uk-checkbox" type="checkbox" id="Have-you-ever-risen-before-the-sun-has-risen"/></td>
+<td class="question-text">Have you ever risen before the sun has risen?</td>
+<td class="answer-text">Yes, I've sometimes risen before the sun has risen. ~ No, I've never risen before the sun has risen.</td>
+</tr>
+<tr class="item Whats-the-difference-between-to-earn-and-to-gain">
+<td><input class="uk-checkbox" type="checkbox" id="Whats-the-difference-between-to-earn-and-to-gain"/></td>
+<td class="question-text">What's the difference between "to earn" and "to gain"?</td>
+<td class="answer-text">The difference between "to earn" and "to gain" is that the verb "to earn" means "to receive money for work done", where as "to gain" generally means "to get more of something".</td>
+</tr>
+<tr class="item If-you-bought-a-business-for-4-million-and-sold-it-later-for-half-that-amount-would-you-be-gaining-by-doing-so">
+<td><input class="uk-checkbox" type="checkbox" id="If-you-bought-a-business-for-4-million-and-sold-it-later-for-half-that-amount-would-you-be-gaining-by-doing-so"/></td>
+<td class="question-text">If you bought a business for £4 million and sold it later for half that amount, would you be gaining by doing so?</td>
+<td class="answer-text">If I bought a business for £4 million and sold it later for half that amount, I wouldn't be gaining by doing so, I'd be losing.</td>
+</tr>
+<tr class="item Does-your-watch-generally-gain-or-lose-time-or-does-it-keep-perfect-time">
+<td><input class="uk-checkbox" type="checkbox" id="Does-your-watch-generally-gain-or-lose-time-or-does-it-keep-perfect-time"/></td>
+<td class="question-text">Does your watch generally gain or lose time, or does it keep perfect time?</td>
+<td class="answer-text">My watch generally gains time. / My watch generally keeps perfect time.</td>
+</tr>
+<tr class="item How-long-does-it-take-the-average-student-to-gain-a-degree-at-university-in-your-country">
+<td><input class="uk-checkbox" type="checkbox" id="How-long-does-it-take-the-average-student-to-gain-a-degree-at-university-in-your-country"/></td>
+<td class="question-text">How long does it take the average student to gain a degree at university in your country?</td>
+<td class="answer-text">It take the average student about 4 years to gain a degree at university in my country.</td>
+</tr>
+<tr class="note How-long-does-it-take-the-average-student-to-gain-a-degree-at-university-in-your-country"><td colspan="3" class="answer-text">take 人 時間/コスト</td></tr>
+<tr class="item As-regards-learning-a-language-would-you-gain-anything-by-going-to-the-country-where-it-was-spoken">
+<td><input class="uk-checkbox" type="checkbox" id="As-regards-learning-a-language-would-you-gain-anything-by-going-to-the-country-where-it-was-spoken"/></td>
+<td class="question-text">As regards learning a language, would you gain anything by going to the country where it was spoken?</td>
+<td class="answer-text">Yes, as regards learning a language, I'd gain something by going to the country where it was spoken.</td>
+</tr>
+<tr class="item Are-there-any-marks-on-these-walls">
+<td><input class="uk-checkbox" type="checkbox" id="Are-there-any-marks-on-these-walls"/></td>
+<td class="question-text">Are there any marks on these walls?</td>
+<td class="answer-text">No, there aren't any mark on those walls.</td>
+</tr>
+<tr class="note Are-there-any-marks-on-these-walls"><td colspan="3" class="answer-text">汚れ,何かの痕;傷跡; 記号,マーク</td></tr>
+<tr class="item Who-marks-your-dictations">
+<td><input class="uk-checkbox" type="checkbox" id="Who-marks-your-dictations"/></td>
+<td class="question-text">Who marks your dictations?</td>
+<td class="answer-text">I mark my dictations myself.</td>
+</tr>
+<tr class="note Who-marks-your-dictations"><td colspan="3" class="answer-text">採点する</td></tr>
+<tr class="item How-many-marks-did-you-get-in-your-last-English-exam">
+<td><input class="uk-checkbox" type="checkbox" id="How-many-marks-did-you-get-in-your-last-English-exam"/></td>
+<td class="question-text">How many marks did you get in your last English exam?</td>
+<td class="answer-text">I got 80 marks out of 100 in my last English exam.</td>
+</tr>
+<tr class="note How-many-marks-did-you-get-in-your-last-English-exam"><td colspan="3" class="answer-text">点数,評点=<米>grade</td></tr>
+<tr class="item Which-petrol-company-do-you-think-has-the-most-well-known-trademark">
+<td><input class="uk-checkbox" type="checkbox" id="Which-petrol-company-do-you-think-has-the-most-well-known-trademark"/></td>
+<td class="question-text">Which petrol company do you think has the most well-known trademark?</td>
+<td class="answer-text">I think Shell has the most well-known trademark.</td>
+</tr>
+<tr class="note Which-petrol-company-do-you-think-has-the-most-well-known-trademark"><td colspan="3" class="answer-text">petrol=<米>gasoline</td></tr>
+<tr class="item What-part-of-the-book-is-this">
+<td><input class="uk-checkbox" type="checkbox" id="What-part-of-the-book-is-this"/></td>
+<td class="question-text">What part of the book is this?</td>
+<td class="answer-text">It's the bottom, or the base, of the book.</td>
+</tr>
+<tr class="note What-part-of-the-book-is-this"><td colspan="3" class="answer-text">底</td></tr>
+<tr class="item What-do-you-cosider-to-be-the-basis-of-a-good-life">
+<td><input class="uk-checkbox" type="checkbox" id="What-do-you-cosider-to-be-the-basis-of-a-good-life"/></td>
+<td class="question-text">What do you cosider to be the basis of a good life?</td>
+<td class="answer-text">I cosider good health to be the basis of a good life.</td>
+</tr>
+<tr class="note What-do-you-cosider-to-be-the-basis-of-a-good-life"><td colspan="3" class="answer-text">基礎,根拠</td></tr>
+<tr class="item Have-you-met-me-on-many-previous-occasions">
+<td><input class="uk-checkbox" type="checkbox" id="Have-you-met-me-on-many-previous-occasions"/></td>
+<td class="question-text">Have you met me on many previous occasions?</td>
+<td class="answer-text">Yes, I've met you on many previous occasions.</td>
+</tr>
+<tr class="item What-do-we-mean-by-a-street-plan-of-a-town">
+<td><input class="uk-checkbox" type="checkbox" id="What-do-we-mean-by-a-street-plan-of-a-town"/></td>
+<td class="question-text">What do we mean by a street plan of a town?</td>
+<td class="answer-text">By a street plan of a town, we mean a map showing the streets of the town and their names.</td>
+</tr>
+<tr class="note What-do-we-mean-by-a-street-plan-of-a-town"><td colspan="3" class="answer-text">地図; 図面; 機会などの図解</td></tr>
+<tr class="item Do-you-think-a-young-person-should-be-allowed-to-plan-their-own-future-without-the-interference-of-their-parents">
+<td><input class="uk-checkbox" type="checkbox" id="Do-you-think-a-young-person-should-be-allowed-to-plan-their-own-future-without-the-interference-of-their-parents"/></td>
+<td class="question-text">Do you think a young person should be allowed to plan their own future without the interference of their parents?</td>
+<td class="answer-text">No, I don't think a young person should be allowed to plan their own future without the interference of their parents.</td>
+</tr>
+<tr class="note Do-you-think-a-young-person-should-be-allowed-to-plan-their-own-future-without-the-interference-of-their-parents"><td colspan="3" class="answer-text">口出し,干渉</td></tr>
+<tr class="item How-long-is-the-time-set-for-a-game-of-football">
+<td><input class="uk-checkbox" type="checkbox" id="How-long-is-the-time-set-for-a-game-of-football"/></td>
+<td class="question-text">How long is the time set for a game of football?</td>
+<td class="answer-text">The time set for a game of football is 90 minutes; that is 45 minutes each way.</td>
+</tr>
+<tr class="item What-kind-of-life-do-you-think-is-better-a-life-where-you-have-a-set-time-for-doing-everything-such-as-eating-sleeping-etc-or-a-life-where-you-do-these-things-whenever-you-want">
+<td><input class="uk-checkbox" type="checkbox" id="What-kind-of-life-do-you-think-is-better-a-life-where-you-have-a-set-time-for-doing-everything-such-as-eating-sleeping-etc-or-a-life-where-you-do-these-things-whenever-you-want"/></td>
+<td class="question-text">What kind of life do you think is better: a life where you have a set time for doing everything, such as eating, sleeping, etc., or a life where you do these things whenever you want?</td>
+<td class="answer-text">I think a life where you do everything, such as eating, sleeping, etc. whenever you want is better than a life where you have a set time for doing these things.</td>
+</tr>
+<tr class="item What-did-I-set-down-on-the-table-when-I-came-into-the-room-at-the-beginning-of-the-lesson">
+<td><input class="uk-checkbox" type="checkbox" id="What-did-I-set-down-on-the-table-when-I-came-into-the-room-at-the-beginning-of-the-lesson"/></td>
+<td class="question-text">What did I set down on the table when I came into the room at the beginning of the lesson?</td>
+<td class="answer-text">You set your book down on the table when you came into the room at the beginning of the lesson.</td>
+</tr>
+<tr class="note What-did-I-set-down-on-the-table-when-I-came-into-the-room-at-the-beginning-of-the-lesson"><td colspan="3" class="answer-text">set = put</td></tr>
+<tr class="item What-time-is-sunrise-at-the-moment">
+<td><input class="uk-checkbox" type="checkbox" id="What-time-is-sunrise-at-the-moment"/></td>
+<td class="question-text">What time is sunrise at the moment?</td>
+<td class="answer-text">Sunrise is about 5 am at the moment.</td>
+</tr>
+<tr class="item What-do-you-consider-to-be-the-duty-a-person-owes-to-the-society-in-which-they-live">
+<td><input class="uk-checkbox" type="checkbox" id="What-do-you-consider-to-be-the-duty-a-person-owes-to-the-society-in-which-they-live"/></td>
+<td class="question-text">What do you consider to be the duty a person owes to the society in which they live?</td>
+<td class="answer-text">I consider the duty a person owes to the society in which they live is to be honest, hard-working, etc.</td>
+</tr>
+<tr class="item Do-policemen-wear-their-uniforms-when-theyre-off-duty">
+<td><input class="uk-checkbox" type="checkbox" id="Do-policemen-wear-their-uniforms-when-theyre-off-duty"/></td>
+<td class="question-text">Do policemen wear their uniforms when they're off duty?</td>
+<td class="answer-text">No, policemen don't wear their uniforms when they're off duty, they only where them when they're on duty.</td>
+</tr>
+<tr class="item If-you-brought-a-foreign-car-into-this-country-would-you-have-to-pay-duty-on-it">
+<td><input class="uk-checkbox" type="checkbox" id="If-you-brought-a-foreign-car-into-this-country-would-you-have-to-pay-duty-on-it"/></td>
+<td class="question-text">If you brought a foreign car into this country, would you have to pay duty on it?</td>
+<td class="answer-text">Yes, if I brought a foreign car into this country, I'd have to pay duty on it?</td>
+</tr>
+<tr class="note If-you-brought-a-foreign-car-into-this-country-would-you-have-to-pay-duty-on-it"><td colspan="3" class="answer-text">関税</td></tr>
+<tr class="item Is-the-weight-of-these-two-chairs-about-equal">
+<td><input class="uk-checkbox" type="checkbox" id="Is-the-weight-of-these-two-chairs-about-equal"/></td>
+<td class="question-text">Is the weight of these two chairs about equal?</td>
+<td class="answer-text">Yes, the weight of these two chairs is about equal.</td>
+</tr>
+<tr class="note Is-the-weight-of-these-two-chairs-about-equal"><td colspan="3" class="answer-text">単数形...</td></tr>
+<tr class="item By-the-time-your-are-ninety-years-old-do-you-suppose-your-hari-will-be-gray">
+<td><input class="uk-checkbox" type="checkbox" id="By-the-time-your-are-ninety-years-old-do-you-suppose-your-hari-will-be-gray"/></td>
+<td class="question-text">By the time your are ninety years old, do you suppose your hari will be gray?</td>
+<td class="answer-text">Yes, by the time I'm ninety years old, I suppose my hari will be gray.</td>
+</tr>
+<tr class="note By-the-time-your-are-ninety-years-old-do-you-suppose-your-hari-will-be-gray"><td colspan="3" class="answer-text">whenとの違いはwhenは特定の時点で、byだとその時点までの時間も含む</td></tr>
+<tr class="item Can-you-speak-English-as-well-as-you-speak-your-own-language">
+<td><input class="uk-checkbox" type="checkbox" id="Can-you-speak-English-as-well-as-you-speak-your-own-language"/></td>
+<td class="question-text">Can you speak English as well as you speak your own language?</td>
+<td class="answer-text">No, I can't speak English as well as I speak my own language. I speak it worse than my own language.</td>
+</tr>
+<tr class="note Can-you-speak-English-as-well-as-you-speak-your-own-language"><td colspan="3" class="answer-text">as well as: 同程度に</td></tr>
+<tr class="item Do-you-take-English-lessons-on-Sunday-as-well-as-during-the-week">
+<td><input class="uk-checkbox" type="checkbox" id="Do-you-take-English-lessons-on-Sunday-as-well-as-during-the-week"/></td>
+<td class="question-text">Do you take English lessons on Sunday as well as during the week?</td>
+<td class="answer-text">Yes, I take English lessons on Sunday as well as during the week.</td>
+</tr>
+<tr class="note Do-you-take-English-lessons-on-Sunday-as-well-as-during-the-week"><td colspan="3" class="answer-text">同様に</td></tr>
+<tr class="item Whats-the-difference-between-the-words-older-and-elder">
+<td><input class="uk-checkbox" type="checkbox" id="Whats-the-difference-between-the-words-older-and-elder"/></td>
+<td class="question-text">What's the difference between the words "older" and "elder"?</td>
+<td class="answer-text">The difference between the words "older" and "elder" is that we generally use the the word "elder" when speaking about people in the same family, and we cannot say "elder than".</td>
+</tr>
+<tr class="note Whats-the-difference-between-the-words-older-and-elder"><td colspan="3" class="answer-text">血縁や同名の人でどちらが年上かを伝える時に主に使うらしい</td></tr>
+<tr class="item Have-you-got-an-elder-brother">
+<td><input class="uk-checkbox" type="checkbox" id="Have-you-got-an-elder-brother"/></td>
+<td class="question-text">Have you got an elder brother?</td>
+<td class="answer-text">No, I have'nt got an elder brother.</td>
+</tr>
+<tr class="item Are-you-the-eldest-in-your-family">
+<td><input class="uk-checkbox" type="checkbox" id="Are-you-the-eldest-in-your-family"/></td>
+<td class="question-text">Are you the eldest in your family?</td>
+<td class="answer-text">No, I'm not the eldest in my family.</td>
+</tr>
+<tr class="item Whats-the-difference-between-to-let-and-to-rent">
+<td><input class="uk-checkbox" type="checkbox" id="Whats-the-difference-between-to-let-and-to-rent"/></td>
+<td class="question-text">Whats the difference between "to let" and "to rent"?</td>
+<td class="answer-text">The difference between "to let" and "to rent" is that "to let" means to lend something in exchange for money, and "to rent" means to borrow something in exchange for money.</td>
+</tr>
+<tr class="note Whats-the-difference-between-to-let-and-to-rent"><td colspan="3" class="answer-text">let = lease = rent out</td></tr>
+<tr class="item Will-your-English-have-improved-by-this-time-next-month">
+<td><input class="uk-checkbox" type="checkbox" id="Will-your-English-have-improved-by-this-time-next-month"/></td>
+<td class="question-text">Will your English have improved by this time next month?</td>
+<td class="answer-text">Yes, my English will have improved by this time next month.</td>
+</tr>
+<tr class="item Why-is-a-desert-such-a-difficult-place-to-live-in">
+<td><input class="uk-checkbox" type="checkbox" id="Why-is-a-desert-such-a-difficult-place-to-live-in"/></td>
+<td class="question-text">Why is a desert such a difficult place to live in?</td>
+<td class="answer-text">A desert is such a difficult place to live in because there is so little water.</td>
+</tr>
+<tr class="note Why-is-a-desert-such-a-difficult-place-to-live-in"><td colspan="3" class="answer-text">such a = very</td></tr>
+<tr class="item How-do-parents-provide-for-their-children-How-do-parents-provide-for-their-children">
+<td><input class="uk-checkbox" type="checkbox" id="How-do-parents-provide-for-their-children-How-do-parents-provide-for-their-children"/></td>
+<td class="question-text">How do parents provide for their children?How do parents provide for their children?</td>
+<td class="answer-text">Parents provide for their children by making sure they have all the things they need in life.</td>
+</tr>
+<tr class="note How-do-parents-provide-for-their-children-How-do-parents-provide-for-their-children"><td colspan="3" class="answer-text">provide for ~: 家族・子供を養う; 災害など不測の事態に備える</td></tr>
+<tr class="item If-you-had-just-bought-a-house-and-then-someone-told-you-there-was-a-ghost-in-it-what-would-you-do-providing-of-course-you-believed-in-ghosts">
+<td><input class="uk-checkbox" type="checkbox" id="If-you-had-just-bought-a-house-and-then-someone-told-you-there-was-a-ghost-in-it-what-would-you-do-providing-of-course-you-believed-in-ghosts"/></td>
+<td class="question-text">If you had just bought a house and then someone told you there was a ghost in it, what would you do, providing, of course, you believed in ghosts?</td>
+<td class="answer-text">If I had just bought a house and then someone told me there was a ghost in it, I'd sell it, providing I believed in ghosts.</td>
+</tr>
+<tr class="note If-you-had-just-bought-a-house-and-then-someone-told-you-there-was-a-ghost-in-it-what-would-you-do-providing-of-course-you-believed-in-ghosts"><td colspan="3" class="answer-text">Providing/Provided: ~という条件で; ref. Assuming/Supposing: ~と仮定して</td></tr>
+<tr class="item If-you-came-to-some-crossroads-while-driving-a-car-and-instead-of-stopping-you-kept-straight-on-what-might-happen">
+<td><input class="uk-checkbox" type="checkbox" id="If-you-came-to-some-crossroads-while-driving-a-car-and-instead-of-stopping-you-kept-straight-on-what-might-happen"/></td>
+<td class="question-text">If you came to some crossroads while driving a car and, instead of stopping, you kept straight on, what might happen?</td>
+<td class="answer-text">If I came to some crossroads while driving a car and, instead of stopping, I kept straight on, an accident might happen.</td>
+</tr>
+<tr class="note If-you-came-to-some-crossroads-while-driving-a-car-and-instead-of-stopping-you-kept-straight-on-what-might-happen"><td colspan="3" class="answer-text">keep straight on: まっすぐ進む; straight on: adv.まっすぐに,ずっと</td></tr>
+<tr class="item Does-it-appear-to-you-that-people-in-the-world-is-becoming-happier-or-less-happy">
+<td><input class="uk-checkbox" type="checkbox" id="Does-it-appear-to-you-that-people-in-the-world-is-becoming-happier-or-less-happy"/></td>
+<td class="question-text">Does it appear to you that people in the world is becoming happier or less happy?</td>
+<td class="answer-text">It appear to me that people in the world is becoming less happy.</td>
+</tr>
+<tr class="item Do-you-judge-people-by-appearances-or-do-you-wait-until-you-get-to-know-them-well">
+<td><input class="uk-checkbox" type="checkbox" id="Do-you-judge-people-by-appearances-or-do-you-wait-until-you-get-to-know-them-well"/></td>
+<td class="question-text">Do you judge people by appearances or do you wait until you get to know them well?</td>
+<td class="answer-text">No, I don't judge people by appearances, I wait until I get to know them well.</td>
+</tr>
+<tr class="note Do-you-judge-people-by-appearances-or-do-you-wait-until-you-get-to-know-them-well"><td colspan="3" class="answer-text">appearance: 外見; get to know: 知り合いになる,見知る</td></tr>
+<tr class="item How-wide-is-a-double-bed">
+<td><input class="uk-checkbox" type="checkbox" id="How-wide-is-a-double-bed"/></td>
+<td class="question-text">How wide is a double bed?</td>
+<td class="answer-text">A double bed is about double the width, of a single bed.</td>
+</tr>
+<tr class="note How-wide-is-a-double-bed"><td colspan="3" class="answer-text">ｳｨｽ</td></tr>
+<tr class="item Do-you-have-trouble-remembering-all-the-rules-of-grammar-in-English">
+<td><input class="uk-checkbox" type="checkbox" id="Do-you-have-trouble-remembering-all-the-rules-of-grammar-in-English"/></td>
+<td class="question-text">Do you have trouble remembering all the rules of grammar in English?</td>
+<td class="answer-text">Yes, I have trouble remembering all the rules of grammar in English.</td>
+</tr>
+<tr class="note Do-you-have-trouble-remembering-all-the-rules-of-grammar-in-English"><td colspan="3" class="answer-text">have trouble ~ing: 手こずる,苦労する</td></tr>
+<tr class="item When-children-get-into-trouble-do-they-sometimes-tell-lies-in-order-to-get-themselves-out-of-trouble">
+<td><input class="uk-checkbox" type="checkbox" id="When-children-get-into-trouble-do-they-sometimes-tell-lies-in-order-to-get-themselves-out-of-trouble"/></td>
+<td class="question-text">When children get into trouble, do they sometimes tell lies in order to get themselves out of trouble?</td>
+<td class="answer-text">Yes, when children get into trouble, they sometimes tell lies in order to get themselves out of trouble.</td>
+</tr>
+<tr class="note When-children-get-into-trouble-do-they-sometimes-tell-lies-in-order-to-get-themselves-out-of-trouble"><td colspan="3" class="answer-text">get into trouble: まずいことになる; 叱られる/処罰される立場にある; 問題を起こす,迷惑をかける</td></tr>
+<tr class="item When-you-are-reading-a-book-in-your-own-language-and-you-see-a-word-you-dont-know-the-meaning-of-do-you-take-the-trouble-to-look-it-up-in-a-dictionary-or-do-you-just-keep-reading">
+<td><input class="uk-checkbox" type="checkbox" id="When-you-are-reading-a-book-in-your-own-language-and-you-see-a-word-you-dont-know-the-meaning-of-do-you-take-the-trouble-to-look-it-up-in-a-dictionary-or-do-you-just-keep-reading"/></td>
+<td class="question-text">When you are reading a book in your own language, and you see a word you don't know the meaning of, do you take the trouble to look it up in a dictionary or do you just keep reading?</td>
+<td class="answer-text">When I'm reading a book in my own language, and I see a word I don't know the meaning of, I don't take the trouble to look it up in a dictionary, I just keep reading.</td>
+</tr>
+<tr class="note When-you-are-reading-a-book-in-your-own-language-and-you-see-a-word-you-dont-know-the-meaning-of-do-you-take-the-trouble-to-look-it-up-in-a-dictionary-or-do-you-just-keep-reading"><td colspan="3" class="answer-text">労を惜しまず~する, わざわざ~する</td></tr>
+<tr class="item Do-dreams-sometimes-trouble-you-at-night">
+<td><input class="uk-checkbox" type="checkbox" id="Do-dreams-sometimes-trouble-you-at-night"/></td>
+<td class="question-text">Do dreams sometimes trouble you at night?</td>
+<td class="answer-text">Yes, dreams sometimes trouble me at night.</td>
+</tr>
+<tr class="note Do-dreams-sometimes-trouble-you-at-night"><td colspan="3" class="answer-text">悩ませる; 苦しめる</td></tr>
+<tr class="item When-do-we-double-the-final-consonant-of-an-adjective-in-forming-its-comparative-and-its-superlative-Give-me-an-example">
+<td><input class="uk-checkbox" type="checkbox" id="When-do-we-double-the-final-consonant-of-an-adjective-in-forming-its-comparative-and-its-superlative-Give-me-an-example"/></td>
+<td class="question-text">When do we double the final consonant of an adjective in forming its comparative and its superlative? Give me an example.</td>
+<td class="answer-text">We double the final consonant of an adjective in forming its comparative and its superlative, when it ends with a single consonant preceded by a single vowel, .</td>
+</tr>
+<tr class="note When-do-we-double-the-final-consonant-of-an-adjective-in-forming-its-comparative-and-its-superlative-Give-me-an-example"><td colspan="3" class="answer-text">ｳﾞｧｳｫﾙ; thin - thinner than - the thinnest</td></tr>
+<tr class="item When-you-have-something-unpleasant-to-do-do-you-delay-doing-it-or-do-you-do-it-at-once-without-delay">
+<td><input class="uk-checkbox" type="checkbox" id="When-you-have-something-unpleasant-to-do-do-you-delay-doing-it-or-do-you-do-it-at-once-without-delay"/></td>
+<td class="question-text">When you have something unpleasant to do, do you delay doing it, or do you do it at once without delay?</td>
+<td class="answer-text">When I have something unpleasant to do, I delay doing it.</td>
+</tr>
+<tr class="item Which-is-better-though-to-delay-doing-things-or-do-things-at-once-without-delay">
+<td><input class="uk-checkbox" type="checkbox" id="Which-is-better-though-to-delay-doing-things-or-do-things-at-once-without-delay"/></td>
+<td class="question-text">Which is better though: to delay doing things or do things at once without delay?</td>
+<td class="answer-text">It's usually better to do things at once without delay.</td>
+</tr>
+<tr class="item What-must-you-do-before-you-walk-across-the-road">
+<td><input class="uk-checkbox" type="checkbox" id="What-must-you-do-before-you-walk-across-the-road"/></td>
+<td class="question-text">What must you do before you walk across the road?</td>
+<td class="answer-text">I must look both ways before I walk across the road.</td>
+</tr>
+<tr class="item I-you-cant-get-across-a-river-by-bridge-how-can-you-get-across">
+<td><input class="uk-checkbox" type="checkbox" id="I-you-cant-get-across-a-river-by-bridge-how-can-you-get-across"/></td>
+<td class="question-text">I you can't get across a river by bridge, how can you get across?</td>
+<td class="answer-text">If you can't get across a river by bridge, you can get across by boat or by swimming across.</td>
+</tr>
+<tr class="note I-you-cant-get-across-a-river-by-bridge-how-can-you-get-across"><td colspan="3" class="answer-text">get across: ~を渡る,越える</td></tr>
+<tr class="item What-can-you-see-across-the-street-from-this-window">
+<td><input class="uk-checkbox" type="checkbox" id="What-can-you-see-across-the-street-from-this-window"/></td>
+<td class="question-text">What can you see across the street from this window?</td>
+<td class="answer-text">I can you see some other houses across the street from this window.</td>
+</tr>
+<tr class="note What-can-you-see-across-the-street-from-this-window"><td colspan="3" class="answer-text">向かいに</td></tr>
+<tr class="item At-the-airport-do-you-usually-check-in-all-your-luggage-or-do-you-carry-some-of-it-onto-the-plane-with-you">
+<td><input class="uk-checkbox" type="checkbox" id="At-the-airport-do-you-usually-check-in-all-your-luggage-or-do-you-carry-some-of-it-onto-the-plane-with-you"/></td>
+<td class="question-text">At the airport, do you usually check in all your luggage or do you carry some of it onto the plane with you?</td>
+<td class="answer-text">At the airport, I usually carry some of my luggage onto the plane with me.</td>
+</tr>
+</tbody>
+    </table>
+    <div class="footer">
+        <span id="scrollPercentage">0%</span>
+    </div>
+</body>
+</html>
